@@ -127,6 +127,42 @@ document.addEventListener('DOMContentLoaded', function () {
       if (bannerTitle) bannerTitle.innerHTML = defaultTitle;
     });
   });
+  var track = document.getElementById('sliderTrack');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var pageNums = document.querySelectorAll('.page-num');
+  var currentIndex = 0;
+  var totalSlides = 4; // Количество слайдов
+
+  function goToSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+    currentIndex = index;
+
+    // Сдвигаем трек на 100vw влево за каждый индекс
+    track.style.transform = "translateX(-".concat(currentIndex * 100, "vw)");
+
+    // Меняем активные скобки у цифр пагинации
+    pageNums.forEach(function (num) {
+      return num.classList.remove('active');
+    });
+    pageNums[currentIndex].classList.add('active');
+  }
+
+  // Клик по стрелкам
+  prevBtn.addEventListener('click', function () {
+    return goToSlide(currentIndex - 1);
+  });
+  nextBtn.addEventListener('click', function () {
+    return goToSlide(currentIndex + 1);
+  });
+
+  // Клик по цифрам (1, 2, 3, 4)
+  pageNums.forEach(function (num) {
+    num.addEventListener('click', function (e) {
+      var index = parseInt(e.target.getAttribute('data-index'));
+      goToSlide(index);
+    });
+  });
 });
 /******/ })()
 ;

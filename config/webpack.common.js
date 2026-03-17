@@ -2,21 +2,23 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const htmlPages = require("./webpack.pages.js");
-
-const webpack = require("webpack");
 const path = require("path");
+
 
 module.exports = {
   entry: {
     index: "./src/js/index.js",
     styleguide: "./src/js/styleguide.js",
-    test: "./src/js/test1.js",
+    test: ["./src/js/test1.js", "./src/css/style.css"],
   },
 
   output: {
     filename: "[name].js",
-    path: path.resolve(".", "docs"),
+    path: path.resolve('.', "docs"),
+    publicPath: "/",
+    clean: true,
   },
+
   module: {
     rules: [
       {

@@ -12,6 +12,9 @@ body {
   color: #000;
 
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 html::-webkit-scrollbar {
   display: none;
@@ -33,10 +36,38 @@ ul { list-style: none; }
   border-bottom: 1px solid #fdfdfd;
 }
 
-.hero-logo {
-  z-index: 10;
-  letter-spacing: -5px;
+.hero-loz{
+  width: 20vw;
+  font-family: 'Akzidenzgroteskpro', sans-serif;
+  font-weight: 400;
+  margin-left: -29.5vw;
+  margin-top: 1vw;
+  z-index: 100;
 }
+
+.hero-text{
+  margin-top: 4vw;
+  margin-left: -5vw;
+  z-index: 100;
+}
+
+.big-arrow{
+  font-size: 5vw;
+  margin-top: -9vw;
+  margin-left: -5vw;
+  z-index: 100;
+}
+
+
+.hero-logo {
+  z-index: 100;
+}
+
+.hero-logo img {
+  margin-top: -2vw;
+  margin-left: -35vw;
+}
+
 
 .hero-top-nav {
   position: absolute;
@@ -45,12 +76,12 @@ ul { list-style: none; }
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 12vw;
+  gap: 18vw;
   z-index: 100;
 }
 
 .hero-top-nav a {
-  font-size: 14px;
+  font-size: 10vw;
   font-weight: 800;
   text-transform: uppercase;
   color: #000;
@@ -78,10 +109,10 @@ ul { list-style: none; }
 
   background-repeat: no-repeat;
   background-image:
-          linear-gradient(#000, #000), linear-gradient(#000, #000), /* Top-Left */
-          linear-gradient(#000, #000), linear-gradient(#000, #000), /* Top-Right */
-          linear-gradient(#000, #000), linear-gradient(#000, #000), /* Bottom-Left */
-          linear-gradient(#000, #000), linear-gradient(#000, #000); /* Bottom-Right */
+          linear-gradient(#000, #000), linear-gradient(#000, #000),
+          linear-gradient(#000, #000), linear-gradient(#000, #000),
+          linear-gradient(#000, #000), linear-gradient(#000, #000),
+          linear-gradient(#000, #000), linear-gradient(#000, #000);
 
 
   background-position:
@@ -117,19 +148,19 @@ ul { list-style: none; }
   animation: float 3s ease-in-out infinite;
 }
 .icon-1 img, .icon-2 img, .icon-3 img, .icon-4 img, .icon-5 img, .icon-6 img, .icon-7 img, .icon-8 img, .icon-9 img {
-  width: 15vw;
+  width: 12vw;
 }
 
 
-.icon-1 { top: 10%; left: 15%; animation-delay: 0s; }
-.icon-2 { top: 5%; left: 35%; animation-delay: 1s; }
-.icon-3 { top: 10%; right: 20%; animation-delay: 0.5s; }
-.icon-4 { top: 30%; right: 10%; animation-delay: 1.5s; }
-.icon-5 { bottom: 20%; right: 15%; animation-delay: 0.2s; }
-.icon-6 { bottom: 3%; left: 30%; animation-delay: 1.2s; }
-.icon-7 { top: 60%; left: 15%; animation-delay: 0.8s; }
-.icon-8 { bottom: 5%; left: 50%; animation-delay: 1.8s; }
-.icon-9 { bottom: 30%; left: 10%; animation-delay: 0.4s; }
+.icon-1 { top: 10%; left: 55%; animation-delay: 0s; }
+.icon-2 { top: 8%; left: 80%; animation-delay: 1s; }
+.icon-3 { top: 25%; right: 20%; animation-delay: 0.5s; }
+.icon-4 { top: 40%; right: 30%; animation-delay: 1.5s; }
+.icon-5 { bottom: 28%; right: 15%; animation-delay: 0.2s; }
+.icon-6 { bottom: 3%; left: 85%; animation-delay: 1.2s; }
+.icon-7 { top: 70%; left: 55%; animation-delay: 0.8s; }
+.icon-8 { bottom: 1%; left: 72%; animation-delay: 1.8s; }
+.icon-9 { bottom: 40%; left: 85%; animation-delay: 0.4s; }
 
 
 @keyframes float {
@@ -241,7 +272,6 @@ ul { list-style: none; }
 
 .promo-banner {
   flex: 1;
-
   /*background: linear-gradient(135deg, #ff9a9e 0%, #ff5e62 100%);*/
   padding: 1.2vw;
   position: relative;
@@ -464,8 +494,8 @@ ul { list-style: none; }
   transform: scale(1.5);
 }
 .content-footer {
-  padding: 2vw;
-  width: 70vw;
+padding: 2vw 0;
+  width: 50vw;
   border-top: 2px solid #000;
   display: flex;
   align-items: center;
@@ -473,11 +503,11 @@ ul { list-style: none; }
 }
 
 .footer-logo img{
-  width: 9vw;
+  width: 8vw;
 }
 
 .footer-line {
-  width: 3vw;
+  width: 1vw;
   flex-grow: 1;
   height: 1px;
   background: #000;
@@ -570,7 +600,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .page-title {
-  font-size: 32px;
+  font-size: 2vw;
   font-weight: 900;
   margin-bottom: 40px;
 }
@@ -1089,9 +1119,6 @@ width: 10vw;
   padding-top: 20px;
 }
 
-
-
-/* --- Главная Сетка (Grid Layout) --- */
 .ax-layout {
   display: grid;
   grid-template-columns: var(--ax-sidebar-w) 1fr var(--ax-right-w);
@@ -1108,7 +1135,7 @@ width: 10vw;
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
-  border-right: 1px solid transparent; /* Можно добавить border при желании */
+  border-right: 1px solid transparent;
 }
 
 .ax-sidebar-content {
@@ -1169,7 +1196,7 @@ width: 10vw;
 
 /* Статья */
 .ax-hero-title, .ax-section-title {
-  font-size: 2.7vw;
+  font-size: 2.3vw;
   font-weight: 600;
   margin-bottom: 30px;
 }
@@ -1183,7 +1210,6 @@ width: 10vw;
   margin-bottom: 50px;
 }
 
-.ax-section { margin-bottom: 3vw; }
 .ax-section-title {
   font-size: 32px;
   font-weight: 800;
@@ -1199,13 +1225,50 @@ width: 10vw;
   gap: 30px;
 }
 
-.ax-list-checked { list-style: none; }
-.ax-list-checked li {
-  position: relative; padding-left: 30px; margin-bottom: 12px;
+.ax-list-checked, .ax-list-checked-orange, .ax-list-checked-rose, .ax-list-checked-turquoise, .ax-list-checked-yellow {
+  list-style: none;
+  width: 28vw;
+  font-family: 'Akzidenzgroteskpro', sans-serif !important;
+  font-weight: 400;
+}
+
+.ax-list-checked li, .ax-list-checked-orange li, .ax-list-checked-rose li, .ax-list-checked-turquoise li, .ax-list-checked-yellow li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
   font-size: 16px;
 }
+
+
 .ax-list-checked li::before {
   content: '➔'; color: #5BB2FF;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.ax-list-checked-orange li::before {
+  content: '➔'; color: #FF8C3F;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.ax-list-checked-turquoise li::before {
+  content: '➔'; color: #80EAFF;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.ax-list-checked-rose li::before {
+  content: '➔'; color: #FF768D;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.ax-list-checked-yellow li::before {
+  content: '➔'; color: #FFCD55;
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -1248,15 +1311,15 @@ width: 10vw;
 /* --- Правая Колонка (Фиксированная) --- */
 .ax-sidebar-right {
   background: #fff;
-  padding: 60px 40px;
+  /*padding: 60px 40px;*/
   height: 100%;
+  width: 25vw;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* 3D Курсор */
 .ax-cursor-3d img {
   width: 8vw;
 }
@@ -1264,18 +1327,20 @@ width: 10vw;
 /* Виджет заметок */
 .ax-widget-box {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 5vw;
   text-align: center;
 }
 
 .ax-widget-header {
   position: relative;
-  padding: 15px;
-  margin-bottom: 15px;
+  margin-top: -4vw;
+  margin-bottom: 0.5vw;
+  gap: 5vw;
 }
 .ax-widget-header h3 {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 1.5vw;
+
 }
 
 /* Декоративные уголки */
@@ -1291,7 +1356,7 @@ width: 10vw;
 .ax-widget-body {
   border: 2px dashed #b3d7ff;
   border-top: none;
-  margin: -15px 5px 20px 5px;
+  margin: 15px 5px 20px 5px;
   padding: 30px 10px;
   min-height: 10vw;
   display: flex;
@@ -1299,6 +1364,22 @@ width: 10vw;
   align-items: center;
   gap: 15px;
   border-radius: 0 0 4px 4px;
+}
+
+.orange{
+  border: 2px dashed #FF8C3F;
+}
+
+.rose{
+  border: 2px dashed #FF768D;
+}
+
+.turquoise{
+  border: 2px dashed #80EAFF;
+}
+
+.yellow{
+  border: 2px dashed #FFCD55;
 }
 
 .ax-pill {
@@ -1313,6 +1394,32 @@ width: 10vw;
   border-color: var(--ax-blue);
   box-shadow: none;
 }
+
+.ax-pill-orange {
+  color: #FF8C3F;
+  border-color: var(--ax-blue);
+  box-shadow: none;
+}
+
+.ax-pill-rose {
+  color: #FF768D;
+  border-color: var(--ax-blue);
+  box-shadow: none;
+}
+
+.ax-pill-turquoise {
+  color: #80EAFF;
+  border-color: var(--ax-blue);
+  box-shadow: none;
+}
+
+.ax-pill-yellow {
+  color: #FFCD55;
+  border-color: var(--ax-blue);
+  box-shadow: none;
+}
+
+
 .ax-rotate-left { transform: rotate(-3deg); }
 .ax-rotate-right { transform: rotate(2deg); }
 
@@ -1332,7 +1439,71 @@ width: 10vw;
   cursor: pointer;
   text-transform: uppercase;
 }
-.ax-btn-save:hover { background: #358be6; }
+.ax-btn-save:hover { background: #1e4b7c; }
+
+.ax-btn-save-orange {
+  width: 100%;
+  margin-top: 0.5vw;
+  font-family: 'Druk Wide Cyr', sans-serif !important;
+  background: #FF8C3F;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1vw;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.ax-btn-save-orange:hover { background: #935226; }
+
+.ax-btn-save-rose {
+  width: 100%;
+  margin-top: 0.5vw;
+  font-family: 'Druk Wide Cyr', sans-serif !important;
+  background: #FF768D;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1vw;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.ax-btn-save-rose:hover { background: #91283b; }
+
+.ax-btn-save-turquoise {
+  width: 100%;
+  margin-top: 0.5vw;
+  font-family: 'Druk Wide Cyr', sans-serif !important;
+  background: #80EAFF;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1vw;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.ax-btn-save-turquoise:hover { background: #2d7a88; }
+
+.ax-btn-save-yellow {
+  width: 100%;
+  margin-top: 0.5vw;
+  font-family: 'Druk Wide Cyr', sans-serif !important;
+  background: #FFCD55;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1vw;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.ax-btn-save-yellow:hover { background: #b69239; }
 
 /*test*/
 .ax-layout {
@@ -1399,7 +1570,7 @@ width: 10vw;
   text-decoration: none; color: var(--text-color);
 }
 
-/* Блок теста */
+
 .ax-quiz-area { flex-grow: 1; }
 
 .ax-title-wrap {
@@ -1508,7 +1679,7 @@ width: 10vw;
   display: inline-block;
 }
 
-/* --- Правый Сайдбар (Рубрикатор) --- */
+
 .ax-sidebar-right {
   padding: 40px 20px;
   display: flex;
@@ -1536,7 +1707,7 @@ width: 10vw;
 }
 .rubric-item.current .corner { opacity: 0; }
 
-/*result*/
+
 .ax-result-title {
   font-size: 36px;
   font-weight: 700;
@@ -1573,7 +1744,7 @@ width: 10vw;
   left: 0;
   top: 0;
   font-weight: bold;
-  color: #4a9eff; /* Синяя стрелка по умолчанию */
+  color: #4a9eff;
 }
 
 /* Подчеркнутые профессии */
@@ -1618,12 +1789,12 @@ width: 10vw;
   position: absolute;
   filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.1));
 }
-/* Примерные позиции объектов */
+
 .obj-cursor { top: 20px; left: 40px; transform: rotate(-15deg); width: 60px; }
 .obj-hammer { top: 10px; right: 20px; width: 50px; transform: rotate(15deg); }
 .obj-tube { bottom: 20px; left: 10px; width: 40px; transform: rotate(-10deg); }
 
-/* Виджет заметок (стиль из макета результата) */
+
 .ax-widget-result {
   border: 2px dashed #000;
   padding: 20px;
@@ -1711,4 +1882,242 @@ width: 10vw;
 
 .hidden {
   display: none !important;
+}
+
+
+/*новая главная*/
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+  margin-top: 40vw;
+}
+
+.nav-arrow {
+  background: none; border: none; font-size: 20px;
+  cursor: pointer; font-weight: bold;
+}
+
+.pages { display: flex; gap: 15px; align-items: center; }
+
+.page-num {
+  font-size: 18px; font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+}
+
+/* Стилизация активного элемента [ 1 ] */
+.page-num.active::before,
+.page-num.active::after {
+  content: '';
+  position: absolute;
+  top: 0; width: 8px; height: 100%;
+  border: 3px solid #000;
+}
+.page-num.active::before { left: 0; border-right: none; border-radius: 5px 0 0 5px; }
+.page-num.active::after { right: 0; border-left: none; border-radius: 0 5px 5px 0; }
+
+
+.slider-viewport {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.slider-track {
+  display: flex;
+  width: 400vw;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- ПАГИНАЦИЯ --- */
+.pagination {
+  position: absolute;
+  bottom: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: max-content;
+}
+
+
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.slide-right-content {
+  position: absolute;
+  left: 10vw;
+  width: 40vw;
+  height: 60vh;
+}
+
+/* Общие анимации парения */
+@keyframes float1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5vw); } }
+@keyframes float2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(2vw); } }
+@keyframes float3 { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+.float-1 { animation: float1 4s ease-in-out infinite; }
+.float-2 { animation: float2 5s ease-in-out infinite; }
+.float-3 { animation: float3 4.5s ease-in-out infinite; }
+
+
+/* --- СТИЛИ 2 ЭКРАНА (Теги) --- */
+.tag {
+  position: absolute;
+  font-family: 'Akzidenzgroteskpro', sans-serif;
+  font-size: 2vw;
+  font-weight: 800;
+  padding: 0.8vw 1.5vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tag-orange:hover { transform: rotate(5deg) scale(1.3) !important;}
+.tag-green:hover { transform: rotate(3deg) scale(1.3) !important;}
+.tag-turquoise:hover { transform: rotate(10deg) scale(1.3) !important;}
+.tag-blue:hover { transform: rotate(15deg) scale(1.3) !important;}
+.tag-pink:hover { transform: rotate(5deg) scale(1.3) !important;}
+.tag-bej:hover { transform: rotate(5deg) scale(1.3) !important;}
+.tag-cyan:hover { transform: rotate(-5deg) scale(1.3) !important;}
+.tag-yellow:hover { transform: rotate(-5deg) scale(1.3) !important;}
+.tag-brown:hover { transform: rotate(-5deg) scale(1.3) !important;}
+.tag-orange { color: #FF8C3F; top: 1%; left: 130%; width: 25vw; rotate: -5deg; }
+.tag-cyan { color: #00d2d3; top: 15%; left: 110%; width: 25vw; rotate: 5deg; }
+.tag-pink { color: #FF768D;  top: 26%; left: 120%; width: 35vw; rotate: -5deg;}
+.tag-yellow { color: #FFCD55; top: 41%; left: 135%; rotate: 5deg; width: 20vw; }
+.tag-bej { color: #F18E6D;  top: 50%; left: 150%; rotate: -5deg; width: 25vw;}
+.tag-brown { color: #E6BB77; top: 65%; left: 120%; width: 35vw; rotate: 5deg; }
+.tag-blue { color: #5BB2FF; top: 70%; left: 120%; rotate: -15deg; width: 20vw; }
+.tag-turquoise { color: #80DDBF; top: 83%; left: 120%; width: 25vw; rotate: -10deg; }
+.tag-green { color: #9CD75D; top: 87%; left: 165%; rotate: -3deg; width: 20vw; }
+
+
+
+
+
+
+/* --- СТИЛИ 3 ЭКРАНА  --- */
+.glass-obj img{
+  width: 15vw;
+}
+
+.bag{
+position: absolute;
+  margin-left: 50vw;
+}
+
+.kepka{
+  position: absolute;
+  margin-right: -20vw;
+  margin-top: -5vw;
+}
+
+.hat{
+  position: absolute;
+  margin-left: 30vw;
+}
+
+
+/* --- СТИЛИ 4 ЭКРАНА (Колесо) --- */
+.wheel-main-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel-box {
+  position: absolute;
+  top: 50%;
+  width: 75vw;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.wheel-spin-anim {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center center;
+  animation: rotateWheel 30s linear infinite;
+}
+
+@keyframes rotateWheel {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.square{
+  bottom: 0;
+  top: -10vw;
+  right: -1vw;
+  width: 40vw;
+  height: 150vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 50;
+}
+
+.random-btn {
+  position: absolute;
+  top: 45%;
+  left: 100%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: #111; color: #fff;
+  padding: 0.8vw 8vw;
+  border-radius: 0.5vw;
+  border: none; font-weight: 800; font-size: 1vw;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Akzidenzgroteskpro', sans-serif;
 }
