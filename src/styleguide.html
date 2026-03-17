@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!--    <link rel="stylesheet" href="/css/style.css">-->
     <title>Styleguide — axis</title>
     <meta name="title" content="axis — страница styleguide проекта" />
     <meta
@@ -32,292 +31,314 @@
     />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content=""
-    />
-    <meta
-      property="twitter:title"
-      content="Axis - медиа о профессиях"
-    />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="Axis - медиа о профессиях" />
     <meta
       property="twitter:description"
       content="Описание, как выглядят в проекте бренд, типографика, логотип, цвета и носители айдентики"
     />
-    <meta
-      property="twitter:image"
-      content=""
-    />
-
+    <meta property="twitter:image" content="" />
   </head>
   <body class="sg-body">
+    <div class="sg-wrapper">
+      <!-- ЛЕВАЯ ПАНЕЛЬ (Фиксированная) -->
+      <aside class="sg-sidebar-left">
+        <div class="sg-logo"><img src="images/logo.svg" /></div>
 
-  <div class="sg-wrapper">
+        <nav class="sg-nav">
+          <a href="#" class="sg-nav-link sg-active">
+            <span class="sg-bracket">[</span>О НАС<span class="sg-bracket"
+              >]</span
+            >
+          </a>
+          <a href="/pages/category.html" class="sg-nav-link">КАТАЛОГ</a>
+          <a href="/pages/search.html" class="sg-nav-link">ТРЕНДЫ</a>
+          <a href="/pages/about.html" class="sg-nav-link">НАВЫКИ</a>
+          <a href="/pages/about.html" class="sg-nav-link">ТЕСТЫ</a>
+        </nav>
 
-    <!-- ЛЕВАЯ ПАНЕЛЬ (Фиксированная) -->
-    <aside class="sg-sidebar-left">
-      <div class="sg-logo"><img src="images/logo.svg"></div>
-
-      <nav class="sg-nav">
-        <a href="#" class="sg-nav-link sg-active">
-          <span class="sg-bracket">[</span>О НАС<span class="sg-bracket">]</span>
-        </a>
-        <a href="/pages/category.html" class="sg-nav-link">КАТАЛОГ</a>
-        <a href="/pages/search.html" class="sg-nav-link">ТРЕНДЫ</a>
-        <a href="/pages/about.html" class="sg-nav-link">НАВЫКИ</a>
-        <a href="/pages/about.html" class="sg-nav-link">ТЕСТЫ</a>
-      </nav>
-
-      <div class="sg-footer-text">
-        ТВОЙ ОРИЕНТИР<br>
-        В МИРЕ ПРОФЕССИЙ
-      </div>
-    </aside>
-
-    <main class="sg-content">
-
-      <a href="/pages/about.html" class="sg-back-btn">← О нас</a>
-
-
-      <div class="sg-main-title">
-        <span class="sg-dashed-brace">[</span>
-        Стайлгайд
-        <span class="sg-dashed-brace">]</span>
-      </div>
-
-
-      <section id="colors" class="sg-section">
-        <h2 class="sg-h2">Цвета и графика</h2>
-        <p class="sg-desc">
-          Цвета закреплены за профессиональными сферами. Они помогают быстро ориентироваться в каталоге и воспринимать каждую профессию как часть её направления.
-        </p>
-
-        <div class="sg-cards-grid">
-
-          <div class="sg-card">
-            <div class="sg-card-icon">
-
-              <div class="sg-placeholder sg-bg-blue"><img src="images/it.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">IT</h3>
-              <span class="sg-hex sg-blue">#5bb2ff</span>
-            </div>
-            <div class="sg-card-corners sg-border-blue"></div>
-          </div>
-
-          <!-- Карточка Маркетинг -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-orange"><img src="images/marketing.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Маркетинг и PR</h3>
-              <span class="sg-hex sg-orange">#ff8c3f</span>
-            </div>
-            <div class="sg-card-corners sg-border-orange"></div>
-          </div>
-
-          <!-- Карточка Медицина -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-teal"><img src="images/medicine.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Медицина</h3>
-              <span class="sg-hex sg-teal">#80eaff</span>
-            </div>
-            <div class="sg-card-corners sg-border-teal"></div>
-          </div>
-
-          <!-- Карточка Креатив -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-pink"><img src="images/creative.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Креативный<br>сектор</h3>
-              <span class="sg-hex sg-pink">#ff768d</span>
-            </div>
-            <div class="sg-card-corners sg-border-pink"></div>
-          </div>
-
-          <!-- Карточка Естественные науки -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-yellow"><img src="images/eco.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Естественные<br>науки</h3>
-              <span class="sg-hex sg-yellow">#e6bb77</span>
-            </div>
-            <div class="sg-card-corners sg-border-yellow"></div>
-          </div>
-
-          <!-- Карточка Точные науки -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-mint"><img src="images/accurate.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Точные науки</h3>
-              <span class="sg-hex sg-mint">#80ddbf</span>
-            </div>
-            <div class="sg-card-corners sg-border-mint"></div>
-          </div>
-
-          <!-- Карточка Финансы -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-gold"><img src="images/finance.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Финансы</h3>
-              <span class="sg-hex sg-gold">#ffcd55</span>
-            </div>
-            <div class="sg-card-corners sg-border-gold"></div>
-          </div>
-
-          <!-- Карточка Строительство -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-grey"><img src="images/construction.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Строительство</h3>
-              <span class="sg-hex sg-grey">#c2d3e5</span>
-            </div>
-            <div class="sg-card-corners sg-border-grey"></div>
-          </div>
-
-          <!-- Карточка Образование -->
-          <div class="sg-card">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-salmon"><img src="images/education.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Образование</h3>
-              <span class="sg-hex sg-salmon">#f18e6d</span>
-            </div>
-            <div class="sg-card-corners sg-border-salmon"></div>
-          </div>
-
-          <!-- Карточка Экология (По центру в 4 ряду) -->
-          <div class="sg-card sg-card-center">
-            <div class="sg-card-icon">
-              <div class="sg-placeholder sg-bg-lime"><img src="images/eco.webp"></div>
-            </div>
-            <div class="sg-card-info">
-              <h3 class="sg-card-title">Экология</h3>
-              <span class="sg-hex sg-lime">#9cd75d</span>
-            </div>
-            <div class="sg-card-corners sg-border-lime"></div>
-          </div>
+        <div class="sg-footer-text">
+          ТВОЙ ОРИЕНТИР<br />
+          В МИРЕ ПРОФЕССИЙ
         </div>
-      </section>
+      </aside>
 
-      <!-- СЕКЦИЯ 2: ТИПОГРАФИКА -->
-      <section id="typography" class="sg-section">
-        <h2 class="sg-h2">Типографика</h2>
+      <main class="sg-content">
+        <a href="/pages/about.html" class="sg-back-btn">← О нас</a>
 
-        <div class="sg-typo-row">
-          <!-- Колонка 1 -->
-          <div class="sg-typo-col">
-            <p class="sg-label">Заголовки и подзаголовки</p>
-            <h3 class="sg-font-title-lg">Druk Wide</h3>
-            <p class="sg-font-meta">Начертание: Medium<br>Line height: 100%</p>
-            <ul class="sg-font-specs">
-              <li>H1: 30px</li>
-              <li>H2: 25px</li>
-              <li>H3: 18px</li>
-              <li>H4: 16px</li>
-            </ul>
-            <p class="sg-abc sg-abc-bold">
-              Аа Бб Вв Гг Дд Ее Ёё Жж<br>
-              Зз Ии Йй Кк Лл Мм Нн<br>
-              Оо Пп Рр Сс Тт Уу Фф<br>
-              Хх Цц Чч Шш Щщ Ъъ Ыы<br>
-              Ьь Ээ Юю Яя
-            </p>
-          </div>
-
-          <!-- Колонка 2 -->
-          <div class="sg-typo-col">
-            <p class="sg-label">Наборный текст</p>
-            <h3 class="sg-font-title-reg">Akzidenz-Grotesk Pro</h3>
-            <p class="sg-font-meta">Начертание: Regular Extended<br>Line height: 150%<br>Body: 12px</p>
-            <p class="sg-abc sg-abc-reg">
-              Аа Бб Вв Гг Дд Ее Ёё Жж Зз<br>
-              Ии Йй Кк Лл Мм Нн Оо Пп<br>
-              Рр Сс Тт Уу Фф Хх Цц Чч Шш<br>
-              Щщ Ъъ Ыы Ьь Ээ Юю Яя
-            </p>
-          </div>
+        <div class="sg-main-title">
+          <span class="sg-dashed-brace">[</span>
+          Стайлгайд
+          <span class="sg-dashed-brace">]</span>
         </div>
-      </section>
 
-      <!-- СЕКЦИЯ 3: ЛОГОТИП -->
-      <section id="logo" class="sg-section">
-        <h2 class="sg-h2">Логотип</h2>
-        <p class="sg-desc">Логотип отражает идею ориентира в мире профессий. Имеет текстовый и графический варианты.</p>
+        <section id="colors" class="sg-section">
+          <h2 class="sg-h2">Цвета и графика</h2>
+          <p class="sg-desc">
+            Цвета закреплены за профессиональными сферами. Они помогают быстро
+            ориентироваться в каталоге и воспринимать каждую профессию как часть
+            её направления.
+          </p>
 
-        <div class="sg-logo-row">
-          <div class="sg-logo-item">
-            <p class="sg-label">Полный текстовый</p>
-            <div class="sg-logo-view sg-logo-full"><img src="images/logo.svg"></div>
+          <div class="sg-cards-grid">
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-blue">
+                  <img src="images/it.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">IT</h3>
+                <span class="sg-hex sg-blue">#5bb2ff</span>
+              </div>
+              <div class="sg-card-corners sg-border-blue"></div>
+            </div>
+
+            <!-- Карточка Маркетинг -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-orange">
+                  <img src="images/marketing.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Маркетинг и PR</h3>
+                <span class="sg-hex sg-orange">#ff8c3f</span>
+              </div>
+              <div class="sg-card-corners sg-border-orange"></div>
+            </div>
+
+            <!-- Карточка Медицина -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-teal">
+                  <img src="images/medicine.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Медицина</h3>
+                <span class="sg-hex sg-teal">#80eaff</span>
+              </div>
+              <div class="sg-card-corners sg-border-teal"></div>
+            </div>
+
+            <!-- Карточка Креатив -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-pink">
+                  <img src="images/creative.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Креативный<br />сектор</h3>
+                <span class="sg-hex sg-pink">#ff768d</span>
+              </div>
+              <div class="sg-card-corners sg-border-pink"></div>
+            </div>
+
+            <!-- Карточка Естественные науки -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-yellow">
+                  <img src="images/eco.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Естественные<br />науки</h3>
+                <span class="sg-hex sg-yellow">#e6bb77</span>
+              </div>
+              <div class="sg-card-corners sg-border-yellow"></div>
+            </div>
+
+            <!-- Карточка Точные науки -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-mint">
+                  <img src="images/accurate.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Точные науки</h3>
+                <span class="sg-hex sg-mint">#80ddbf</span>
+              </div>
+              <div class="sg-card-corners sg-border-mint"></div>
+            </div>
+
+            <!-- Карточка Финансы -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-gold">
+                  <img src="images/finance.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Финансы</h3>
+                <span class="sg-hex sg-gold">#ffcd55</span>
+              </div>
+              <div class="sg-card-corners sg-border-gold"></div>
+            </div>
+
+            <!-- Карточка Строительство -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-grey">
+                  <img src="images/construction.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Строительство</h3>
+                <span class="sg-hex sg-grey">#c2d3e5</span>
+              </div>
+              <div class="sg-card-corners sg-border-grey"></div>
+            </div>
+
+            <!-- Карточка Образование -->
+            <div class="sg-card">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-salmon">
+                  <img src="images/education.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Образование</h3>
+                <span class="sg-hex sg-salmon">#f18e6d</span>
+              </div>
+              <div class="sg-card-corners sg-border-salmon"></div>
+            </div>
+
+            <!-- Карточка Экология (По центру в 4 ряду) -->
+            <div class="sg-card sg-card-center">
+              <div class="sg-card-icon">
+                <div class="sg-placeholder sg-bg-lime">
+                  <img src="images/eco.webp" />
+                </div>
+              </div>
+              <div class="sg-card-info">
+                <h3 class="sg-card-title">Экология</h3>
+                <span class="sg-hex sg-lime">#9cd75d</span>
+              </div>
+              <div class="sg-card-corners sg-border-lime"></div>
+            </div>
           </div>
-          <div class="sg-logo-item">
-            <p class="sg-label">Краткий графический</p>
-            <div class="sg-logo-view sg-logo-short"><img src="images/logo2.svg"></div>
+        </section>
+
+        <!-- СЕКЦИЯ 2: ТИПОГРАФИКА -->
+        <section id="typography" class="sg-section">
+          <h2 class="sg-h2">Типографика</h2>
+
+          <div class="sg-typo-row">
+            <!-- Колонка 1 -->
+            <div class="sg-typo-col">
+              <p class="sg-label">Заголовки и подзаголовки</p>
+              <h3 class="sg-font-title-lg">Druk Wide</h3>
+              <p class="sg-font-meta">
+                Начертание: Medium<br />Line height: 100%
+              </p>
+              <ul class="sg-font-specs">
+                <li>H1: 30px</li>
+                <li>H2: 25px</li>
+                <li>H3: 18px</li>
+                <li>H4: 16px</li>
+              </ul>
+              <p class="sg-abc sg-abc-bold">
+                Аа Бб Вв Гг Дд Ее Ёё Жж<br />
+                Зз Ии Йй Кк Лл Мм Нн<br />
+                Оо Пп Рр Сс Тт Уу Фф<br />
+                Хх Цц Чч Шш Щщ Ъъ Ыы<br />
+                Ьь Ээ Юю Яя
+              </p>
+            </div>
+
+            <!-- Колонка 2 -->
+            <div class="sg-typo-col">
+              <p class="sg-label">Наборный текст</p>
+              <h3 class="sg-font-title-reg">Akzidenz-Grotesk Pro</h3>
+              <p class="sg-font-meta">
+                Начертание: Regular Extended<br />Line height: 150%<br />Body:
+                12px
+              </p>
+              <p class="sg-abc sg-abc-reg">
+                Аа Бб Вв Гг Дд Ее Ёё Жж Зз<br />
+                Ии Йй Кк Лл Мм Нн Оо Пп<br />
+                Рр Сс Тт Уу Фф Хх Цц Чч Шш<br />
+                Щщ Ъъ Ыы Ьь Ээ Юю Яя
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- СЕКЦИЯ 4: СЕТКА -->
-      <section id="grid" class="sg-section">
-        <h2 class="sg-h2">Сетка</h2>
-        <div class="sg-grid-row">
-          <div class="sg-grid-col">
-            <p class="sg-label">Desktop</p>
-            <p class="sg-font-meta">4 колонки с отступами 40px.<br>Отступ между блоками 40px, между элементами внутри блока 20px.</p>
-            <div class="sg-grid-visual"><img src="images/desc.webp"></div>
+        <!-- СЕКЦИЯ 3: ЛОГОТИП -->
+        <section id="logo" class="sg-section">
+          <h2 class="sg-h2">Логотип</h2>
+          <p class="sg-desc">
+            Логотип отражает идею ориентира в мире профессий. Имеет текстовый и
+            графический варианты.
+          </p>
+
+          <div class="sg-logo-row">
+            <div class="sg-logo-item">
+              <p class="sg-label">Полный текстовый</p>
+              <div class="sg-logo-view sg-logo-full">
+                <img src="images/logo.svg" />
+              </div>
+            </div>
+            <div class="sg-logo-item">
+              <p class="sg-label">Краткий графический</p>
+              <div class="sg-logo-view sg-logo-short">
+                <img src="images/logo2.svg" />
+              </div>
+            </div>
           </div>
-          <div class="sg-grid-col">
-            <p class="sg-label">Mobile</p>
-            <p class="sg-font-meta">2 колонки с отступами 20px.<br>Отступ между блоками 25px, между элементами внутри блока 10px.</p>
-            <div class="sg-grid-visual"><img src="images/mobile.webp"></div>
+        </section>
+
+        <!-- СЕКЦИЯ 4: СЕТКА -->
+        <section id="grid" class="sg-section">
+          <h2 class="sg-h2">Сетка</h2>
+          <div class="sg-grid-row">
+            <div class="sg-grid-col">
+              <p class="sg-label">Desktop</p>
+              <p class="sg-font-meta">
+                4 колонки с отступами 40px.<br />Отступ между блоками 40px,
+                между элементами внутри блока 20px.
+              </p>
+              <div class="sg-grid-visual"><img src="images/desc.webp" /></div>
+            </div>
+            <div class="sg-grid-col">
+              <p class="sg-label">Mobile</p>
+              <p class="sg-font-meta">
+                2 колонки с отступами 20px.<br />Отступ между блоками 25px,
+                между элементами внутри блока 10px.
+              </p>
+              <div class="sg-grid-visual"><img src="images/mobile.webp" /></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- ФУТЕР ВНУТРИ СКРОЛЛА -->
-      <footer class="sg-bottom-area">
-        <div class="sg-bottom-left">
-          <div class="sg-logo-sm">axis</div>
-          <div class="sg-arrow-long">⟶</div>
-          <div class="sg-bottom-slogan">
-            ТВОЙ ОРИЕНТИР<br>В МИРЕ ПРОФЕССИЙ
+        <!-- ФУТЕР ВНУТРИ СКРОЛЛА -->
+        <footer class="sg-bottom-area">
+          <div class="sg-bottom-left">
+            <div class="sg-logo-sm">axis</div>
+            <div class="sg-arrow-long">⟶</div>
+            <div class="sg-bottom-slogan">
+              ТВОЙ ОРИЕНТИР<br />В МИРЕ ПРОФЕССИЙ
+            </div>
           </div>
-        </div>
-        <div class="sg-bottom-right">
-          <a href="#" class="sg-btn">РАССЫЛКА ➔</a>
-          <a href="#" class="sg-btn">ТГ КАНАЛ ➔</a>
-        </div>
-      </footer>
+          <div class="sg-bottom-right">
+            <a href="#" class="sg-btn">РАССЫЛКА ➔</a>
+            <a href="#" class="sg-btn">ТГ КАНАЛ ➔</a>
+          </div>
+        </footer>
+      </main>
 
-    </main>
-
-    <!-- ПРАВАЯ ПАНЕЛЬ (Якоря) -->
-    <aside class="sg-sidebar-right">
-      <nav class="sg-anchor-nav">
-        <a href="#colors">Цвета и графика</a>
-        <a href="#typography">Типографика</a>
-        <a href="#logo">Логотип</a>
-        <a href="#grid">Сетка</a>
-      </nav>
-    </aside>
-
-  </div>
-
+      <!-- ПРАВАЯ ПАНЕЛЬ (Якоря) -->
+      <aside class="sg-sidebar-right">
+        <nav class="sg-anchor-nav">
+          <a href="#colors">Цвета и графика</a>
+          <a href="#typography">Типографика</a>
+          <a href="#logo">Логотип</a>
+          <a href="#grid">Сетка</a>
+        </nav>
+      </aside>
+    </div>
   </body>
 </html>

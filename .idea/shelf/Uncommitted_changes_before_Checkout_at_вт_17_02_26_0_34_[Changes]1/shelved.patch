@@ -1,0 +1,544 @@
+Index: src/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"ru\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Axis</title>\r\n<!--    <link rel=\"stylesheet\" href=\"./css/style.css\">-->\r\n    <meta\r\n      name=\"title\"\r\n      content=\"Axis - медиа о профессиях\"\r\n    />\r\n    <meta\r\n      name=\"description\"\r\n      content=\"Axis помогает разобраться, что происходит в мире работы и какие варианты открыты перед тобой\"\r\n    />\r\n    <meta property=\"og:type\" content=\"website\" />\r\n    <meta property=\"og:locale\" content=\"ru_RU\" />\r\n    <meta property=\"og:site_name\" content=\"Axis\" />\r\n    <meta\r\n      property=\"og:url\"\r\n      content=content=\"https://hseadc.github.io/codiki/\"\r\n    />\r\n    <meta\r\n      property=\"og:title\"\r\n      content=\"Axis - медиа о профессиях\"\r\n    />\r\n    <meta\r\n      property=\"og:description\"\r\n      content=\"Axis помогает разобраться, что происходит в мире работы и какие варианты открыты перед тобой\"\r\n    />\r\n    <meta\r\n      property=\"og:image\"\r\n      content=\"https://raw.githubusercontent.com/hseadc/codiki/refs/heads/main/src/images/meta/og-index.png\"\r\n    />\r\n\r\n\r\n    <meta property=\"twitter:card\" content=\"summary_large_image\" />\r\n    <meta\r\n      property=\"twitter:url\"\r\n      content=\"https://hseadc.github.io/codiki/\"\r\n    />\r\n    <meta\r\n      property=\"twitter:title\"\r\n      content=\"Axis - медиа о профессиях\"\r\n    />\r\n    <meta\r\n      property=\"twitter:description\"\r\n      content=\"Axis помогает разобраться, что происходит в мире работы и какие варианты открыты перед тобой\"\r\n    />\r\n    <meta\r\n      property=\"twitter:image\"\r\n      content=\"https://raw.githubusercontent.com/hseadc/codiki/refs/heads/main/src/images/meta/og-index.png\"\r\n    />\r\n</head>\r\n<body>\r\n<header class=\"hero-section\">\r\n    <div class=\"hero-content\">\r\n        <nav class=\"hero-top-nav\">\r\n            <a href=\"pages/about.html\">О нас</a>\r\n            <a href=\"pages/category.html\">Каталог</a>\r\n            <a href=\"pages/search.html\">Тренды</a>\r\n            <a href=\"#\">Навыки</a>\r\n            <a href=\"pages/test.html\">Тесты</a>\r\n        </nav>\r\n        <!-- Логотип по центру -->\r\n        <div class=\"hero-logo\">\r\n            <a href=\"index.html\">\r\n                <img src=\"images/logo.svg\" alt=\"Axis - Главная страница\">\r\n            </a>\r\n        </div>\r\n\r\n        <div class=\"floating-icon icon-1\"><img src=\"images/it.webp\"></div>\r\n        <div class=\"floating-icon icon-2\"><img src=\"images/marketing.webp\"></div>\r\n        <div class=\"floating-icon icon-3\"><img src=\"images/creative.webp\"></div>\r\n        <div class=\"floating-icon icon-4\"><img src=\"images/finance.webp\"></div>\r\n        <div class=\"floating-icon icon-5\"><img src=\"images/medicine.webp\"></div>\r\n        <div class=\"floating-icon icon-6\"><img src=\"images/construction.webp\"></div>\r\n        <div class=\"floating-icon icon-7\"><img src=\"images/education.webp\"></div>\r\n        <div class=\"floating-icon icon-8\"><img src=\"images/eco.webp\"></div>\r\n        <div class=\"floating-icon icon-9\"><img src=\"images/humanitarian.webp\"></div>\r\n    </div>\r\n</header>\r\n\r\n<!-- ОСНОВНОЙ КОНТЕЙНЕР (Слева меню, Справа контент) -->\r\n<div class=\"main-wrapper\">\r\n\r\n    <!-- ЛЕВОЕ МЕНЮ (ФИКСИРОВАННОЕ) -->\r\n    <aside class=\"sidebar\">\r\n        <div class=\"sidebar-logo\"><img src=\"images/logo.svg\"></div>\r\n        <nav class=\"sidebar-nav\">\r\n            <a href=\"pages/about.html\">О нас</a>\r\n            <a href=\"pages/category.html\">Каталог</a>\r\n            <a href=\"pages/search.html\">Тренды</a>\r\n            <a href=\"pages/category.html\">Навыки</a>\r\n            <a href=\"pages/test.html\">Тесты</a>\r\n        </nav>\r\n        <div class=\"sidebar-footer\">\r\n            Твой ориентир<br>в мире профессий\r\n        </div>\r\n    </aside>\r\n\r\n    <!-- ПРАВАЯ ЧАСТЬ (СКРОЛЛИТСЯ) -->\r\n    <main class=\"content\">\r\n\r\n        <!-- Блок с категориями и розовым баннером -->\r\n        <div class=\"top-content-grid\">\r\n\r\n            <!-- Список категорий -->\r\n            <div class=\"categories-list\">\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#5BB2FF\"\r\n                     data-img=\"it\"\r\n                     data-title=\"IT\"\r\n                     data-desc=\"Разработка, тестирование, аналитика и управление проектами.\">IT</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#FF8C3F\"\r\n                     data-img=\"marketing\"\r\n                     data-title=\"Marketing\"\r\n                     data-desc=\"Продвижение брендов, реклама и PR.\">Маркетинг и PR</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#FF768D\"\r\n                     data-img=\"creative\"\r\n                     data-title=\"Creative\"\r\n                     data-desc=\"Дизайн, мода, искусство и креатив.\">Креативные индустрии</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#80EAFF\"\r\n                     data-img=\"medicine\"\r\n                     data-title=\"Medicine\"\r\n                     data-desc=\"Лечебное дело и биотехнологии.\">Медицина</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#FFCD55\"\r\n                     data-img=\"finance\"\r\n                     data-title=\"Finance\"\r\n                     data-desc=\"Банкинг, инвестиции и аудит.\">Финансы</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#80DDBF\"\r\n                     data-img=\"accurate\"\r\n                     data-title=\"Exact Sciences\"\r\n                     data-desc=\"Математика, физика и химия.\">Точные науки</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#E6BB77\"\r\n                     data-img=\"humanitarian\"\r\n                     data-title=\"Natural Sciences\"\r\n                     data-desc=\"Биология, география и геология.\">Естественные науки</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#C2D3E5\"\r\n                     data-img=\"construction\"\r\n                     data-title=\"Construction\"\r\n                     data-desc=\"Архитектура и инженерия.\">Строительство</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#F18E6D\"\r\n                     data-img=\"education\"\r\n                     data-title=\"Education\"\r\n                     data-desc=\"Педагогика и преподавание.\">Образование</div>\r\n\r\n                <div class=\"cat-item\"\r\n                     data-color=\"#9cd75d\"\r\n                     data-img=\"eco\"\r\n                     data-title=\"Ecology\"\r\n                     data-desc=\"Охрана природы и эко-активизм.\">Экология</div>\r\n            </div>\r\n\r\n            <!-- Розовый промо-блок -->\r\n            <div class=\"promo-banner\" id=\"banner-bg\">\r\n\r\n\r\n                <div class=\"banner-content\">\r\n                    <h2 id=\"banner-title\">Три шага <br>к твоей специальности</h2>\r\n\r\n\r\n                    <div class=\"steps\" id=\"banner-steps\">\r\n                        <p>→ прочитай статью об интересующей тебя сфере</p>\r\n                        <p>→ пройди тест, чтобы определить навыки</p>\r\n                        <p>→ ознакомься с мнением экспертов</p>\r\n                    </div>\r\n\r\n\r\n                    <p id=\"banner-desc\" style=\"display: none;\"></p>\r\n                    <a href=\"#\" class=\"btn-black\" id=\"banner-btn\">пройти тест →</a>\r\n                </div>\r\n\r\n                <div class=\"computer-img-placeholder\" id=\"banner-img-container\">\r\n                    <img src=\"images/computer.webp\" class=\"banner-image\" alt=\"computer\">\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Статьи о профессиях -->\r\n        <section class=\"articles-section\">\r\n            <h2 class=\"section-title\">Статьи о профессиях</h2>\r\n            <div class=\"cards-grid\">\r\n                <!-- Карточка 1 -->\r\n                <div class=\"card card-blue\">\r\n                    <div class=\"card-header\">\r\n                        <span>Front-end разработчик</span>\r\n                        <span class=\"card-header text\">Создаёт видимую часть сайтов и приложений: всё с чем взаимодействует пользователь (кнопки, меню, анимации, формы).</span>\r\n                    </div>\r\n                    <div class=\"card-img-placeholder\"><img src=\"images/it.webp\"></div>\r\n                    <div class=\"card-footer\">\r\n                        <span class=\"icon-sq\">v3</span>\r\n                        <a href=\"#\" class=\"btn-read\">читать →</a>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"card card-orange\">\r\n                    <div class=\"card-header\">\r\n                        <span>SSM</span>\r\n                        <span class=\"card-header text\">Специалист по маркетингу, который отвечает за продвижение компании в соцсетях. Выстраивает стратегию, создаёт контент.</span>\r\n                    </div>\r\n                    <div class=\"card-img-placeholder\"><img src=\"images/marketing.webp\"></div>\r\n                    <div class=\"card-footer\">\r\n                        <span class=\"icon-sq\">v3</span>\r\n                        <a href=\"#\" class=\"btn-read\">читать →</a>\r\n                    </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"card card-green\">\r\n                    <div class=\"card-header\">\r\n                        <span>Ещё...</span>\r\n                        <div class=\"card-img-placeholder theme\"><img src=\"images/dispersion-glass-_16_.webp\"></div>\r\n                    </div>\r\n                    <div class=\"card-footer\">\r\n                        <a href=\"#\" class=\"btn-read\">читать →</a>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n\r\n        <!-- Тренды и прогнозы -->\r\n        <section class=\"trends-section\">\r\n            <h2 class=\"section-title\">Тренды и прогнозы</h2>\r\n            <div class=\"trends-grid\">\r\n                <div class=\"trend-card\">\r\n                    <h3>Зумеры выбирают спокойную карьеру</h3>\r\n                    <img class=\"trend-img\" src=\"images/dispersion-glass-_16_.webp\">\r\n                    <a href=\"#\" class=\"btn-read-sm\">читать →</a>\r\n                </div>\r\n                <div class=\"trend-card\">\r\n                    <h3>Профессии, которые появятся к 2030 году</h3>\r\n                    <img class=\"trend-img\" src=\"images/Heart.webp\">\r\n                    <a href=\"#\" class=\"btn-read-sm\">читать →</a>\r\n                </div>\r\n                <div class=\"trend-card\">\r\n                    <h3>Главные навыки будущего</h3>\r\n                    <img class=\"trend-img\" src=\"images/3.webp\">\r\n                    <a href=\"#\" class=\"btn-read-sm\">читать →</a>\r\n                </div>\r\n                <div class=\"trend-card\">\r\n                    <h3>Почему портфолио стало важнее диплома</h3>\r\n                    <img class=\"trend-img\" src=\"images/Plus-Abstract-Shape.webp\">\r\n                    <a href=\"#\" class=\"btn-read-sm\">читать →</a>\r\n                </div>\r\n            </div>\r\n        </section>\r\n\r\n        <div class=\"mobile-header\" style=\"display:none;\">\r\n            <div class=\"mob-logo-icon\">axis</div>\r\n            <div class=\"mob-burger\">☰</div>\r\n        </div>\r\n        <!-- Футер внутри контента -->\r\n        <footer class=\"content-footer\">\r\n            <div class=\"footer-logo\"><img src=\"images/logo.svg\"></div>\r\n            <div class=\"footer-line\"></div>\r\n            <div class=\"footer-slogan\">ТВОЙ ОРИЕНТИР <br> В МИРЕ ПРОФЕССИЙ</div>\r\n            <div class=\"footer-buttons\">\r\n                <button class=\"btn-black\">РАССЫЛКА →</button>\r\n                <button class=\"btn-black\">ТГ КАНАЛ →</button>\r\n            </div>\r\n        </footer>\r\n\r\n\r\n    </main>\r\n</div>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/index.html b/src/index.html
+--- a/src/index.html	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ b/src/index.html	(date 1771277584597)
+@@ -188,7 +188,7 @@
+                 </div>
+ 
+                 <div class="computer-img-placeholder" id="banner-img-container">
+-                    <img src="images/computer.webp" class="banner-image" alt="computer">
++                    <img src="images/comp.webp" class="banner-image" alt="computer">
+                 </div>
+ 
+             </div>
+@@ -227,7 +227,7 @@
+                 <div class="card card-green">
+                     <div class="card-header">
+                         <span>Ещё...</span>
+-                        <div class="card-img-placeholder theme"><img src="images/dispersion-glass-_16_.webp"></div>
++                        <div class="card-img-placeholder theme"><img src=""></div>
+                     </div>
+                     <div class="card-footer">
+                         <a href="#" class="btn-read">читать →</a>
+Index: src/pages/test/test1.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/pages/test/test1.html b/src/pages/test/test1.html
+--- a/src/pages/test/test1.html	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ b/src/pages/test/test1.html	(date 1771276972213)
+@@ -1,0 +1,139 @@
++<!DOCTYPE html>
++<html lang="ru">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Axis - Тестирование</title>
++    <meta name="title" content="Axis - медиа о профессиях">
++    <meta name="description" content="Axis помогает разобраться, что происходит в мире работы и какие варианты открыты перед тобой">
++
++    <!-- Open Graph -->
++    <meta property="og:type" content="website">
++    <meta property="og:locale" content="ru_RU">
++    <meta property="og:site_name" content="Axis">
++    <meta property="og:url" content="https://hseadc.github.io/codiki/">
++    <meta property="og:title" content="Axis - медиа о профессиях">
++    <meta property="og:description" content="Axis помогает разобраться, что происходит в мире работы и какие варианты открыты перед тобой">
++    <meta property="og:image" content="https://raw.githubusercontent.com/hseadc/codiki/refs/heads/main/src/images/meta/og-index.png">
++
++    <!-- Twitter Card -->
++    <meta property="twitter:card" content="summary_large_image">
++    <meta property="twitter:url" content="https://hseadc.github.io/codiki/">
++    <meta property="twitter:title" content="Axis - медиа о профессиях">
++    <meta property="twitter:description" content="Axis помогает разобраться, что происходит в мире работы и какие варианты открыты перед тобой">
++    <meta property="twitter:image" content="https://raw.githubusercontent.com/hseadc/codiki/refs/heads/main/src/images/meta/og-index.png">
++</head>
++<body>
++<!-- Мобильный хедер -->
++<div class="mobile-header" style="display: none;">
++    <div class="mob-logo-icon">axis</div>
++    <div class="mob-burger">☰</div>
++</div>
++
++<div class="main-wrapper">
++    <!-- ЛЕВАЯ ФИКСИРОВАННАЯ КОЛОНКА -->
++    <aside class="sidebar">
++        <div class="hero-logo">
++            <a href="/index.html">
++                <img class="logo-nav-nav" src="../../images/logo.svg" alt="Axis - Главная страница">
++            </a>
++        </div>
++
++        <nav class="sidebar-nav">
++            <a href="/pages/about.html" class="nav-link active">О нас</a>
++            <a href="/pages/category.html" class="nav-link">Каталог</a>
++            <a href="/pages/category.html" class="nav-link">Тренды</a>
++            <a href="/pages/about.html" class="nav-link">Навыки</a>
++            <a href="/pages/about.html" class="nav-link">Тесты</a>
++        </nav>
++
++        <div class="sidebar-footer">
++            Твой ориентир<br>в мире профессий
++        </div>
++    </aside>
++
++    <!-- ОСНОВНОЙ КОНТЕЙНЕР (центр + правая колонка) -->
++    <div class="main-content">
++
++        <!-- ЦЕНТРАЛЬНАЯ КОЛОНКА (скроллится) -->
++        <main class="ax-center-scroll">
++            
++            <div id="view-quiz">
++                <header class="ax-header">
++                    <a href="#" class="ax-back-link">← Тест</a>
++                </header>
++                <!-- Сюда JS будет вставлять вопросы -->
++                <div id="quiz-area"></div>
++            </div>
++
++            <!-- 2. БЛОК РЕЗУЛЬТАТА (Скрыт по умолчанию) -->
++            <div id="view-result" class="hidden">
++                <div class="ax-title-wrap">
++                    <span class="ax-brace">[</span> Твой результат <span class="ax-brace">]</span>
++                </div>
++
++                <div class="ax-res-item">
++                    <div class="ax-res-header">1. IT: 85%</div>
++                    <p class="ax-res-desc">Ты мыслишь, как инженер цифрового мира: аналитический склад ума и внимание к деталям. Тебе будут интересны системы, алгоритмы и создание рабочих решений из кода..</p>
++                    <p class="ax-res-profs"><span class="ax-link-u">Front-end</span>, <span class="ax-link-u">Data Scientist</span>, <span class="ax-link-u">DevOps-инженер</span>, <span class="ax-link-u">Кибербезопасность</span></p>
++                    <button class="ax-res-btn btn-blue">ПЕРЕЙТИ В КАТАЛОГ ➔</button>
++                </div>
++
++                <div class="ax-res-item">
++                    <div class="ax-res-header">2. Точные науки: 70%</div>
++                    <p class="ax-res-desc">Тебе важны чёткие законы, модели и доказательства. Ты любишь докопаться до сути явлений и работать
++                        с объективными данными.</p>
++                    <p class="ax-res-profs"><span class="ax-link-u">Физик-исследователь</span>, <span class="ax-link-u">Химик-технолог</span>, <span class="ax-link-u">Математик</span>, <span class="ax-link-u">Криптограф</span></p>
++                    <button class="ax-res-btn btn-green">ПЕРЕЙТИ В КАТАЛОГ ➔</button>
++                </div>
++
++                <div class="ax-res-item">
++                    <div class="ax-res-header">3. Строительство: 60% </div>
++                    <p class="ax-res-desc">Ты ценишь порядок, практичность и осязаемый результат. Тебе нравится превращать проекты в реальные, полезные объекты.</p>
++                    <p class="ax-res-profs"><span class="ax-link-u">Инженер-проектировщик</span>, <span class="ax-link-u">Архитектор</span>, <span class="ax-link-u">Прораб</span>, <span class="ax-link-u">BIM-менеджер</span></p>
++                    <button class="ax-res-btn btn-gray">ПЕРЕЙТИ В КАТАЛОГ ➔</button>
++                </div>
++
++
++            </div>
++        </main>
++
++        <!-- ПРАВАЯ ФИКСИРОВАННАЯ КОЛОНКА (всегда справа) -->
++        <aside class="ax-sidebar-right">
++            <!-- 1. БЛОК РУБРИКАТОРА (Виден сразу) -->
++            <div id="sidebar-quiz">
++                <div class="ax-rubricator" id="rubricator"></div>
++            </div>
++
++            <!-- 2. БЛОК ВИДЖЕТА (Скрыт по умолчанию) -->
++            <div id="sidebar-result" class="hidden">
++                <div class="ax-cursor-3d">
++                    <img class="it-res" src="../../images/it.webp">
++                    <img class="cons-res" src="../../images/construction.webp">
++                    <img class="acc-res" src="../../images/accurate.webp">
++                </div>
++                <div class="ax-widget-box">
++                    <div class="ax-widget-header">
++                        <span class="ax-border-corner tl"></span>
++                        <span class="ax-border-corner tr"></span>
++                        <span class="ax-border-corner bl"></span>
++                        <span class="ax-border-corner br"></span>
++                    </div>
++                <div class="ax-widget-result">
++                    <div class="ax-pill ax-pill-blue">поле для заметок:</div>
++                    <div class="ax-arrow-down">↓</div>
++                    <div class="ax-pill ax-rotate-left">выдели текст</div>
++                    <div class="ax-arrow-down">↓</div>
++                    <div class="ax-pill ax-rotate-right">перетащи сюда</div>
++                    <div class="ax-arrow-down">↓</div>
++                    <div class="ax-pill">сохрани</div>
++                </div>
++                    <button class="ax-btn-save">СОХРАНИТЬ →</button>
++            </div>
++        </aside>
++    </div>
++</div>
++
++<script src="../../js/test1.js"></script>
++</body>
++</html>
+Index: .idea/codiki.iml
+===================================================================
+diff --git a/.idea/codiki.iml b/.idea/codiki.iml
+deleted file mode 100644
+--- a/.idea/codiki.iml	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ /dev/null	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="WEB_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$">
+-      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+-      <excludeFolder url="file://$MODULE_DIR$/temp" />
+-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ /dev/null	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ /dev/null	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/codiki.iml" filepath="$PROJECT_DIR$/.idea/codiki.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ /dev/null	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: src/js/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import '../css/style.css'\r\n\r\nconsole.log('hey')\r\n\r\n\r\nimport itImg from '/images/it.webp';\r\nimport marketingImg from '/images/marketing.webp';\r\nimport creativeImg from '/images/creative.webp';\r\nimport medicineImg from '/images/medicine.webp';\r\nimport financeImg from '/images/finance.webp';\r\nimport accurateImg from '/images/accurate.webp';\r\nimport humanitarianImg from '/images/humanitarian.webp';\r\nimport constructionImg from '/images/construction.webp';\r\nimport educationImg from '/images/education.webp';\r\nimport ecoImg from '/images/eco.webp';\r\nimport computerImg from '/images/computer.webp';\r\n\r\n\r\nconst images = {\r\n    it: itImg,\r\n    marketing: marketingImg,\r\n    creative: creativeImg,\r\n    medicine: medicineImg,\r\n    finance: financeImg,\r\n    accurate: accurateImg,\r\n    humanitarian: humanitarianImg,\r\n    construction: constructionImg,\r\n    education: educationImg,\r\n    eco: ecoImg\r\n};\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    const categories = document.querySelectorAll('.cat-item');\r\n    const banner = document.getElementById('banner-bg');\r\n    const bannerImage = document.querySelector('.banner-image');\r\n\r\n\r\n    const bannerTitle = document.getElementById('banner-title');\r\n    const bannerDesc = document.getElementById('banner-desc');\r\n    const bannerSteps = document.getElementById('banner-steps');\r\n\r\n\r\n    const defaultImageSrc = computerImg; // Используем импортированную картинку\r\n    const defaultTitle = bannerTitle.innerHTML;\r\n\r\n    categories.forEach(item => {\r\n\r\n        item.addEventListener('mouseenter', function() {\r\n\r\n            const imgKey = this.getAttribute('data-img');\r\n            const color = this.getAttribute('data-color');\r\n            const title = this.getAttribute('data-title');\r\n            const desc = this.getAttribute('data-desc');\r\n\r\n\r\n            this.style.color = color;\r\n\r\n\r\n            banner.style.background = color;\r\n\r\n\r\n            if (images[imgKey]) {\r\n                bannerImage.src = images[imgKey];\r\n                bannerImage.classList.add('zoom-active');\r\n            }\r\n\r\n\r\n\r\n            if(bannerSteps) bannerSteps.style.display = 'none';\r\n\r\n            if(bannerDesc) {\r\n                bannerDesc.style.display = 'block';\r\n                bannerDesc.textContent = desc;\r\n            }\r\n\r\n            if(bannerTitle) bannerTitle.textContent = title;\r\n        });\r\n\r\n\r\n        item.addEventListener('mouseleave', function() {\r\n            this.style.color = '';\r\n            banner.style.background = '';\r\n            bannerImage.src = defaultImageSrc;\r\n\r\n            bannerImage.classList.remove('zoom-active');\r\n            if(bannerSteps) bannerSteps.style.display = 'block';\r\n            if(bannerDesc) bannerDesc.style.display = 'none';\r\n            if(bannerTitle) bannerTitle.innerHTML = defaultTitle;\r\n        });\r\n    });\r\n});
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/js/index.js b/src/js/index.js
+--- a/src/js/index.js	(revision 657326596a084b8ee1219bfb53b93b33c4216ab7)
++++ b/src/js/index.js	(date 1771277279192)
+@@ -3,17 +3,17 @@
+ console.log('hey')
+ 
+ 
+-import itImg from '/images/it.webp';
+-import marketingImg from '/images/marketing.webp';
+-import creativeImg from '/images/creative.webp';
+-import medicineImg from '/images/medicine.webp';
+-import financeImg from '/images/finance.webp';
+-import accurateImg from '/images/accurate.webp';
+-import humanitarianImg from '/images/humanitarian.webp';
+-import constructionImg from '/images/construction.webp';
+-import educationImg from '/images/education.webp';
+-import ecoImg from '/images/eco.webp';
+-import computerImg from '/images/computer.webp';
++import itImg from '../images/it.webp';
++import marketingImg from '../images/marketing.webp';
++import creativeImg from '../images/creative.webp';
++import medicineImg from '../images/medicine.webp';
++import financeImg from '../images/finance.webp';
++import accurateImg from '../images/accurate.webp';
++import humanitarianImg from '../images/humanitarian.webp';
++import constructionImg from '../images/construction.webp';
++import educationImg from '../images/education.webp';
++import ecoImg from '../images/eco.webp';
++import computerImg from '../images/comp.webp';
+ 
+ 
+ const images = {
+Index: src/js/test1.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/js/test1.js b/src/js/test1.js
+new file mode 100644
+--- /dev/null	(date 1771277279189)
++++ b/src/js/test1.js	(date 1771277279189)
+@@ -0,0 +1,253 @@
++addEventListener("DOMContentLoaded", function() {
++const questionsData = [
++    {
++        id: 1,
++        color: '#5BB2FF',
++        question: "На школьном празднике ты:",
++        options: [
++            { key: 'A', text: "Организатор (сценарий, логистика)" },
++            { key: 'Б', text: "Креативщик (концепция, оформление)" },
++            { key: 'В', text: "Коммуникатор (оптимизация общения)" },
++            { key: 'Г', text: "Технарь (оборудование)" }
++        ]
++    },
++    {
++        id: 2,
++        color: '#F18E6D',
++        question: "Какой процесс для вас осмысленнее?",
++        options: [
++            { key: 'A', text: "Анализировать данные и прогнозировать" },
++            { key: 'Б', text: "Наблюдать за природой/организмами" },
++            { key: 'В', text: "Писать алгоритм/инструкцию" },
++            { key: 'Г', text: "Создавать образ/историю" }
++        ]
++    },
++    {
++        id: 3,
++        color: '#9CD75D',
++        question: "Что беспокоит больше всего?",
++        options: [
++            { key: 'A', text: "Низкое качество услуг/продуктов" },
++            { key: 'Б', text: "Грязь, вырубка лесов, вымирание видов" },
++            { key: 'В', text: "Цифровые угрозы и сырой софт" },
++            { key: 'Г', text: "Люди не слышат друг друга" }
++        ]
++    },
++    {
++        id: 4,
++        color: '#9FAAB6',
++        question: "Как учите новое?:",
++        options: [
++            { key: 'A', text: "Статьи, исследования, систематизация" },
++            { key: 'Б', text: "Видео, интерактив, пробы" },
++            { key: 'В', text: "Наставник, живые примеры" },
++            { key: 'Г', text: "Нормативка, ГОСТы, стандарты" }
++        ]
++    },
++    {
++        id: 5,
++        color: '#FFCD55', // Желтый
++        question: " Идеальный результат труда — это:",
++        options: [
++            { key: 'A', text: "Конкретная польза, измеримый итог" },
++            { key: 'Б', text: "Нечто уникальное, меняющее взгляд" },
++            { key: 'В', text: "Новое знание, фундамент" },
++            { key: 'Г', text: "Помощь людям/природе" }
++        ]
++    },
++    {
++        id: 6,
++        color: '#80DDBF', // Розовый
++        question: "Какому формату доверяете?",
++        options: [
++            { key: 'A', text: "ТЗ, гайдлайн, чёткий план" },
++            { key: 'Б', text: "Брейншторм, импровизация" },
++            { key: 'В', text: "Методика, протокол" },
++            { key: 'Г', text: "Живые отзывы, личный опыт" }
++        ]
++    },
++    {
++        id: 7,
++        color: '#80EAFF', // Бирюзовый
++        question: "Что важнее в команде?",
++        options: [
++            { key: 'A', text: "Экспертность" },
++            { key: 'Б', text: "Взаимопонимание" },
++            { key: 'В', text: "Роли и ответственность" },
++            { key: 'Г', text: "Общие ценности" }
++        ]
++    },
++    {
++        id: 8,
++        color: '#E6BB77', // Темно-оранжевый
++        question: "Заметили проблему. Первый шаг?",
++        options: [
++            { key: 'A', text: "Изучить причины" },
++            { key: 'Б', text: "Сразу предложить решение" },
++            { key: 'В', text: "Оценить влияние на людей/природу" },
++            { key: 'Г', text: "Визуализировать, донести" }
++        ]
++    },
++    {
++        id: 9,
++        color: '#FF768D', // Синий насыщенный
++        question: "Что цените в информации?",
++        options: [
++            { key: 'A', text: "Точность, цифры" },
++            { key: 'Б', text: "Новизну" },
++            { key: 'В', text: "Применимость" },
++            { key: 'Г', text: "Системность, картину в целом" }
++        ]
++    },
++    {
++        id: 10,
++        color: '#FF8C3F', // Темно-синий
++        question: "Ваша рабочая метафора:",
++        options: [
++            { key: 'A', text: "Архитектор (строю)" },
++            { key: 'Б', text: "Исследователь (изучаю)" },
++            { key: 'В', text: "Садовник (ращу)" },
++            { key: 'Г', text: "Проводник (веду)" },
++            { key: 'Д', text: "Художник (создаю образ)" }
++        ]
++    }
++];
++
++// Состояние
++    let currentQuestionIndex = 0;
++    const userAnswers = {}; // Хранение ответов { 0: 'A', 1: 'B' ... }
++
++// DOM Элементы
++    const quizArea = document.getElementById('quiz-area');
++    const rubricatorArea = document.getElementById('rubricator');
++    const root = document.documentElement; // Для смены CSS переменных
++    const viewQuiz = document.getElementById('view-quiz');
++    const viewResult = document.getElementById('view-result');
++    const sidebarQuiz = document.getElementById('sidebar-quiz');
++    const sidebarResult = document.getElementById('sidebar-result');
++
++// --- Инициализация ---
++    function init() {
++        renderRubricator();
++        loadQuestion(0);
++    }
++
++// --- Рендер Рубрикатора (1-10) ---
++    function renderRubricator() {
++        rubricatorArea.innerHTML = '';
++        questionsData.forEach((q, index) => {
++            const item = document.createElement('div');
++            item.classList.add('rubric-item');
++            item.innerHTML = `
++            ${index + 1}
++            <span class="corner tl"></span><span class="corner tr"></span>
++            <span class="corner bl"></span><span class="corner br"></span>
++        `;
++
++            // Клик по номеру
++            item.addEventListener('click', () => {
++                loadQuestion(index);
++            });
++
++            rubricatorArea.appendChild(item);
++        });
++        updateRubricatorActiveState();
++    }
++
++    function updateRubricatorActiveState() {
++        const items = rubricatorArea.querySelectorAll('.rubric-item');
++        items.forEach((item, index) => {
++            if (index === currentQuestionIndex) {
++                item.classList.add('current');
++            } else {
++                item.classList.remove('current');
++            }
++        });
++    }
++
++// --- Загрузка вопроса ---
++    function loadQuestion(index) {
++        currentQuestionIndex = index;
++        const data = questionsData[index];
++
++        // 1. Меняем цвет темы (CSS переменная)
++        root.style.setProperty('--theme-color', data.color);
++
++        // 2. Обновляем рубрикатор
++        updateRubricatorActiveState();
++
++        // 3. Рендерим контент вопроса
++        const savedAnswer = userAnswers[index]; // Проверяем, был ли ответ
++
++        quizArea.innerHTML = `
++        <div class="ax-title-wrap">
++            <span class="ax-brace">[</span> Профессиональный ландшафт <span class="ax-brace">]</span>
++        </div>
++        
++        <div class="ax-question-text">
++            ${data.id}. ${data.question}
++        </div>
++
++        <div class="ax-options-list">
++            ${data.options.map(opt => `
++                <label class="ax-option">
++                    <input type="radio" name="question_${data.id}" value="${opt.key}" 
++                        ${savedAnswer === opt.key ? 'checked' : ''} onchange="saveAnswer(${index}, '${opt.key}')">
++                    <div class="ax-letter-box">
++                        ${opt.key}
++                        <span class="corner tl"></span><span class="corner tr"></span>
++                        <span class="corner bl"></span><span class="corner br"></span>
++                    </div>
++                    <span class="ax-option-text">${opt.text}</span>
++                </label>
++            `).join('')}
++        </div>
++
++        <div class="ax-nav-btns">
++            <button class="ax-btn ax-btn-prev" onclick="prevQuestion()" ${index === 0 ? 'disabled' : ''}>← Назад</button>
++            <button class="ax-btn ax-btn-next" onclick="nextQuestion()">Далее →</button>
++        </div>
++    `;
++    }
++
++// --- Логика переключения ---
++
++    window.saveAnswer = function(qIndex, value) {
++        userAnswers[qIndex] = value;
++    }
++
++    window.prevQuestion = function() {
++        if (currentQuestionIndex > 0) {
++            loadQuestion(currentQuestionIndex - 1);
++        }
++    }
++
++// Запуск
++    init();
++
++    window.nextQuestion = function() {
++        if (currentQuestionIndex < questionsData.length - 1) {
++            loadQuestion(currentQuestionIndex + 1);
++        } else {
++            finishTest();
++        }
++    }
++
++// --- НОВАЯ ПРОСТАЯ ФУНКЦИЯ ЗАВЕРШЕНИЯ ---
++    function finishTest() {
++        // 1. Сбрасываем цвет темы (если нужно)
++        document.documentElement.style.setProperty('--theme-color', '#1a1a1a');
++
++        // 2. Скрываем блоки Теста
++        viewQuiz.classList.add('hidden');
++        sidebarQuiz.classList.add('hidden');
++
++        // 3. Показываем блоки Результата
++        viewResult.classList.remove('hidden');
++        sidebarResult.classList.remove('hidden');
++
++        // 4. Прокручиваем страницу вверх
++        window.scrollTo(0, 0);
++    }
++
++})
+\ No newline at end of file

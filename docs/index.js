@@ -1,70 +1,168 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/css/style.css":
-/*!***************************!*\
-  !*** ./src/css/style.css ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
 /******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
-(() => {
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ "./src/css/style.css");
+
+;// ./src/images/it.webp
+const it_namespaceObject = __webpack_require__.p + "images/0f89d13af1a5ea411444.webp";
+;// ./src/images/marketing.webp
+const marketing_namespaceObject = __webpack_require__.p + "images/ee3061cc7b467fdee93a.webp";
+;// ./src/images/creative.webp
+const creative_namespaceObject = __webpack_require__.p + "images/7e699f162b9288c62dfc.webp";
+;// ./src/images/medicine.webp
+const medicine_namespaceObject = __webpack_require__.p + "images/91b34843427e98bac45b.webp";
+;// ./src/images/finance.webp
+const finance_namespaceObject = __webpack_require__.p + "images/c025164ec89f2b660a11.webp";
+;// ./src/images/accurate.webp
+const accurate_namespaceObject = __webpack_require__.p + "images/567d146190b668fe7796.webp";
+;// ./src/images/humanitarian.webp
+const humanitarian_namespaceObject = __webpack_require__.p + "images/55bba355fd0b6e1e4543.webp";
+;// ./src/images/construction.webp
+const construction_namespaceObject = __webpack_require__.p + "images/899290fc4440aa49b11d.webp";
+;// ./src/images/education.webp
+const education_namespaceObject = __webpack_require__.p + "images/0801c91f2867e3c6397c.webp";
+;// ./src/images/eco.webp
+const eco_namespaceObject = __webpack_require__.p + "images/66e26fbddafd88e206a3.webp";
+;// ./src/images/comp.png
+const comp_namespaceObject = __webpack_require__.p + "images/b6e55ec5098a96dbf76a.png";
+;// ./src/js/index.js
 
 console.log('hey');
-})();
 
+
+
+
+
+
+
+
+
+
+
+var js_images = {
+  it: it_namespaceObject,
+  marketing: marketing_namespaceObject,
+  creative: creative_namespaceObject,
+  medicine: medicine_namespaceObject,
+  finance: finance_namespaceObject,
+  accurate: accurate_namespaceObject,
+  humanitarian: humanitarian_namespaceObject,
+  construction: construction_namespaceObject,
+  education: education_namespaceObject,
+  eco: eco_namespaceObject
+};
+document.addEventListener('DOMContentLoaded', function () {
+  var categories = document.querySelectorAll('.cat-item');
+  var banner = document.getElementById('banner-bg');
+  var bannerImage = document.querySelector('.banner-image');
+  var bannerTitle = document.getElementById('banner-title');
+  var bannerDesc = document.getElementById('banner-desc');
+  var bannerSteps = document.getElementById('banner-steps');
+  var defaultImageSrc = comp_namespaceObject; // Используем импортированную картинку
+  var defaultTitle = bannerTitle.innerHTML;
+  categories.forEach(function (item) {
+    item.addEventListener('mouseenter', function () {
+      var imgKey = this.getAttribute('data-img');
+      var color = this.getAttribute('data-color');
+      var title = this.getAttribute('data-title');
+      var desc = this.getAttribute('data-desc');
+      this.style.color = color;
+      banner.style.background = color;
+      if (js_images[imgKey]) {
+        bannerImage.src = js_images[imgKey];
+        bannerImage.classList.add('zoom-active');
+      }
+      if (bannerSteps) bannerSteps.style.display = 'none';
+      if (bannerDesc) {
+        bannerDesc.style.display = 'block';
+        bannerDesc.textContent = desc;
+      }
+      if (bannerTitle) bannerTitle.textContent = title;
+    });
+    item.addEventListener('mouseleave', function () {
+      this.style.color = '';
+      banner.style.background = '';
+      bannerImage.src = defaultImageSrc;
+      bannerImage.classList.remove('zoom-active');
+      if (bannerSteps) bannerSteps.style.display = 'block';
+      if (bannerDesc) bannerDesc.style.display = 'none';
+      if (bannerTitle) bannerTitle.innerHTML = defaultTitle;
+    });
+  });
+  var track = document.getElementById('sliderTrack');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var pageNums = document.querySelectorAll('.page-num');
+  var currentIndex = 0;
+  var totalSlides = 4; // Количество слайдов
+
+  function goToSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+    currentIndex = index;
+
+    // Сдвигаем трек на 100vw влево за каждый индекс
+    track.style.transform = "translateX(-".concat(currentIndex * 100, "vw)");
+
+    // Меняем активные скобки у цифр пагинации
+    pageNums.forEach(function (num) {
+      return num.classList.remove('active');
+    });
+    pageNums[currentIndex].classList.add('active');
+  }
+
+  // Клик по стрелкам
+  prevBtn.addEventListener('click', function () {
+    return goToSlide(currentIndex - 1);
+  });
+  nextBtn.addEventListener('click', function () {
+    return goToSlide(currentIndex + 1);
+  });
+
+  // Клик по цифрам (1, 2, 3, 4)
+  pageNums.forEach(function (num) {
+    num.addEventListener('click', function (e) {
+      var index = parseInt(e.target.getAttribute('data-index'));
+      goToSlide(index);
+    });
+  });
+});
 /******/ })()
 ;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQTs7Ozs7OztVQ0FBO1VBQ0E7O1VBRUE7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7O1VBRUE7VUFDQTs7VUFFQTtVQUNBO1VBQ0E7Ozs7O1dDdEJBO1dBQ0E7V0FDQTtXQUNBLHVEQUF1RCxpQkFBaUI7V0FDeEU7V0FDQSxnREFBZ0QsYUFBYTtXQUM3RCxFOzs7Ozs7Ozs7Ozs7QUNOeUI7QUFFekJBLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDLEtBQUssQ0FBQyxDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYjI0ZHMwOC8uL3NyYy9jc3Mvc3R5bGUuY3NzIiwid2VicGFjazovL2IyNGRzMDgvd2VicGFjay9ib290c3RyYXAiLCJ3ZWJwYWNrOi8vYjI0ZHMwOC93ZWJwYWNrL3J1bnRpbWUvbWFrZSBuYW1lc3BhY2Ugb2JqZWN0Iiwid2VicGFjazovL2IyNGRzMDgvLi9zcmMvanMvaW5kZXguanMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307IiwiLy8gVGhlIG1vZHVsZSBjYWNoZVxudmFyIF9fd2VicGFja19tb2R1bGVfY2FjaGVfXyA9IHt9O1xuXG4vLyBUaGUgcmVxdWlyZSBmdW5jdGlvblxuZnVuY3Rpb24gX193ZWJwYWNrX3JlcXVpcmVfXyhtb2R1bGVJZCkge1xuXHQvLyBDaGVjayBpZiBtb2R1bGUgaXMgaW4gY2FjaGVcblx0dmFyIGNhY2hlZE1vZHVsZSA9IF9fd2VicGFja19tb2R1bGVfY2FjaGVfX1ttb2R1bGVJZF07XG5cdGlmIChjYWNoZWRNb2R1bGUgIT09IHVuZGVmaW5lZCkge1xuXHRcdHJldHVybiBjYWNoZWRNb2R1bGUuZXhwb3J0cztcblx0fVxuXHQvLyBDcmVhdGUgYSBuZXcgbW9kdWxlIChhbmQgcHV0IGl0IGludG8gdGhlIGNhY2hlKVxuXHR2YXIgbW9kdWxlID0gX193ZWJwYWNrX21vZHVsZV9jYWNoZV9fW21vZHVsZUlkXSA9IHtcblx0XHQvLyBubyBtb2R1bGUuaWQgbmVlZGVkXG5cdFx0Ly8gbm8gbW9kdWxlLmxvYWRlZCBuZWVkZWRcblx0XHRleHBvcnRzOiB7fVxuXHR9O1xuXG5cdC8vIEV4ZWN1dGUgdGhlIG1vZHVsZSBmdW5jdGlvblxuXHRfX3dlYnBhY2tfbW9kdWxlc19fW21vZHVsZUlkXShtb2R1bGUsIG1vZHVsZS5leHBvcnRzLCBfX3dlYnBhY2tfcmVxdWlyZV9fKTtcblxuXHQvLyBSZXR1cm4gdGhlIGV4cG9ydHMgb2YgdGhlIG1vZHVsZVxuXHRyZXR1cm4gbW9kdWxlLmV4cG9ydHM7XG59XG5cbiIsIi8vIGRlZmluZSBfX2VzTW9kdWxlIG9uIGV4cG9ydHNcbl9fd2VicGFja19yZXF1aXJlX18uciA9IChleHBvcnRzKSA9PiB7XG5cdGlmKHR5cGVvZiBTeW1ib2wgIT09ICd1bmRlZmluZWQnICYmIFN5bWJvbC50b1N0cmluZ1RhZykge1xuXHRcdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBTeW1ib2wudG9TdHJpbmdUYWcsIHsgdmFsdWU6ICdNb2R1bGUnIH0pO1xuXHR9XG5cdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCAnX19lc01vZHVsZScsIHsgdmFsdWU6IHRydWUgfSk7XG59OyIsImltcG9ydCAnLi4vY3NzL3N0eWxlLmNzcydcclxuXHJcbmNvbnNvbGUubG9nKCdoZXknKSJdLCJuYW1lcyI6WyJjb25zb2xlIiwibG9nIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=
