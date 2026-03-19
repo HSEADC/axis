@@ -65,7 +65,8 @@ const eco_namespaceObject = __webpack_require__.p + "images/66e26fbddafd88e206a3
 const comp_namespaceObject = __webpack_require__.p + "images/b6e55ec5098a96dbf76a.png";
 ;// ./src/js/index.js
 
-console.log('hey');
+
+// Импорты картинок
 
 
 
@@ -90,79 +91,89 @@ var js_images = {
   eco: eco_namespaceObject
 };
 document.addEventListener('DOMContentLoaded', function () {
-  var categories = document.querySelectorAll('.cat-item');
+  // --- ЛОГИКА БАННЕРА (только если есть элементы) ---
   var banner = document.getElementById('banner-bg');
   var bannerImage = document.querySelector('.banner-image');
   var bannerTitle = document.getElementById('banner-title');
   var bannerDesc = document.getElementById('banner-desc');
   var bannerSteps = document.getElementById('banner-steps');
-  var defaultImageSrc = comp_namespaceObject; // Используем импортированную картинку
-  var defaultTitle = bannerTitle.innerHTML;
-  categories.forEach(function (item) {
-    item.addEventListener('mouseenter', function () {
-      var imgKey = this.getAttribute('data-img');
-      var color = this.getAttribute('data-color');
-      var title = this.getAttribute('data-title');
-      var desc = this.getAttribute('data-desc');
-      this.style.color = color;
-      banner.style.background = color;
-      if (js_images[imgKey]) {
-        bannerImage.src = js_images[imgKey];
-        bannerImage.classList.add('zoom-active');
-      }
-      if (bannerSteps) bannerSteps.style.display = 'none';
-      if (bannerDesc) {
-        bannerDesc.style.display = 'block';
-        bannerDesc.textContent = desc;
-      }
-      if (bannerTitle) bannerTitle.textContent = title;
+  var categories = document.querySelectorAll('.cat-item');
+  if (banner && bannerImage && bannerTitle) {
+    var defaultImageSrc = comp_namespaceObject;
+    var defaultTitle = bannerTitle.innerHTML;
+    categories.forEach(function (item) {
+      item.addEventListener('mouseenter', function () {
+        var imgKey = this.getAttribute('data-img');
+        var color = this.getAttribute('data-color');
+        var title = this.getAttribute('data-title');
+        var desc = this.getAttribute('data-desc');
+        this.style.color = color;
+        banner.style.background = color;
+        if (js_images[imgKey]) {
+          bannerImage.src = js_images[imgKey];
+          bannerImage.classList.add('zoom-active');
+        }
+        if (bannerSteps) bannerSteps.style.display = 'none';
+        if (bannerDesc) {
+          bannerDesc.style.display = 'block';
+          bannerDesc.textContent = desc;
+        }
+        if (bannerTitle) bannerTitle.textContent = title;
+      });
+      item.addEventListener('mouseleave', function () {
+        this.style.color = '';
+        banner.style.background = '';
+        bannerImage.src = defaultImageSrc;
+        bannerImage.classList.remove('zoom-active');
+        if (bannerSteps) bannerSteps.style.display = 'block';
+        if (bannerDesc) bannerDesc.style.display = 'none';
+        if (bannerTitle) bannerTitle.innerHTML = defaultTitle;
+      });
     });
-    item.addEventListener('mouseleave', function () {
-      this.style.color = '';
-      banner.style.background = '';
-      bannerImage.src = defaultImageSrc;
-      bannerImage.classList.remove('zoom-active');
-      if (bannerSteps) bannerSteps.style.display = 'block';
-      if (bannerDesc) bannerDesc.style.display = 'none';
-      if (bannerTitle) bannerTitle.innerHTML = defaultTitle;
-    });
-  });
+  }
+
+  // --- ЛОГИКА СЛАЙДЕРА (только если есть элементы) ---
   var track = document.getElementById('sliderTrack');
   var prevBtn = document.getElementById('prevBtn');
   var nextBtn = document.getElementById('nextBtn');
   var pageNums = document.querySelectorAll('.page-num');
-  var currentIndex = 0;
-  var totalSlides = 4; // Количество слайдов
-
-  function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    currentIndex = index;
-
-    // Сдвигаем трек на 100vw влево за каждый индекс
-    track.style.transform = "translateX(-".concat(currentIndex * 100, "vw)");
-
-    // Меняем активные скобки у цифр пагинации
-    pageNums.forEach(function (num) {
-      return num.classList.remove('active');
+  if (track && prevBtn && nextBtn && pageNums.length > 0) {
+    var goToSlide = function goToSlide(index) {
+      if (index < 0 || index >= totalSlides) return;
+      currentIndex = index;
+      track.style.transform = "translateX(-".concat(currentIndex * 100, "vw)");
+      pageNums.forEach(function (num) {
+        return num.classList.remove('active');
+      });
+      pageNums[currentIndex].classList.add('active');
+    };
+    var currentIndex = 0;
+    var totalSlides = 4;
+    prevBtn.addEventListener('click', function () {
+      return goToSlide(currentIndex - 1);
     });
-    pageNums[currentIndex].classList.add('active');
+    nextBtn.addEventListener('click', function () {
+      return goToSlide(currentIndex + 1);
+    });
+    pageNums.forEach(function (num) {
+      num.addEventListener('click', function (e) {
+        var index = parseInt(e.target.getAttribute('data-index'));
+        if (!isNaN(index)) goToSlide(index);
+      });
+    });
   }
 
-  // Клик по стрелкам
-  prevBtn.addEventListener('click', function () {
-    return goToSlide(currentIndex - 1);
-  });
-  nextBtn.addEventListener('click', function () {
-    return goToSlide(currentIndex + 1);
-  });
-
-  // Клик по цифрам (1, 2, 3, 4)
-  pageNums.forEach(function (num) {
-    num.addEventListener('click', function (e) {
-      var index = parseInt(e.target.getAttribute('data-index'));
-      goToSlide(index);
+  // --- ЛОГИКА ГОРИЗОНТАЛЬНОЙ ПРОКРУТКИ ---
+  var cardsGrid = document.querySelector('.cards-grid');
+  if (cardsGrid) {
+    cardsGrid.addEventListener('wheel', function (event) {
+      if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      cardsGrid.scrollLeft += event.deltaY;
+    }, {
+      passive: false
     });
-  });
+  }
 });
 /******/ })()
 ;

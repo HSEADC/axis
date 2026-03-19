@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <title>Тренды</title>
     <meta name="title" content="Axis - медиа о профессиях" />
     <meta
@@ -42,104 +43,151 @@
     />
   </head>
   <body>
-    <section class="logo">
-      <img
-        class="logo"
-        src="../images/logo.svg"
-        href="/src/index.html"
-        alt=""
-      />
-    </section>
-    <section class="menu">
-      <nav>
-        <div class="menu-nav">
-          <ul>
-            <li class="box corners-hover">
-              <a class="nav-link" href="../index.html">О нас</a>
-            </li>
-            <li class="box corners-hover">
-              <a class="nav-link" href="../pages/category.html">Каталог</a>
-            </li>
-            <li class="box corners-hover">
-              <a class="nav-link" href="../pages/search.html">Тренды</a>
-            </li>
-            <li class="box corners-hover">
-              <a class="nav-link" href="../pages/about.html">Навыки</a>
-            </li>
-            <li class="box corners-hover">
-              <a class="nav-link" href="../pages/test.html">Тесты</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </section>
-      <main class="zxx-core-viewport">
-        <header class="zxx-header-zone">
-          <div class="zxx-bracket-heading">Тренды</div>
-          <h2 class="zxx-subtitle-text">Прогноз для каждой сферы</h2>
-        </header>
+  <div class="mobile-header" style="display: none;">
+    <div class="mob-logo-icon">axis</div>
+    <div class="mob-burger">☰</div>
+  </div>
+  <div class="main-wrapper">
 
-        <!-- БЛОК С ГОРИЗОНТАЛЬНЫМ СКРОЛЛОМ -->
-        <section class="zxx-scroll-stage">
-          <div class="zxx-swipe-track">
+    <aside class="sidebar">
+      <section class="logo-section">
+        <a href="../index.html">
+          <img src="../images/logo.svg" alt="logo" /></a>
+      </section>
+
+      <nav class="sidebar-nav">
+        <a href="./about.html" class="nav-link ">О нас</a>
+        <a href="./category.html" class="nav-link">Каталог</a>
+        <a href="./search.html" class="nav-link active">Тренды</a>
+        <a href="./test.html" class="nav-link">Тесты</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        Твой ориентир<br>в мире профессий
+      </div>
+    </aside>
+
+      <main class="zxx-core-viewport">
+        <article class="ax-article">
+          <!-- Заголовок-иконка -->
+          <div class="ax-hero-title">
+            <span class="ax-brace">[</span> Тренды <span class="ax-brace">]</span>
+          </div>
+          <p class="ax-intro-text-trends"> Прогноз для каждой сферы</p>
+        </article>
+
+        <section class="articles-section">
+          <div class="cards-grid">
             <!-- Карточка 1 -->
-            <div class="zxx-swipe-item zxx-shade-azure">
-              <h3 class="zxx-card-title">IT 2026–2030: профессии, которые будут определять рынок</h3>
-              <div class="zxx-deco-blob zxx-shape-triangle"></div>
+            <div class="card card-blue">
+              <a href="./search/search1.html">
+              <div class="card-header-trends">
+                <span>IT 2026–2030: профессии, которые будут определять рынок</span>
+              </div>
+              <div class="card-img-placeholder-trends bl-tr">
+                <img src="../images/it.webp" alt="IT" />
+              </div>
+              </a>
             </div>
             <!-- Карточка 2 -->
-            <div class="zxx-swipe-item zxx-shade-rose">
-              <h3 class="zxx-card-title">Креативный сектор: человек + технологии</h3>
-              <div class="zxx-deco-blob"></div>
+            <div class="card card-pink">
+              <a href="./search/trends1.html">
+              <div class="card-header-trends">
+                <span>Креативный сектор: человек + технологии.</span>
+              </div>
+              <div class="card-img-placeholder-trends">
+                <img src="../images/creative.webp" alt="Креатив" />
+              </div>
+              </a>
             </div>
             <!-- Карточка 3 -->
-            <div class="zxx-swipe-item zxx-shade-aqua">
-              <h3 class="zxx-card-title">Медицина: технологии</h3>
-              <div class="zxx-deco-blob zxx-shape-rounded"></div>
+            <div class="card card-turquoise">
+              <a href="./search/trends2.html">
+              <div class="card-header-trends">
+                <span>Медицинские технологии</span>
+              </div>
+              <div class="card-img-placeholder-trends med-tr">
+                <img src="../images/medicine.webp" alt="Медицина" />
+              </div>
+              </a>
             </div>
           </div>
-          <!-- Стрелка внизу галереи -->
-          <div class="zxx-vector-line">
-            <div class="zxx-vector-body"></div>
-            <div class="zxx-vector-tip">&rarr;</div>
+        </section>
+        
+        <div class="arrow-long">
+          <img src="../images/Vector234254004.svg" alt="Arow" />
+        </div>
+
+        <section class="trends-section">
+          <h2 class="section-title">Тренды и прогнозы</h2>
+          <div class="trend-grid-two">
+            <div class="trend-card-two">
+              <a href="./search/trends-mini1.html">
+              <h3>Кто исчезнет с рынка к 2035</h3>
+              <img class="trend-img-two" src="../images/trend1.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two trends2">
+              <a href="./search/trends-mini2.html">
+              <h3>ИИ — не враг: как мы учимся работать вместе</h3>
+              <img class="trend-img-two" src="../images/trends2.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two">
+              <a href="./search/trends-mini3.html">
+              <h3>Главные навыки будущего</h3>
+              <img class="trend-img-two" src="../images/dispersion-glass-_16_-_2_.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two">
+              <a href="./search/trends-mini4.html">
+              <h3>Почему портфолио стало важнее диплома</h3>
+              <img class="trend-img-two" src="../images/apple.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two">
+              <a href="./search/trends-mini5.html">
+              <h3>Зумеры выбирают спокойную карьеру</h3>
+              <img class="trend-img-two" src="../images/Heart.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two">
+              <a href="./search/trends-mini6.html">
+              <h3>Экология как новая карьера</h3>
+              <img class="trend-img-two" src="../images/trends3.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two trends3">
+              <a href="./search/trends-mini7.html">
+              <h3>Поколение альфа и его мышление</h3>
+              <img class="trend-img-two" src="../images/trends4.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
+            <div class="trend-card-two">
+              <a href="./search/trends-mini8.html">
+              <h3>Профессии 2030 года</h3>
+              <img class="trend-img-two" src="../images/Plus-Abstract-Shape-_4_.webp" alt="Axis - Главная страница" />
+              </a>
+            </div>
           </div>
         </section>
 
-        <!-- СЕТКА КАРТОЧЕК -->
-        <section class="zxx-masonry-layout">
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Кто исчезнет с рынка к 2035</h4>
-            <div class="zxx-glass-entity zxx-form-alpha"></div>
+        <footer class="content-footer-main">
+          <div class="footer-logo"><img src="../images/logo.svg" alt="Axis - Главная страница" /></div>
+          <div class="footer-line-main">
+            <img src="../images/arrow-small.svg" alt="arrow">
           </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">ИИ — не враг: как мы учимся работать вместе</h4>
-            <div class="zxx-glass-entity zxx-form-beta"></div>
+          <div class="footer-slogan-main">
+            ТВОЙ ОРИЕНТИР <br />
+            В МИРЕ ПРОФЕССИЙ
           </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Зумеры выбирают спокойную карьеру</h4>
-            <div class="zxx-glass-entity zxx-form-gamma"></div>
+          <div class="footer-buttons-main">
+            <button class="btn-black">РАССЫЛКА →</button>
+            <button class="btn-black">
+              <a href="https://t.me/axis_prof">ТГ КАНАЛ → </a> </button>
           </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Профессии 2030 года</h4>
-            <div class="zxx-glass-entity zxx-form-delta"></div>
-          </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Главные навыки будущего</h4>
-            <div class="zxx-glass-entity zxx-form-epsilon"></div>
-          </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Экология как новая карьера</h4>
-            <div class="zxx-glass-entity zxx-form-zeta"></div>
-          </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Почему портфолио стало важнее диплома?</h4>
-            <div class="zxx-glass-entity zxx-form-eta"></div>
-          </div>
-          <div class="zxx-grid-cell">
-            <h4 class="zxx-cell-title">Поколение альфа и его мышление</h4>
-            <div class="zxx-glass-entity zxx-form-theta"></div>
-          </div>
-        </section>
+        </footer>
       </main>
+  </div>
   </body>
 </html>

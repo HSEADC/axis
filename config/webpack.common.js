@@ -9,7 +9,8 @@ module.exports = {
   entry: {
     index: "./src/js/index.js",
     styleguide: "./src/js/styleguide.js",
-    test: ["./src/js/test1.js", "./src/css/style.css"],
+    test: "./src/js/test1.js",
+    search: "./src/js/search.js",
   },
 
   output: {

@@ -11,10 +11,10 @@ function createPages(template, filename, chunks) {
 const htmlPages = [
   createPages("./src/index.html", "./index.html", ["index"]),
   createPages("./src/pages/about.html", "./pages/about.html", ["index"]),
-  createPages("./src/pages/search.html", "./pages/search.html", ["index"]),
-  createPages("./src/pages/test.html", "./pages/test.html", ["index"]),
+  createPages("./src/pages/search.html", "./pages/search.html", ["index", "search"]),
+  createPages("./src/pages/test.html", "./pages/test.html", ["index", "test1"]),
   createPages("./src/pages/category.html", "./pages/category.html", ["index"]),
-  createPages("./src/pages/test/test1.html", "./pages/test/test1.html", [["index", "test"]]),
+  createPages("./src/pages/test/test1.html", "./pages/test/test1.html", ["index", "test"]),
   createPages("./src/pages/category/it.html", "./pages/category/it.html", ["index",]),
   createPages("./src/pages/category/it.html", "./pages/category/data-analyst.html", ["index",]),
   createPages("./src/pages/category/site-administrator.html", "./pages/category/site-administrator.html", ["index",]),
@@ -75,6 +75,18 @@ const htmlPages = [
   createPages("./src/pages/category/financial-analyst.html", "./pages/category/financial-analyst.html", ["index",]),
   createPages("./src/pages/category/finance.html", "./pages/category/finance.html", ["index",]),
   createPages("./src/styleguide.html", "./styleguide.html", ["styleguide"]),
+  createPages("./src/pages/search/search1.html", "./pages/search/search1.html", ["index", "search"]),
+  createPages("./src/pages/search/trends1.html", "./pages/search/trends1.html", ["index", "search"]),
+  createPages("./src/pages/search/trends2.html", "./pages/search/trends2.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini1.html", "./pages/search/trends-mini1.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini2.html", "./pages/search/trends-mini2.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini3.html", "./pages/search/trends-mini3.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini4.html", "./pages/search/trends-mini4.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini5.html", "./pages/search/trends-mini5.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini6.html", "./pages/search/trends-mini6.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini7.html", "./pages/search/trends-mini7.html", ["index", "search"]),
+  createPages("./src/pages/search/trends-mini8.html", "./pages/search/trends-mini8.html", ["index", "search"]),
+
 ];
 
 module.exports = htmlPages;
