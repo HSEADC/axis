@@ -1,7 +1,5 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
-(() => {
 
 addEventListener("DOMContentLoaded", function () {
   var questionsData = [{
@@ -288,13 +286,5 @@ addEventListener("DOMContentLoaded", function () {
     window.scrollTo(0, 0);
   }
 });
-})();
-
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
-(() => {
-// extracted by mini-css-extract-plugin
-
-})();
-
 /******/ })()
 ;
