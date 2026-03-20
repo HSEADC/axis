@@ -8,9 +8,9 @@
 body {
   font-family: 'Drukewidecyr', sans-serif;
   font-weight: 600;
-  background-color: #ffffff;
-  color: #000;
-  margin: 0 1vw;
+  background-color: #FCFCFC;
+  color: #212121;
+  margin: 1 1vw;
 
 }
 *, *::before, *::after {
@@ -29,12 +29,12 @@ ul { list-style: none; }
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #fff;
+  background-color: #FCFCFC;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-bottom: 1px solid #fdfdfd;
+  border-bottom: 1px solid #FCFCFC;
 }
 
 .hero-loz{
@@ -89,7 +89,7 @@ ul { list-style: none; }
   font-size: 10vw;
   font-weight: 800;
   text-transform: uppercase;
-  color: #000;
+  color: #212121;
   letter-spacing: 0.5px;
   transition: opacity 0.2s;
   text-decoration: none;
@@ -104,7 +104,7 @@ ul { list-style: none; }
 
   /* 2. Текст и отступы */
   text-decoration: none;
-  color: #000;
+  color: #212121;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 14px;
@@ -114,10 +114,10 @@ ul { list-style: none; }
 
   background-repeat: no-repeat;
   background-image:
-          linear-gradient(#000, #000), linear-gradient(#000, #000),
-          linear-gradient(#000, #000), linear-gradient(#000, #000),
-          linear-gradient(#000, #000), linear-gradient(#000, #000),
-          linear-gradient(#000, #000), linear-gradient(#000, #000);
+          linear-gradient(#212121, #212121), linear-gradient(#212121, #212121),
+          linear-gradient(#212121, #212121), linear-gradient(#212121, #212121),
+          linear-gradient(#212121, #212121), linear-gradient(#000, #212121),
+          linear-gradient(#212121, #212121), linear-gradient(#000, #212121);
 
 
   background-position:
@@ -185,7 +185,7 @@ ul { list-style: none; }
   height: 100vh;
   position: sticky;
   top: 0;
-  background: #f9f9f9;
+  background: #FCFCFC;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -210,7 +210,7 @@ ul { list-style: none; }
   font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #000;
+  color: #212121;
 }
 
 .sidebar-footer {
@@ -225,7 +225,7 @@ ul { list-style: none; }
 .content {
   flex-grow: 1;
   padding: 40px;
-  background: #fff;
+  background: #FCFCFC;
   overflow: hidden;
 }
 
@@ -240,20 +240,20 @@ ul { list-style: none; }
 
 .categories-list {
   flex: 0 0 30vw;
-  border: 1px solid #000;
+  border: 1px solid #212121;
   display: flex;
   flex-direction: column;
 }
 
 .cat-item {
   padding: 1.3vw 1vw;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #212121;
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
-  background: #fff;
+  background: #FCFCFC;
 }
 
 .cat-item:last-child {
@@ -315,7 +315,7 @@ ul { list-style: none; }
 .btn-black {
   display: inline-block;
   background: #222;
-  color: #fff;
+  color: #FCFCFC;
   padding: 10px 20px;
   font-size: 12px;
   font-weight: 700;
@@ -453,7 +453,7 @@ ul { list-style: none; }
 
 .icon-sq {
   background: #222;
-  color: #fff;
+  color: #FCFCFC;
   width: 24px;
   height: 24px;
   display: flex;
@@ -465,7 +465,7 @@ ul { list-style: none; }
 
 .btn-read {
   background: #222;
-  color: #fff;
+  color: #FCFCFC;
   padding: 5px 15px;
   font-size: 12px;
   font-weight: 700;
@@ -487,11 +487,11 @@ ul { list-style: none; }
 }
 
 .trend-card {
-  background: #f9f9f9;
+  background: #FCFCFC;
   padding: 20px;
   height: 300px;
   display: flex;
-  background-color: #EEEEEE;
+  background-color: #FCFCFC;
   border-radius: 10px;
   flex-direction: column;
   justify-content: space-between;
@@ -501,7 +501,7 @@ ul { list-style: none; }
   padding: 1vw;
   height: 18vw;
   display: flex;
-  background-color: #EEEEEE;
+  background-color: #FCFCFC;
   border-radius: 10px;
   flex-direction: column;
   justify-content: space-between;
@@ -515,7 +515,7 @@ ul { list-style: none; }
 
 .btn-read-sm {
   background: #222;
-  color: #fff;
+  color: #FCFCFC;
   padding: 8px 0;
   text-align: center;
   font-size: 10px;
@@ -548,7 +548,7 @@ ul { list-style: none; }
 .content-footer {
 padding: 2vw 0;
   width: 50vw;
-  border-top: 2px solid #000;
+  border-top: 2px solid #212121;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -557,7 +557,7 @@ padding: 2vw 0;
 .content-footer-main{
   width: 81.5vw;
   padding: 2vw 0;
-  border-top: 2px solid #000;
+  border-top: 2px solid #212121;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -571,7 +571,7 @@ padding: 2vw 0;
   width: 1vw;
   flex-grow: 1;
   height: 1px;
-  background: #000;
+  background: #212121;
 }
 
 .footer-line-main img{
@@ -618,7 +618,7 @@ a { text-decoration: none; color: inherit; }
   height: 100vh;
   position: sticky;
   top: 0;
-  background: #fdfdfd;
+  background: #FCFCFC;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -643,7 +643,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
-  color: #000;
+  color: #212121;
   display: inline-block;
   transition: 0.3s;
 }
@@ -679,7 +679,7 @@ a { text-decoration: none; color: inherit; }
 .content {
   flex-grow: 1;
   padding: 40px 60px 40px 40px; /* Справа чуть больше отступ */
-  background: #fff;
+  background: #FCFCFC;
 }
 
 .page-title {
@@ -731,7 +731,7 @@ a { text-decoration: none; color: inherit; }
 .card-title {
   font-size: 20px;
   font-weight: 800;
-  color: #111;
+  color: #212121;
   z-index: 2;
   line-height: 1.2;
 }
@@ -807,7 +807,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 1.5;
-  color: #222;
+  color: #212121;
 }
 
 
@@ -1052,7 +1052,7 @@ a { text-decoration: none; color: inherit; }
 .professions-grid a {
   text-decoration: underline;
   text-underline-offset: 3px;
-  color: #000;
+  color: #212121;
   font-weight: 500;
   font-size: 15px;
 }
@@ -1118,12 +1118,12 @@ width: 10vw;
   width: 100%;
   position: relative;
   margin-bottom: 20px;
-  background: #fff;
+  background: #FCFCFC;
 }
 
 .note-header {
   background: #64b5f6;
-  color: #fff;
+  color: #FCFCFC;
   font-weight: 700;
   font-size: 12px;
   padding: 4px 10px;
@@ -1144,12 +1144,12 @@ width: 10vw;
 }
 
 .note-step {
-  border: 1px solid #000;
+  border: 1px solid #212121;
   border-radius: 20px;
   padding: 5px 15px;
   font-weight: 700;
   font-size: 12px;
-  background: #fff;
+  background: #FCFCFC;
   transform: rotate(-2deg);
 }
 
@@ -1163,7 +1163,7 @@ width: 10vw;
 
 .btn-blue-save {
   background: #64b5f6;
-  color: #fff;
+  color: #FCFCFC;
   font-weight: 900;
   border: none;
   padding: 10px 0;
@@ -1198,7 +1198,7 @@ width: 10vw;
   justify-content: flex-start;
 }
 .inner-footer-wrapper .content-footer {
-  border-top: 2px solid #000;
+  border-top: 2px solid #212121;
   padding-top: 20px;
 }
 
@@ -1212,7 +1212,7 @@ width: 10vw;
 
 /* --- Левая Колонка (Сайдбар) --- */
 .ax-sidebar-left {
-  background: #fff;
+  background: #FCFCFC;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
@@ -1258,11 +1258,11 @@ width: 10vw;
   padding: 40px 60px;
   margin-left: -2.5vw;
   scrollbar-width: thin;
-  scrollbar-color: #ffffff transparent;
+  scrollbar-color: #FCFCFC transparent;
 }
 
 .ax-center-scroll::-webkit-scrollbar { width: 6px; }
-.ax-center-scroll::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
+.ax-center-scroll::-webkit-scrollbar-thumb { background-color: #FCFCFC; border-radius: 4px; }
 
 .ax-content-wrapper {
   max-width: 800px;
@@ -1367,7 +1367,7 @@ width: 10vw;
 .ax-professions-list ul { list-style: none; }
 .ax-professions-list li { margin-bottom: 10px; }
 .ax-professions-list a {
-  color: #000000;
+  color: #212121;
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: color 0.2s;
@@ -1391,16 +1391,16 @@ width: 10vw;
 }
 .ax-footer__buttons { display: flex; gap: 10px; }
 .ax-btn-black {
-  background: #1a1a1a; color: #fff; padding: 12px 20px;
+  background: #1a1a1a; color: #FCFCFC; padding: 12px 20px;
   text-decoration: none;
   font-size: 12px; font-weight: 700; border-radius: 8px;
   transition: background 0.2s;
 }
-.ax-btn-black:hover { background: #000; }
+.ax-btn-black:hover { background: #212121; }
 
 /* --- Правая Колонка (Фиксированная) --- */
 .ax-sidebar-right {
-  background: #fff;
+  background: #FCFCFC;
   /*padding: 60px 40px;*/
   height: 100%;
   width: 25vw;
@@ -1473,14 +1473,14 @@ width: 10vw;
 }
 
 .ax-pill {
-  background: #fff; border: 2px solid #000;
+  background: #FCFCFC; border: 2px solid #212121;
   border-radius: 30px; padding: 8px 16px;
   font-weight: 600; font-size: 13px;
-  box-shadow: 2px 2px 0 #000;
+  box-shadow: 2px 2px 0 #212121;
   display: inline-block;
 }
 .ax-pill-blue {
-  color: #000000;
+  color: #212121;
   border-color: var(--ax-blue);
   box-shadow: none;
 }
@@ -1520,7 +1520,7 @@ width: 10vw;
   margin-top: 0.5vw;
   font-family: 'Druk Wide Cyr', sans-serif !important;
   background: #358be6;
-  color: #000000;
+  color: #212121;
   border: none;
   padding: 15px;
   border-radius: 8px;
@@ -1536,7 +1536,7 @@ width: 10vw;
   margin-top: 0.5vw;
   font-family: 'Druk Wide Cyr', sans-serif !important;
   background: #FF8C3F;
-  color: #000000;
+  color: #212121;
   border: none;
   padding: 15px;
   border-radius: 8px;
@@ -1552,7 +1552,7 @@ width: 10vw;
   margin-top: 0.5vw;
   font-family: 'Druk Wide Cyr', sans-serif !important;
   background: #FF768D;
-  color: #000000;
+  color: #212121;
   border: none;
   padding: 15px;
   border-radius: 8px;
@@ -1568,7 +1568,7 @@ width: 10vw;
   margin-top: 0.5vw;
   font-family: 'Druk Wide Cyr', sans-serif !important;
   background: #80EAFF;
-  color: #000000;
+  color: #212121;
   border: none;
   padding: 15px;
   border-radius: 8px;
@@ -1584,7 +1584,7 @@ width: 10vw;
   margin-top: 0.5vw;
   font-family: 'Druk Wide Cyr', sans-serif !important;
   background: #FFCD55;
-  color: #000000;
+  color: #212121;
   border: none;
   padding: 15px;
   border-radius: 8px;
@@ -1643,7 +1643,7 @@ width: 10vw;
   overflow-y: auto;
   padding: 40px 60px;
   scrollbar-width: thin;
-  scrollbar-color: #ddd transparent;
+  scrollbar-color: #FCFCFC transparent;
 }
 .ax-content-container {
   max-width: 800px;
@@ -1750,7 +1750,7 @@ width: 10vw;
   cursor: pointer;
   transition: 0.2s;
 }
-.ax-btn-prev { background: #e0e0e0; color: #888; }
+.ax-btn-prev { background: #FCFCFC; color: #888; }
 .ax-btn-prev:hover { background: #ccc; color: #000; }
 
 .ax-btn-next {

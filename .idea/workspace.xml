@@ -5,121 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90929b0c-70ec-4cb8-bad3-85ea2f3c6440" name="Changes" comment="Merge branch 'main' of https://github.com/HSEADC/codiki">
-      <change afterPath="$PROJECT_DIR$/src/js/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends-mini8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/search/trends2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/test2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/test3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/test/test3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack.pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.pages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ed330040e5152b468054.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/22b0b92cd6b38eb9dbbd.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/cb7b4b1e0f58e2a6b10e.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/0801c91f2867e3c6397c.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/0e1af3632e88ebf7563d.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/0f89d13af1a5ea411444.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/2acec3292462952f8b2a.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/31df2ed8425d197ae99f.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/4ca9274d2d8f509e5711.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/4e9c44d0d176997167a5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/55bba355fd0b6e1e4543.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/567d146190b668fe7796.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/66e26fbddafd88e206a3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/7e699f162b9288c62dfc.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/899290fc4440aa49b11d.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/91b34843427e98bac45b.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/ab63fe6fef5fdbff8e04.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/acddb4040f57f8034d58.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/b6e55ec5098a96dbf76a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/bd437c25d8c79fc2fba0.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/c025164ec89f2b660a11.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/ee3061cc7b467fdee93a.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/f0e5597f77f404d679f3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/f74ea76f857ec7e31ba8.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/Artist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/M&amp;A-specialist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/SMM-specialist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/accountant.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/actuary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/auditor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/bi-analyst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/brand-manager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/clinical-psychologist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/compliance-specialist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/composer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/content-marketer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/copywriter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/costume-designer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/creative-industries.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/creative-producer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/credit-analyst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/cybersecurity-specialists.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/data-analyst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/data-scientist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/devOps-engineer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/digital-marketer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/economist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/editor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/email-marketer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/finance.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/financial-analyst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/financial-controller.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/fintech-specialist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/forensic-expert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/game-developer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/general-practitioner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/graphic-designer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/it.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/marketer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/marketing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/medical-lab-technician.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/medicine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/motion-designer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/musician.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/nurse.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/oncologist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/paramedic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/pediatrician.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/pharmacist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/photographer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/pr-manager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/product-manager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/risk-management-specialist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/site-administrator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/surgeon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/tax-consultant.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/trader.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/traffic-manager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/treasurer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/underwriter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/videographer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category/web-designer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/test/test1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/styleguide.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/styleguide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/styleguide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/test1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/search/search1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search/search1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test/test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -161,6 +59,8 @@
     <setting file="file://$PROJECT_DIR$/src/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/js/search.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/js/test1.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/js/test2.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/js/test3.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/pages/about.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/pages/category.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/pages/category/Artist.html" root0="SKIP_INSPECTION" />
@@ -228,6 +128,7 @@
     <setting file="file://$PROJECT_DIR$/src/pages/search/trends2.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/pages/test.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/pages/test/test1.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/pages/test/test2.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/styleguide.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
@@ -298,6 +199,7 @@
       <workItem from="1773849547053" duration="4092000" />
       <workItem from="1773923844181" duration="6185000" />
       <workItem from="1773930061694" duration="13785000" />
+      <workItem from="1773959639227" duration="5469000" />
     </task>
     <task id="LOCAL-00001" summary="123456789">
       <option name="closed" value="true" />

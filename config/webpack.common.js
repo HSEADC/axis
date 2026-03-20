@@ -10,6 +10,8 @@ module.exports = {
     index: "./src/js/index.js",
     styleguide: "./src/js/styleguide.js",
     test: "./src/js/test1.js",
+    test2: "./src/js/test2.js",
+    test3: "./src/js/test3.js",
     search: "./src/js/search.js",
   },
 

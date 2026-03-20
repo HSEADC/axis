@@ -48,7 +48,7 @@ const questionsData = [
     },
     {
         id: 5,
-        color: '#FFCD55', // Желтый
+        color: '#FFCD55',
         question: " Идеальный результат труда — это:",
         options: [
             { key: 'A', text: "Конкретная польза, измеримый итог" },
@@ -59,7 +59,7 @@ const questionsData = [
     },
     {
         id: 6,
-        color: '#80DDBF', // Розовый
+        color: '#80DDBF',
         question: "Какому формату доверяете?",
         options: [
             { key: 'A', text: "ТЗ, гайдлайн, чёткий план" },
@@ -70,7 +70,7 @@ const questionsData = [
     },
     {
         id: 7,
-        color: '#80EAFF', // Бирюзовый
+        color: '#80EAFF',
         question: "Что важнее в команде?",
         options: [
             { key: 'A', text: "Экспертность" },
@@ -81,7 +81,7 @@ const questionsData = [
     },
     {
         id: 8,
-        color: '#E6BB77', // Темно-оранжевый
+        color: '#E6BB77',
         question: "Заметили проблему. Первый шаг?",
         options: [
             { key: 'A', text: "Изучить причины" },
@@ -92,7 +92,7 @@ const questionsData = [
     },
     {
         id: 9,
-        color: '#FF768D', // Синий насыщенный
+        color: '#FF768D',
         question: "Что цените в информации?",
         options: [
             { key: 'A', text: "Точность, цифры" },
@@ -115,11 +115,11 @@ const questionsData = [
     }
 ];
 
-// Состояние
+
     let currentQuestionIndex = 0;
     const userAnswers = {}; // Хранение ответов { 0: 'A', 1: 'B' ... }
 
-// DOM Элементы
+
     const quizArea = document.getElementById('quiz-area');
     const rubricatorArea = document.getElementById('rubricator');
     const root = document.documentElement; // Для смены CSS переменных
@@ -128,7 +128,7 @@ const questionsData = [
     const sidebarQuiz = document.getElementById('sidebar-quiz');
     const sidebarResult = document.getElementById('sidebar-result');
 
-// --- Инициализация ---
+
     function init() {
         renderRubricator();
         loadQuestion(0);
@@ -146,7 +146,6 @@ const questionsData = [
             <span class="corner bl"></span><span class="corner br"></span>
         `;
 
-            // Клик по номеру
             item.addEventListener('click', () => {
                 loadQuestion(index);
             });
@@ -167,19 +166,19 @@ const questionsData = [
         });
     }
 
-// --- Загрузка вопроса ---
+
     function loadQuestion(index) {
         currentQuestionIndex = index;
         const data = questionsData[index];
 
-        // 1. Меняем цвет темы (CSS переменная)
+
         root.style.setProperty('--theme-color', data.color);
 
-        // 2. Обновляем рубрикатор
+
         updateRubricatorActiveState();
 
-        // 3. Рендерим контент вопроса
-        const savedAnswer = userAnswers[index]; // Проверяем, был ли ответ
+
+        const savedAnswer = userAnswers[index];
 
         quizArea.innerHTML = `
         <div class="ax-title-wrap">
@@ -212,7 +211,6 @@ const questionsData = [
     `;
     }
 
-// --- Логика переключения ---
 
     window.saveAnswer = function(qIndex, value) {
         userAnswers[qIndex] = value;
@@ -224,7 +222,6 @@ const questionsData = [
         }
     }
 
-// Запуск
     init();
 
     window.nextQuestion = function() {
@@ -235,20 +232,19 @@ const questionsData = [
         }
     }
 
-// --- НОВАЯ ПРОСТАЯ ФУНКЦИЯ ЗАВЕРШЕНИЯ ---
+
     function finishTest() {
-        // 1. Сбрасываем цвет темы (если нужно)
+
         document.documentElement.style.setProperty('--theme-color', '#1a1a1a');
 
-        // 2. Скрываем блоки Теста
+
         viewQuiz.classList.add('hidden');
         sidebarQuiz.classList.add('hidden');
 
-        // 3. Показываем блоки Результата
+
         viewResult.classList.remove('hidden');
         sidebarResult.classList.remove('hidden');
 
-        // 4. Прокручиваем страницу вверх
         window.scrollTo(0, 0);
     }
 
