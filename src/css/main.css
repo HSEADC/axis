@@ -4,7 +4,9 @@
   margin: 0;
   padding: 0;
 }
+.sidebar.active{
 
+}
 body {
   font-family: 'Drukewidecyr', sans-serif;
   font-weight: 600;

@@ -1,40 +1,787 @@
-@media (max-width: 1024px) {
-            .categories-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .catalog-title {
-                font-size: 28px;
-            }
-            
-            .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-            
-            .hero h1 {
-                font-size: 28px;
-            }
-        }
+/* Базовые настройки для rem (1rem = 16px при стандартных настройках) */
+:root {
+    --font-main: 'Akzidenzgroteskpro', sans-serif;
+    width: 100%;
+}
+
+
+/* --- ПЛАНШЕТ (до 1024px) --- */
+@media screen and (max-width: 1024px) {
+
+    /*категории*/
+
+    .main-wrapper {
+        display: block; /* Убираем flex, если в десктопе sidebar сбоку */
+    }
+
+    .sidebar {
+        display: none; /* Скрываем боковую панель на планшете/мобилке */
+    }
+
+    .mobile-header {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw 5vw;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid #eee;
+    }
+
+    .mob-logo-icon img {
+        width: 10vw;
+    }
+
+
+    .mob-burger {
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+
+    .content {
+        padding: 4vw;
+    }
+
+    /* Сетка категорий на планшете - 2 колонки */
+    .catalog-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3vw;
+        margin-top: 2rem;
+    }
+
+    .cat-card {
+        height: 10vw;
+        width: 100%;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden; /* Чтобы картинки не вылезали за края слишком сильно на планшете */
+        display: flex;
+        align-items: center;
+    }
+
+    .card-title span{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #212121;
+        max-width: 60%;
+        line-height: 1.1;
+        z-index: 2;
+    }
+
+.card-filter{
+    font-size: 0.5rem;
+}
+
+/*о нас*/
+
+    .content {
+        padding: 4vw;
+    }
+
+    .about-layout {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-visuals {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .about-img {
+        width: 30vw;
+        height: auto;
+    }
+
+/*главная*/
+    .top-content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    h2.section-title,
+    .banner-content h2 {
+        font-size: 1.8rem !important; /* Уменьшаем до разумных пределов */
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    /* 3. Список категорий — делаем как в макете */
+    .categories-list {
+        border: 1px solid #000;
+        border-radius: 15px;
+        padding: 0;
+        margin-bottom: 2rem;
+        background: #fff;
+    }
+
+    .cat-item {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 12px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cat-item:last-child { border-bottom: none; }
+
+    .cat-item a {
+        font-size: 1.1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* Добавим стрелочку в конец каждой категории (как в макете) */
+    .cat-item::after {
+        content: '→';
+        color: currentColor; /* Цвет берется из data-color или просто черный */
+        font-weight: bold;
+    }
+
+    /* 4. Розовый баннер — ИСПРАВЛЯЕМ НАЛОЖЕНИЕ */
+    .promo-banner {
+        display: flex;
+        flex-direction: column; /* Текст сверху, картинка снизу */
+        padding: 25px;
+        background-color: #FFC5D7; /* Примерный цвет */
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .banner-content {
+        position: relative;
+        z-index: 2; /* Текст над картинкой, если они пересекутся */
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .banner-btn{
+        font-size: 0.7rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+.articles-section{
+    margin-top: 2.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+.articles-section h2{
+    font-size: 0.8rem;
+}
+    .steps p {
+        width: 100% !important;
+        font-size: 0.9rem;
+        margin: 5px 0;
+        opacity: 0.8;
+    }
+
+    .banner-image {
+        width: 80%; /* Картинка не должна быть на весь экран */
+        margin: 20px 0 0 auto; /* Сдвигаем вправо вниз */
+        display: block;
+        position: relative;
+        right: -10%; /* Немного "уводим" за край для стиля */
+    }
+
+    /* 5. Карточки профессий */
+    .cards-grid {
+        display: flex !important; /* Убеждаемся, что это flex */
+        flex-wrap: nowrap !important; /* ЗАПРЕЩАЕМ ПЕРЕНОС (самое важное) */
+        overflow-x: auto; /* Включаем горизонтальный скролл */
+        -webkit-overflow-scrolling: touch; /* Делаем скролл плавным на iOS */
+        gap: 20px; /* Расстояние между карточками */
+        padding: 10px 4vw 30px; /* Отступы: по бокам как у всей страницы, снизу для запаса */
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Edge */
+    }
+
+    .card, .card-orange, .card-green {
+        flex: 0 0 85vw; /* Карточка занимает 85% ширины экрана */
+        max-width: 40vh; /* Но не больше этого значения на планшетах */
+        scroll-snap-align: start; /* Карточка будет "магнититься" к левому краю при скролле */
+
+        /* Внутренние стили карточки, чтобы она была аккуратной */
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 30vh; /* Высота под ваш контент */
+    }
+
+    .btn-read{
+        font-family: 'Akzidenzgroteskpro', sans-serif;
+        font-size: 0.7rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .card-header span:first-child {
+        font-size: 1.5rem;
+        line-height: 1.1;
+    }
+
+
+    .card-header span:first-child {
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+
+    .card-header.text {
+        font-size: 0.6rem;
+    }
+    .banner-content{
+        width: 100%;
+    }
+.main-mob{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vw !important;
+    z-index: 100;
+}
+
+    .hero-top-nav, .slider-track, .pagination, .slider-viewport, .hero-section{
+        display: none;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .trends-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important; /* Запрещаем перенос на новые строки */
+        overflow-x: auto; /* Включаем скролл */
+        gap: 1rem; /* Отступ между карточками */
+        padding: 10px 4vw 30px; /* Отступы по краям экрана */
+        scroll-snap-type: x mandatory; /* Эффект прилипания */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Скрываем полосу прокрутки */
+    }
+
+    .trends-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 2. Сама карточка тренда */
+    .trend-card {
+        flex: 0 0 75vw; /* Ширина карточки — 75% экрана (чтобы была видна следующая) */
+        background-color: #F1F1F1; /* Светло-серый фон как в макете */
+        border-radius: 10px;
+        padding: 1.5rem;
+        scroll-snap-align: start;
+        min-height: 250px; /* Задаем высоту, чтобы карточки не "схлопывались" */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 3. Ссылка внутри карточки (делаем её на всю высоту) */
+    .trend-card a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Текст сверху, картинка снизу */
+        height: 100%;
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* 4. Заголовок внутри карточки */
+    .trend-card h3 {
+        font-size: 1.2rem;
+        font-weight: 900;
+        line-height: 1.2;
+        margin: 0;
+        text-transform: none; /* Или uppercase, если нужно как в макете */
+    }
+
+    /* 5. Исправляем картинку (она должна быть крупнее и внизу справа) */
+    .trend-img {
+        width: 100px !important; /* Увеличиваем размер (настройте под себя) */
+        height: auto !important;
+        align-self: flex-end; /* Прижимаем к правому нижнему углу */
+        margin-top: 1rem;
+        object-fit: contain;
+    }
+
+    .mobile-footer {
+        display: block !important;
+        width: 100%;
+        background-color: #fff;
+        padding: 2rem 4vw 3rem; /* Отступы: сверху, по бокам, снизу */
+        border-top: 1.5px solid #000; /* Черная линия сверху как в макете */
+        margin-top: 3rem;
+    }
+
+    /* 2. Выстраиваем содержимое в ряд */
+    .mobile-footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px; /* Расстояние между элементами */
+    }
+
+    /* 3. Логотип */
+    .mobile-footer .mob-logo-icon img {
+        height: 2.2rem; /* Настройте размер под макет */
+        display: block;
+    }
+
+    /* 4. Линия со стрелкой (самый важный блок) */
+    .footer-line-mob {
+        flex-grow: 1; /* Линия занимает всё свободное место */
+        height: 2px;
+        background-color: #000;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Стрелка будет в конце линии */
+    }
+
+    /* Стилизуем саму стрелку (картинку внутри линии) */
+    .footer-line-mob img {
+        width: 25px; /* Размер наконечника стрелки */
+        height: auto;
+        position: absolute;
+        right: -2px; /* Чтобы стрелка плотно прилегала к концу линии */
+        transform: translateY(0);
+    }
+
+    /* 5. Текст слогана */
+    .footer-slogan-mob {
+        font-size: 0.9rem; /* Уменьшаем для мобилки */
+        font-weight: 900; /* Максимально жирный */
+        line-height: 1;
+        text-transform: uppercase; /* Все заглавные */
+        white-space: nowrap; /* Чтобы не переносился на 3 строки */
+        color: #000;
+        letter-spacing: 0.02em;
+    }
+
+/*статьи*/
+
+    .ax-header {
+        margin-bottom: 2rem;
+    }
+
+    .ax-back-link {
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Заголовок в скобках [] */
+    .ax-hero-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .ax-title-text {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    .ax-bracket {
+        height: 3.5rem; /* Масштабируем скобки */
+        width: auto;
+    }
+
+    /* Текст вступления */
+    .ax-intro-text, .ax-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Заголовки секций */
+    .ax-section-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .article span{
+        font-size: 1.2rem;
+    }
+
+    .ax-icon-arrow img{
+        width: 1rem;
+    }
+
+    /* Списки с иконками/стрелками */
+    .ax-grid-2-col {
+        display: flex;
+        flex-direction: column; /* На мобилках в колонку */
+        gap: 0;
+    }
+    .ax-grid-2-col a{
+        text-decoration-line: none;
+    }
+
+    .ax-grid-2-col li{
+        font-size: 1rem;
+        text-decoration-line: underline;
+        text-decoration-color: #00A3FF;
+    }
+
+    /* Списки */
+    .ax-list-checked {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Пункт списка со стрелочкой */
+    .ax-list-checked li, .ax-list-checked-yellow li, .ax-list-checked-turquoise li, .ax-list-checked-orange li {
+        position: relative;
+        padding-left: 3.5rem; /* Место для стрелочки */
+        margin-bottom: 1.8rem; /* Расстояние между строками как на макете */
+        font-size: 1rem;
+        line-height: 1.2;
+        color: #212121;
+        text-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        text-transform: lowercase; /* На макете всё с маленькой буквы */
+    }
+
+    /* Сама голубая стрелочка */
+    .ax-list-checked li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #00A3FF; /* Голубой как на фото */
+        font-size: 1.5rem;
+        font-weight: 900;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .ax-content-wrapper {
+        padding: 0;
+    }
+
+.ax-sidebar-right{
+    display: none;
+}
+
+
+
+
+
+
+}
+
+/* --- МОБИЛЬНЫЕ УСТРОЙСТВА (до 480px) --- */
+@media screen and (max-width: 480px) {
+
+    /*категории*/
+
+    .ax-hero-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .ax-title-text, .ax-bracket {
+        font-size: 0.4rem;
+        font-weight: 800;
+        margin-top: 2rem;
+    }
+
+    .ax-bracket {
+        width: 4vw;
+        height: auto;
+    }
+
+    /* Сетка категорий на мобилке - 1 колонка (как на макете) */
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cat-card {
+        height: 18vw; /* Пропорциональная высота */
+        min-height: 80px;
+        padding: 0 1.5rem;
+        border-radius: 0.8rem;
+        text-decoration: none;
+    }
+
+    .card-title {
+
+    }
+
+    /* Стилизация иконок как на макете (вылетают за пределы) */
+    .card-icon {
+        position: absolute;
+        right: -2vw;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35vw; /* Крупные иконки */
+        height: auto;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .card-icon img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        /* Эффект легкой прозрачности или наложения можно добавить тут */
+    }
+
+    /* Цвета из вашего HTML */
+    .bg-blue { background-color: #64B5F6; }
+    .bg-orange { background-color: #FF9E57; }
+    .bg-pink { background-color: #F06292; }
+    .bg-cyan { background-color: #80DEEA; }
+    .bg-beige { background-color: #E6C58B; }
+    .bg-mint { background-color: #80CBC4; }
+    .bg-yellow { background-color: #FFD54F; }
+    .bg-grey-blue { background-color: #CFD8DC; }
+    .bg-salmon { background-color: #EF9A9A; }
+    .bg-green { background-color: #AED581; }
+
+    /* Фильтры профессий */
+    .filter-buttons {
+        display: flex;
+        overflow-x: hidden;
+        text-wrap: auto;
+        padding-bottom: 1rem;
+        gap: 0.5rem;
+    }
+
+    .btn-filter {
+        width: 10vw;
+        white-space: nowrap;
+        border-radius: 0.5rem;
+        font-size: 0.5rem;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+    /* Сетка профессий на мобилке - 2 колонки */
+    .professions-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .card-filter {
+        background: #F5F5F5;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25vw;
+    }
+
+    .card-filter h3 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .card-filter img {
+        width: 50%;
+        align-self: flex-end;
+        justify-content: end;
+        margin-top: 5vw;
+    }
+
+    /* Футер */
+    .content-footer-main, .content-footer {
+        display: none;
+    }
+
+    .btn-black {
+        background: #212121;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: none;
+        font-weight: bold;
+    }
+
+
+    .card-filter h3{
+        font-size: 0.4rem;
+    }
+
+
+/*о нас*/
+
+    .content {
+        padding: 5vw 4vw;
+    }
+
+    /* Заголовок с кавычками */
+    .ax-hero-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .ax-title-text {
+        font-size: 1.1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .ax-bracket {
+        height: 2rem; /* Масштабируем SVG через высоту в rem */
+        width: auto;
+    }
+
+    /* Основной текст */
+    .text-section {
+        margin-bottom: 2.5rem;
+    }
+
+    .text-section h2 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-bottom: 1.2rem;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Список "Кто ты?" с цветными стрелками */
+    .who-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .who-list li {
+        position: relative;
+        padding-left: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        min-height: 2rem;
+    }
+
+    /* Создаем стрелки через псевдоэлементы */
+    .who-list li::before {
+        content: "➔";
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .arrow-blue::before { color: #4094ff; }
+    .arrow-orange::before { color: #ff8c40; }
+    .arrow-green::before { color: #a2d94c; }
+
+    /* Скрываем картинки на мобильном, если нужно строго по макету */
+    .about-visuals {
+        display: none;
+    }
+
+    /* Ссылка на стайлгайд */
+    .styleguide-link {
+        margin-top: 2rem;
+        border-top: 0.1rem solid #eee;
+        padding-top: 1.5rem;
+    }
+
+    /* --- ФУТЕР (СТРОГО ПО МАКЕТУ) --- */
+
+    .footer-logo {
+        flex-shrink: 0;
+    }
+
+    .footer-logo img {
+        height: 3rem; /* Высота логотипа */
+        width: auto;
+    }
+
+    .footer-line-main {
+        flex-grow: 1; /* Линия занимает все свободное пространство */
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-line-main img {
+        width: 100%; /* Растягиваем стрелку по горизонтали */
+        height: auto;
+        min-width: 3rem;
+    }
+
+    .footer-slogan-main {
+        flex-shrink: 0;
+        font-size: 0.85rem;
+        font-weight: 800;
+        line-height: 1.1;
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 10rem;
+        margin-left: -15vw;
+    }
+
+    /* Скрываем кнопки рассылки на мобильном, так как их нет на скриншоте */
+    .footer-buttons-main {
+        display: none;
+    }
+
+/*главная*/
+
+    .trends-grid {
+        grid-template-columns: 1fr; /* В одну колонку */
+    }
+
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
