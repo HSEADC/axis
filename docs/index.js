@@ -63,10 +63,25 @@ const education_namespaceObject = __webpack_require__.p + "images/0801c91f2867e3
 const eco_namespaceObject = __webpack_require__.p + "images/66e26fbddafd88e206a3.webp";
 ;// ./src/images/comp.png
 const comp_namespaceObject = __webpack_require__.p + "images/b6e55ec5098a96dbf76a.png";
+;// ./src/images/arrow-blue.svg
+const arrow_blue_namespaceObject = __webpack_require__.p + "images/97cb76d69e74024f74de.svg";
+;// ./src/images/arrow-orange.svg
+const arrow_orange_namespaceObject = __webpack_require__.p + "images/012c701883b23af2ce44.svg";
+;// ./src/images/arrow-pink.svg
+const arrow_pink_namespaceObject = __webpack_require__.p + "images/18de2cf47266e23716f0.svg";
 ;// ./src/js/index.js
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 // Импорты картинок
+
+
+
 
 
 
@@ -91,7 +106,6 @@ var js_images = {
   eco: eco_namespaceObject
 };
 document.addEventListener('DOMContentLoaded', function () {
-  // --- ЛОГИКА БАННЕРА (только если есть элементы) ---
   var banner = document.getElementById('banner-bg');
   var bannerImage = document.querySelector('.banner-image');
   var bannerTitle = document.getElementById('banner-title');
@@ -132,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- ЛОГИКА СЛАЙДЕРА (только если есть элементы) ---
+  // --- ЛОГИКА СЛАЙДЕРА
   var track = document.getElementById('sliderTrack');
   var prevBtn = document.getElementById('prevBtn');
   var nextBtn = document.getElementById('nextBtn');
@@ -174,6 +188,138 @@ document.addEventListener('DOMContentLoaded', function () {
       passive: false
     });
   }
+  // 2 слайд
+  var imageMap = {
+    "[ Маркетинг и PR ]": marketing_namespaceObject,
+    "[ Медицина ]": medicine_namespaceObject,
+    "[ Креативные индустрии ]": creative_namespaceObject,
+    "[ Финансы ]": finance_namespaceObject,
+    "[ Образование ]": education_namespaceObject,
+    "[ Естественные науки ]": humanitarian_namespaceObject,
+    "[ IT ]": it_namespaceObject,
+    "[ Точные науки ]": accurate_namespaceObject,
+    "[ Экология ]": eco_namespaceObject
+  };
+  var tags = document.querySelectorAll('.tag');
+  var activeImg = null;
+  tags.forEach(function (tag) {
+    // 1. ПРИ НАВЕДЕНИИ
+    tag.addEventListener('mouseenter', function () {
+      var slide = this.closest('.two-slide');
+      var logo = slide.querySelector('.hero-logo');
+      var text = slide.querySelector('.hero-text');
+      var tagText = this.innerText.trim();
+
+      // Скрываем лого и текст (добавляем класс)
+      if (logo) logo.classList.add('is-hidden');
+      if (text) text.classList.add('is-hidden');
+
+      // Удаляем старую картинку, если она была (для безопасности)
+      if (activeImg) activeImg.remove();
+
+      // Создаем новую картинку
+      var img = document.createElement('img');
+      img.src = imageMap[tagText] || "";
+      img.className = 'dynamic-parallax-img';
+      slide.appendChild(img);
+      activeImg = img;
+    });
+    tag.addEventListener('mouseleave', function () {
+      var slide = this.closest('.two-slide');
+      var logo = slide.querySelector('.hero-logo');
+      var text = slide.querySelector('.hero-text');
+      if (logo) logo.classList.remove('is-hidden');
+      if (text) text.classList.remove('is-hidden');
+      if (activeImg) {
+        activeImg.remove();
+        activeImg = null;
+      }
+    });
+  });
+
+  // 3. ПАРАЛЛАКС
+
+  window.addEventListener('mousemove', function (e) {
+    if (!activeImg) return;
+    var centerX = window.innerWidth / 4; // Центрируем по левой части
+    var centerY = window.innerHeight / 2;
+    var moveX = (e.clientX - centerX) / 20;
+    var moveY = (e.clientY - centerY) / 20;
+    activeImg.style.transform = "rotateY(".concat(moveX, "deg) rotateX(").concat(-moveY, "deg)");
+  });
+
+  // 3 слайд
+
+  var logoContainer = document.querySelector(".three-hero-logo");
+  var heroText = document.querySelector(".three-hero-loz");
+  var arrowImg = document.querySelector(".three-big-arrow img");
+  if (!logoContainer || !heroText || !arrowImg) return;
+  var objects = {
+    kepka: document.querySelector(".kepka"),
+    hat: document.querySelector(".hat"),
+    bag: document.querySelector(".bag")
+  };
+  var hasObjects = Object.values(objects).some(function (el) {
+    return el !== null;
+  });
+  if (!hasObjects) return;
+  var defaultState = {
+    logoHTML: logoContainer.innerHTML,
+    text: heroText.innerText,
+    arrowSrc: arrowImg.getAttribute("src")
+  };
+  var contentMap = {
+    kepka: {
+      title: "ШКОЛЬНИК",
+      text: "Узнай, какие сферы существуют, где тебе может быть интересно",
+      arrow: arrow_blue_namespaceObject
+    },
+    hat: {
+      title: "АБИТУРИЕНТ",
+      text: "Определи, какие профессии и форматы работы тебе подходят",
+      arrow: arrow_orange_namespaceObject
+    },
+    bag: {
+      title: "КАРЬЕРА-СВИТЧЕР",
+      text: "Пойми, в каком рабочем формате ты раскрываешься лучше всего",
+      arrow: arrow_pink_namespaceObject
+    }
+  };
+  var style = document.createElement("style");
+  style.innerHTML = "\n        .glass-obj { transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer; }\n        .glass-obj:hover { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(150, 255, 150, 0.6)); }\n        .dynamic-title { \n            font-family: 'Akzidenzgroteskpro', sans-serif;\n            font-size: 2vw; \n            font-weight: 800; \n            text-transform: uppercase; \n            margin-left: 10vw;\n            margin: 0;\n            line-height: 0.9;\n            display: block;\n            min-width: 20vw; \n        }\n    ";
+  document.head.appendChild(style);
+
+  // 5. Функция смены контента
+  function updateContent(type) {
+    if (type && contentMap[type]) {
+      var data = contentMap[type];
+      logoContainer.innerHTML = "<span class=\"dynamic-title\">".concat(data.title, "</span>");
+      heroText.innerText = data.text;
+      arrowImg.src = data.arrow;
+      arrowImg.style.filter = "none";
+    } else {
+      logoContainer.innerHTML = defaultState.logoHTML;
+      heroText.innerText = defaultState.text;
+      arrowImg.src = defaultState.arrowSrc;
+    }
+  }
+  Object.entries(objects).forEach(function (_ref) {
+    var _ref2 = _slicedToArray(_ref, 2),
+      key = _ref2[0],
+      el = _ref2[1];
+    if (el) {
+      el.addEventListener("mouseenter", function () {
+        return updateContent(key);
+      });
+      el.addEventListener("mouseleave", function () {
+        return updateContent(null);
+      });
+    }
+  });
+
+  // 4 слайд
+
+  // фильтрация
 });
 /******/ })()
 ;
