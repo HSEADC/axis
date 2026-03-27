@@ -64,11 +64,11 @@ const eco_namespaceObject = __webpack_require__.p + "images/66e26fbddafd88e206a3
 ;// ./src/images/comp.png
 const comp_namespaceObject = __webpack_require__.p + "images/b6e55ec5098a96dbf76a.png";
 ;// ./src/images/arrow-blue.svg
-const arrow_blue_namespaceObject = __webpack_require__.p + "images/97cb76d69e74024f74de.svg";
+const arrow_blue_namespaceObject = __webpack_require__.p + "images/b8ad1f60feda3722c94a.svg";
 ;// ./src/images/arrow-orange.svg
-const arrow_orange_namespaceObject = __webpack_require__.p + "images/012c701883b23af2ce44.svg";
+const arrow_orange_namespaceObject = __webpack_require__.p + "images/8b4f2372417983497e36.svg";
 ;// ./src/images/arrow-pink.svg
-const arrow_pink_namespaceObject = __webpack_require__.p + "images/18de2cf47266e23716f0.svg";
+const arrow_pink_namespaceObject = __webpack_require__.p + "images/d5b1b970d814d1e9f2e6.svg";
 ;// ./src/js/index.js
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
