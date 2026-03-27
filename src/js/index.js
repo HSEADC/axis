@@ -12,6 +12,9 @@ import constructionImg from '../images/construction.webp';
 import educationImg from '../images/education.webp';
 import ecoImg from '../images/eco.webp';
 import computerImg from '../images/comp.png';
+import blueArrowIMG from '../images/arrow-blue.svg';
+import OrangearrowImg from '../images/arrow-orange.svg';
+import pinkarrowImg from '../images/arrow-pink.svg';
 
 const images = {
     it: itImg, marketing: marketingImg, creative: creativeImg, medicine: medicineImg,
@@ -21,7 +24,6 @@ const images = {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- ЛОГИКА БАННЕРА (только если есть элементы) ---
     const banner = document.getElementById('banner-bg');
     const bannerImage = document.querySelector('.banner-image');
     const bannerTitle = document.getElementById('banner-title');
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- ЛОГИКА СЛАЙДЕРА (только если есть элементы) ---
+    // --- ЛОГИКА СЛАЙДЕРА
     const track = document.getElementById('sliderTrack');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
@@ -107,4 +109,175 @@ document.addEventListener('DOMContentLoaded', () => {
             cardsGrid.scrollLeft += event.deltaY;
         }, { passive: false });
     }
+    // 2 слайд
+    const imageMap = {
+        "[ Маркетинг и PR ]": marketingImg,
+        "[ Медицина ]": medicineImg,
+        "[ Креативные индустрии ]": creativeImg,
+        "[ Финансы ]": financeImg,
+        "[ Образование ]": educationImg,
+        "[ Естественные науки ]": humanitarianImg,
+        "[ IT ]": itImg,
+        "[ Точные науки ]": accurateImg,
+        "[ Экология ]": ecoImg
+    };
+
+    const tags = document.querySelectorAll('.tag');
+    let activeImg = null;
+
+    tags.forEach(tag => {
+        // 1. ПРИ НАВЕДЕНИИ
+        tag.addEventListener('mouseenter', function() {
+            const slide = this.closest('.two-slide');
+            const logo = slide.querySelector('.hero-logo');
+            const text = slide.querySelector('.hero-text');
+            const tagText = this.innerText.trim();
+
+            // Скрываем лого и текст (добавляем класс)
+            if (logo) logo.classList.add('is-hidden');
+            if (text) text.classList.add('is-hidden');
+
+            // Удаляем старую картинку, если она была (для безопасности)
+            if (activeImg) activeImg.remove();
+
+            // Создаем новую картинку
+            const img = document.createElement('img');
+            img.src = imageMap[tagText] || "";
+            img.className = 'dynamic-parallax-img';
+            slide.appendChild(img);
+            activeImg = img;
+        });
+
+        tag.addEventListener('mouseleave', function() {
+            const slide = this.closest('.two-slide');
+            const logo = slide.querySelector('.hero-logo');
+            const text = slide.querySelector('.hero-text');
+
+
+            if (logo) logo.classList.remove('is-hidden');
+            if (text) text.classList.remove('is-hidden');
+
+
+            if (activeImg) {
+                activeImg.remove();
+                activeImg = null;
+            }
+        });
+    });
+
+    // 3. ПАРАЛЛАКС
+
+    window.addEventListener('mousemove', (e) => {
+        if (!activeImg) return;
+
+        const centerX = window.innerWidth / 4; // Центрируем по левой части
+        const centerY = window.innerHeight / 2;
+
+        const moveX = (e.clientX - centerX) / 20;
+        const moveY = (e.clientY - centerY) / 20;
+
+        activeImg.style.transform = `rotateY(${moveX}deg) rotateX(${-moveY}deg)`;
+    });
+
+    // 3 слайд
+
+    const logoContainer = document.querySelector(".three-hero-logo");
+    const heroText = document.querySelector(".three-hero-loz");
+    const arrowImg = document.querySelector(".three-big-arrow img");
+
+
+    if (!logoContainer || !heroText || !arrowImg) return;
+
+
+    const objects = {
+        kepka: document.querySelector(".kepka"),
+        hat: document.querySelector(".hat"),
+        bag: document.querySelector(".bag"),
+    };
+
+
+    const hasObjects = Object.values(objects).some(el => el !== null);
+    if (!hasObjects) return;
+
+
+    const defaultState = {
+        logoHTML: logoContainer.innerHTML,
+        text: heroText.innerText,
+        arrowSrc: arrowImg.getAttribute("src"),
+    };
+
+
+    const contentMap = {
+        kepka: {
+            title: "ШКОЛЬНИК",
+            text: "Узнай, какие сферы существуют, где тебе может быть интересно",
+            arrow: blueArrowIMG,
+        },
+        hat: {
+            title: "АБИТУРИЕНТ",
+            text: "Определи, какие профессии и форматы работы тебе подходят",
+            arrow: OrangearrowImg,
+        },
+        bag: {
+            title: "КАРЬЕРА-СВИТЧЕР",
+            text: "Пойми, в каком рабочем формате ты раскрываешься лучше всего",
+            arrow: pinkarrowImg,
+        },
+    };
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+        .glass-obj { transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer; }
+        .glass-obj:hover { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(150, 255, 150, 0.6)); }
+        .dynamic-title { 
+            font-family: 'Akzidenzgroteskpro', sans-serif;
+            font-size: 2vw; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            margin-left: 10vw;
+            margin: 0;
+            line-height: 0.9;
+            display: block;
+            min-width: 20vw; 
+        }
+    `;
+    document.head.appendChild(style);
+
+    // 5. Функция смены контента
+    function updateContent(type) {
+        if (type && contentMap[type]) {
+            const data = contentMap[type];
+
+            logoContainer.innerHTML = `<span class="dynamic-title">${data.title}</span>`;
+            heroText.innerText = data.text;
+
+            arrowImg.src = data.arrow;
+
+            arrowImg.style.filter = "none";
+        } else {
+
+            logoContainer.innerHTML = defaultState.logoHTML;
+            heroText.innerText = defaultState.text;
+            arrowImg.src = defaultState.arrowSrc;
+        }
+    }
+
+
+    Object.entries(objects).forEach(([key, el]) => {
+        if (el) {
+            el.addEventListener("mouseenter", () => updateContent(key));
+            el.addEventListener("mouseleave", () => updateContent(null));
+        }
+    });
+
+// 4 слайд
+
+
+// фильтрация
+
+
+
+
+
+
 });

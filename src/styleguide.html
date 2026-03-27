@@ -15,7 +15,7 @@
     <meta property="og:site_name" content="цветочный" />
     <meta
       property="og:url"
-      content="https://HSEADC.github.io/codiki/styleguide.html"
+      content="https://HSEADC.github.io/axis/styleguide.html"
     />
     <meta
       property="og:title"
@@ -27,7 +27,7 @@
     />
     <meta
       property="og:image"
-      content="https://HSEADC.github.io/codiki/styleguide.html"
+      content="https://HSEADC.github.io/axis/styleguide.html"
     />
 
     <meta property="twitter:card" content="summary_large_image" />
@@ -42,34 +42,44 @@
   <body class="sg-body">
     <div class="sg-wrapper">
       <!-- ЛЕВАЯ ПАНЕЛЬ (Фиксированная) -->
-      <aside class="sg-sidebar-left">
-        <div class="sg-logo"><img src="images/logo.svg" /></div>
+      <div class="mobile-header" style="display: none">
+        <div class="mob-logo-icon"><img src="images/logo2.svg"></div>
+        <div class="mob-burger">☰</div>
+      </div>
+      <div class="main-wrapper">
+        <aside class="sidebar">
+          <section class="logo-section">
+            <a href="./index.html">
+              <img src="./images/logo.svg" alt="logo" /></a>
+          </section>
 
-        <nav class="sg-nav">
-          <a href="#" class="sg-nav-link sg-active">
-            <span class="sg-bracket">[</span>О НАС<span class="sg-bracket"
-              >]</span
-            >
-          </a>
-          <a href="/pages/category.html" class="sg-nav-link">КАТАЛОГ</a>
-          <a href="/pages/search.html" class="sg-nav-link">ТРЕНДЫ</a>
-          <a href="/pages/about.html" class="sg-nav-link">НАВЫКИ</a>
-          <a href="/pages/about.html" class="sg-nav-link">ТЕСТЫ</a>
-        </nav>
+          <nav class="sidebar-nav">
+            <a href="./pages/about.html" class="nav-link active">О нас</a>
+            <a href="./pages/category.html" class="nav-link">Каталог</a>
+            <a href="./pages/search.html" class="nav-link">Тренды</a>
+            <a href="./pages/test.html" class="nav-link">Тесты</a>
+          </nav>
 
-        <div class="sg-footer-text">
-          ТВОЙ ОРИЕНТИР<br />
-          В МИРЕ ПРОФЕССИЙ
-        </div>
-      </aside>
+          <div class="sidebar-footer">Твой ориентир<br />в мире профессий</div>
+        </aside>
 
       <main class="sg-content">
-        <a href="/pages/about.html" class="sg-back-btn">← О нас</a>
+        <header class="ax-header">
+          <a href="./pages/about.html" class="ax-back-link">
+            <span class="ax-icon-arrow article"> <img src="./images/arrow.svg" alt="arrow"></span> О нас
+          </a>
+        </header>
 
-        <div class="sg-main-title">
-          <span class="sg-dashed-brace">[</span>
-          Стайлгайд
-          <span class="sg-dashed-brace">]</span>
+        <div class="ax-hero-title">
+          <svg class="ax-bracket ax-bracket-left" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5216 52.0293H10.1773C6.1012 52.0293 2.79688 48.725 2.79688 44.6489V39.3046" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+            <path d="M15.5216 2.7959H10.1773C6.1012 2.7959 2.79688 6.10022 2.79688 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+          </svg>
+          <span class="ax-title-text">Стайлгад</span>
+          <svg class="ax-bracket ax-bracket-right" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.79678 2.7959H7.86569C11.9418 2.7959 15.2461 6.10022 15.2461 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+            <path d="M2.79678 52.0303H7.86569C11.9418 52.0303 15.2461 48.726 15.2461 44.6499V39.3056" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+          </svg>
         </div>
 
         <section id="colors" class="sg-section">
@@ -315,17 +325,19 @@
         </section>
 
         <!-- ФУТЕР ВНУТРИ СКРОЛЛА -->
-        <footer class="sg-bottom-area">
-          <div class="sg-bottom-left">
-            <div class="sg-logo-sm">axis</div>
-            <div class="sg-arrow-long">⟶</div>
-            <div class="sg-bottom-slogan">
-              ТВОЙ ОРИЕНТИР<br />В МИРЕ ПРОФЕССИЙ
-            </div>
+        <footer class="content-footer-main">
+          <div class="footer-logo"><img src="images/logo.svg" alt="Axis - Главная страница" /></div>
+          <div class="footer-line-main">
+            <img src="./images/arrow-small.svg" alt="arrow">
           </div>
-          <div class="sg-bottom-right">
-            <a href="#" class="sg-btn">РАССЫЛКА ➔</a>
-            <a href="#" class="sg-btn">ТГ КАНАЛ ➔</a>
+          <div class="footer-slogan-main">
+            ТВОЙ ОРИЕНТИР <br />
+            В МИРЕ ПРОФЕССИЙ
+          </div>
+          <div class="footer-buttons-main">
+            <button class="btn-black">РАССЫЛКА <img src="./images/arrow2.svg" alt=""></button>
+            <button class="btn-black">
+              <a href="https://t.me/axis_prof">ТГ КАНАЛ <img src="./images/arrow2.svg" alt=""> </a> </button>
           </div>
         </footer>
       </main>

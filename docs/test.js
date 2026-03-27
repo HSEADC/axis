@@ -73,7 +73,6 @@ addEventListener("DOMContentLoaded", function () {
   }, {
     id: 5,
     color: '#FFCD55',
-    // Желтый
     question: " Идеальный результат труда — это:",
     options: [{
       key: 'A',
@@ -91,7 +90,6 @@ addEventListener("DOMContentLoaded", function () {
   }, {
     id: 6,
     color: '#80DDBF',
-    // Розовый
     question: "Какому формату доверяете?",
     options: [{
       key: 'A',
@@ -109,7 +107,6 @@ addEventListener("DOMContentLoaded", function () {
   }, {
     id: 7,
     color: '#80EAFF',
-    // Бирюзовый
     question: "Что важнее в команде?",
     options: [{
       key: 'A',
@@ -127,7 +124,6 @@ addEventListener("DOMContentLoaded", function () {
   }, {
     id: 8,
     color: '#E6BB77',
-    // Темно-оранжевый
     question: "Заметили проблему. Первый шаг?",
     options: [{
       key: 'A',
@@ -145,7 +141,6 @@ addEventListener("DOMContentLoaded", function () {
   }, {
     id: 9,
     color: '#FF768D',
-    // Синий насыщенный
     question: "Что цените в информации?",
     options: [{
       key: 'A',
@@ -182,12 +177,9 @@ addEventListener("DOMContentLoaded", function () {
       text: "Художник (создаю образ)"
     }]
   }];
-
-  // Состояние
   var currentQuestionIndex = 0;
   var userAnswers = {}; // Хранение ответов { 0: 'A', 1: 'B' ... }
 
-  // DOM Элементы
   var quizArea = document.getElementById('quiz-area');
   var rubricatorArea = document.getElementById('rubricator');
   var root = document.documentElement; // Для смены CSS переменных
@@ -195,8 +187,6 @@ addEventListener("DOMContentLoaded", function () {
   var viewResult = document.getElementById('view-result');
   var sidebarQuiz = document.getElementById('sidebar-quiz');
   var sidebarResult = document.getElementById('sidebar-result');
-
-  // --- Инициализация ---
   function init() {
     renderRubricator();
     loadQuestion(0);
@@ -209,8 +199,6 @@ addEventListener("DOMContentLoaded", function () {
       var item = document.createElement('div');
       item.classList.add('rubric-item');
       item.innerHTML = "\n            ".concat(index + 1, "\n            <span class=\"corner tl\"></span><span class=\"corner tr\"></span>\n            <span class=\"corner bl\"></span><span class=\"corner br\"></span>\n        ");
-
-      // Клик по номеру
       item.addEventListener('click', function () {
         loadQuestion(index);
       });
@@ -228,28 +216,16 @@ addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  // --- Загрузка вопроса ---
   function loadQuestion(index) {
     currentQuestionIndex = index;
     var data = questionsData[index];
-
-    // 1. Меняем цвет темы (CSS переменная)
     root.style.setProperty('--theme-color', data.color);
-
-    // 2. Обновляем рубрикатор
     updateRubricatorActiveState();
-
-    // 3. Рендерим контент вопроса
-    var savedAnswer = userAnswers[index]; // Проверяем, был ли ответ
-
-    quizArea.innerHTML = "\n        <div class=\"ax-title-wrap\">\n            <span class=\"ax-brace\">[</span> \u041F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u043B\u0430\u043D\u0434\u0448\u0430\u0444\u0442 <span class=\"ax-brace\">]</span>\n        </div>\n        \n        <div class=\"ax-question-text\">\n            ".concat(data.id, ". ").concat(data.question, "\n        </div>\n\n        <div class=\"ax-options-list\">\n            ").concat(data.options.map(function (opt) {
+    var savedAnswer = userAnswers[index];
+    quizArea.innerHTML = "\n        <div class=\"ax-title-wrap\">\n            <svg class=\"ax-bracket ax-bracket-left\" width=\"19\" height=\"55\" viewBox=\"0 0 19 55\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                        <path d=\"M15.5216 52.0293H10.1773C6.1012 52.0293 2.79688 48.725 2.79688 44.6489V39.3046\" stroke=\"#212121\" stroke-width=\"5.59259\" stroke-linecap=\"round\"/>\n                        <path d=\"M15.5216 2.7959H10.1773C6.1012 2.7959 2.79688 6.10022 2.79688 10.1763V15.5206\" stroke=\"#212121\" stroke-width=\"5.59259\" stroke-linecap=\"round\"/>\n                    </svg>\n                    <span class=\"ax-title-text\">\u041F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u043B\u0430\u043D\u0434\u0448\u0430\u0444\u0442</span>\n                    <svg class=\"ax-bracket ax-bracket-right\" width=\"19\" height=\"55\" viewBox=\"0 0 19 55\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                        <path d=\"M2.79678 2.7959H7.86569C11.9418 2.7959 15.2461 6.10022 15.2461 10.1763V15.5206\" stroke=\"#212121\" stroke-width=\"5.59259\" stroke-linecap=\"round\"/>\n                        <path d=\"M2.79678 52.0303H7.86569C11.9418 52.0303 15.2461 48.726 15.2461 44.6499V39.3056\" stroke=\"#212121\" stroke-width=\"5.59259\" stroke-linecap=\"round\"/>\n                    </svg>\n        </div>\n        \n        <div class=\"ax-question-text\">\n            ".concat(data.id, ". ").concat(data.question, "\n        </div>\n\n        <div class=\"ax-options-list\">\n            ").concat(data.options.map(function (opt) {
       return "\n                <label class=\"ax-option\">\n                    <input type=\"radio\" name=\"question_".concat(data.id, "\" value=\"").concat(opt.key, "\" \n                        ").concat(savedAnswer === opt.key ? 'checked' : '', " onchange=\"saveAnswer(").concat(index, ", '").concat(opt.key, "')\">\n                    <div class=\"ax-letter-box\">\n                        ").concat(opt.key, "\n                        <span class=\"corner tl\"></span><span class=\"corner tr\"></span>\n                        <span class=\"corner bl\"></span><span class=\"corner br\"></span>\n                    </div>\n                    <span class=\"ax-option-text\">").concat(opt.text, "</span>\n                </label>\n            ");
     }).join(''), "\n        </div>\n\n        <div class=\"ax-nav-btns\">\n            <button class=\"ax-btn ax-btn-prev\" onclick=\"prevQuestion()\" ").concat(index === 0 ? 'disabled' : '', ">\u2190 \u041D\u0430\u0437\u0430\u0434</button>\n            <button class=\"ax-btn ax-btn-next\" onclick=\"nextQuestion()\">\u0414\u0430\u043B\u0435\u0435 \u2192</button>\n        </div>\n    ");
   }
-
-  // --- Логика переключения ---
-
   window.saveAnswer = function (qIndex, value) {
     userAnswers[qIndex] = value;
   };
@@ -258,8 +234,6 @@ addEventListener("DOMContentLoaded", function () {
       loadQuestion(currentQuestionIndex - 1);
     }
   };
-
-  // Запуск
   init();
   window.nextQuestion = function () {
     if (currentQuestionIndex < questionsData.length - 1) {
@@ -268,21 +242,12 @@ addEventListener("DOMContentLoaded", function () {
       finishTest();
     }
   };
-
-  // --- НОВАЯ ПРОСТАЯ ФУНКЦИЯ ЗАВЕРШЕНИЯ ---
   function finishTest() {
-    // 1. Сбрасываем цвет темы (если нужно)
     document.documentElement.style.setProperty('--theme-color', '#1a1a1a');
-
-    // 2. Скрываем блоки Теста
     viewQuiz.classList.add('hidden');
     sidebarQuiz.classList.add('hidden');
-
-    // 3. Показываем блоки Результата
     viewResult.classList.remove('hidden');
     sidebarResult.classList.remove('hidden');
-
-    // 4. Прокручиваем страницу вверх
     window.scrollTo(0, 0);
   }
 });

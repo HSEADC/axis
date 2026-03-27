@@ -182,7 +182,15 @@ const questionsData = [
 
         quizArea.innerHTML = `
         <div class="ax-title-wrap">
-            <span class="ax-brace">[</span> Профессиональный ландшафт <span class="ax-brace">]</span>
+            <svg class="ax-bracket ax-bracket-left" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5216 52.0293H10.1773C6.1012 52.0293 2.79688 48.725 2.79688 44.6489V39.3046" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                        <path d="M15.5216 2.7959H10.1773C6.1012 2.7959 2.79688 6.10022 2.79688 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                    </svg>
+                    <span class="ax-title-text">Профессиональный ландшафт</span>
+                    <svg class="ax-bracket ax-bracket-right" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.79678 2.7959H7.86569C11.9418 2.7959 15.2461 6.10022 15.2461 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                        <path d="M2.79678 52.0303H7.86569C11.9418 52.0303 15.2461 48.726 15.2461 44.6499V39.3056" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                    </svg>
         </div>
         
         <div class="ax-question-text">

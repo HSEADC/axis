@@ -78,7 +78,17 @@
 
     <main class="content">
 
-        <h1 class="page-title"><span class="brackets">[</span> Каталог <span class="brackets">]</span></h1>
+        <div class="ax-hero-title">
+            <svg class="ax-bracket ax-bracket-left" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5216 52.0293H10.1773C6.1012 52.0293 2.79688 48.725 2.79688 44.6489V39.3046" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                <path d="M15.5216 2.7959H10.1773C6.1012 2.7959 2.79688 6.10022 2.79688 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+            </svg>
+            <span class="ax-title-text">Сферы</span>
+            <svg class="ax-bracket ax-bracket-right" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.79678 2.7959H7.86569C11.9418 2.7959 15.2461 6.10022 15.2461 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                <path d="M2.79678 52.0303H7.86569C11.9418 52.0303 15.2461 48.726 15.2461 44.6499V39.3056" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+            </svg>
+        </div>
 
         <div class="catalog-grid">
 
@@ -114,7 +124,7 @@
             <a href="/pages/category/it.html">
             <div class="cat-card bg-beige">
                 <span class="card-title">Естественные <br>науки</span>
-                <div class="card-icon"><img src="../images/humanitarian.webp"></div>
+                <div class="card-icon bg-beige"><img src="../images/humanitarian.webp"></div>
             </div></a>
 
             <!-- 6. Точные науки -->
@@ -154,6 +164,165 @@
 
         </div>
 
+        <div class="ax-hero-title">
+            <svg class="ax-bracket ax-bracket-left" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5216 52.0293H10.1773C6.1012 52.0293 2.79688 48.725 2.79688 44.6489V39.3046" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                <path d="M15.5216 2.7959H10.1773C6.1012 2.7959 2.79688 6.10022 2.79688 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+            </svg>
+            <span class="ax-title-text">Профессии</span>
+            <svg class="ax-bracket ax-bracket-right" width="19" height="55" viewBox="0 0 19 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.79678 2.7959H7.86569C11.9418 2.7959 15.2461 6.10022 15.2461 10.1763V15.5206" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+                <path d="M2.79678 52.0303H7.86569C11.9418 52.0303 15.2461 48.726 15.2461 44.6499V39.3056" stroke="#212121" stroke-width="5.59259" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="btn-filter active" data-filter="all">Все</button>
+            <button class="btn-filter" data-filter="it">ИТ</button>
+            <button class="btn-filter" data-filter="marketing">Маркетинг</button>
+            <button class="btn-filter" data-filter="creative">Креатив</button>
+            <button class="btn-filter" data-filter="medicine">Медицина</button>
+            <button class="btn-filter" data-filter="finance">Финансы</button>
+            <button class="btn-filter" data-filter="accurate">Точные науки</button>
+            <button class="btn-filter" data-filter="construction">Строительство</button>
+            <button class="btn-filter" data-filter="education">Образование</button>
+            <button class="btn-filter" data-filter="eco">Экология</button>
+        </div>
+
+        <!-- Сетка карточек -->
+        <div class="professions-grid">
+
+            <div class="card-filter" data-category="marketing">
+                <a href="./category/marketer.html">
+                <h3>Маркетолог</h3>
+                <img src="../images/marketing.webp">
+                </a>
+            </div>
+            <div class="card-filter" data-category="it">
+                <a href="./category/devOps-engineer.html">
+                <h3>DevOps-инженер</h3>
+                <img src="../images/it.webp">
+                </a>
+            </div>
+            <div class="card-filter" data-category="creative">
+                <a href="./category/architecture.html">
+                <h3>Архитектор</h3>
+                <img src="../images/creative.webp">
+                </a>
+            </div>
+            <div class="card-filter prb" data-category="medicine">
+                <a href="./category/general-practitioner.html">
+                <h3>Врач-терапевт</h3>
+                    <img src="../images/medicine.webp">
+                </a>
+            </div>
+            <div class="card-filter prb" data-category="finance">
+                <a href="./category/financial-analyst.html">
+                <h3>Финансовый аналитик</h3>
+                    <img src="../images/finance.webp">
+                </a>
+            </div>
+            <div class="card-filter prb" data-category="accurate">
+                <a href="./category/geologist.html">
+                    <h3>Геолог</h3>
+                    <img src="../images/accurate.webp">
+                </a>
+            </div>
+            <div class="card-filter" data-category="education"><h3>Учитель-предметник</h3></div>
+            <div class="card-filter" data-category="eco"><h3>Экоаналитик</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Прораб</h3></div>
+
+            <div class="card-filter" data-category="it"><h3>Front-end разработчик</h3></div>
+            <div class="card-filter" data-category="marketing"><h3>Бренд-менеджер</h3></div>
+            <div class="card-filter" data-category="creative"><h3>Художник</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Врач-хирург</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Аудитор</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Астроном</h3></div>
+            <div class="card-filter" data-category="education"><h3>Воспитатель</h3></div>
+            <div class="card-filter" data-category="eco"><h3>Климатолог</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Инженер-проектировщик</h3></div>
+
+            <div class="card-filter" data-category="marketing"><h3>Digital-маркетолог</h3></div>
+            <div class="card-filter" data-category="it"><h3>Дата-сайентист</h3></div>
+            <div class="card-filter" data-category="creative"><h3>Motion-дизайнер</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Врач-педиатр</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Бухгалтер</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Биолог</h3></div>
+            <div class="card-filter" data-category="education"><h3>Методист</h3></div>
+            <div class="card-filter" data-category="eco"><h3>Сотрудник заповедника</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Крановщик</h3></div>
+
+            <div class="card-filter" data-category="marketing"><h3>SMM-специалист</h3></div>
+            <div class="card-filter" data-category="it"><h3>Кибербезопасность</h3></div>
+            <div class="card-filter" data-category="creative"><h3>Фотограф</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Врач-кардиолог</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Трейдер</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Вулканолог</h3></div>
+            <div class="card-filter" data-category="education"><h3>Тьютор</h3></div>
+            <div class="card-filter" data-category="eco"><h3>Экологический консультант</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Инженер-сметчик</h3></div>
+
+            <div class="card-filter" data-category="marketing"><h3>PR-менеджер</h3></div>
+            <div class="card-filter" data-category="it"><h3>Back-end разработчик</h3></div>
+            <div class="card-filter" data-category="creative"><h3>Графический дизайнер</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Фармацевт</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Налоговый консультант</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Океанолог</h3></div>
+            <div class="card-filter" data-category="education"><h3>Корпоративный тренер</h3></div>
+            <div class="card-filter" data-category="eco"><h3>Государственный инспектор</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Начальник участка</h3></div>
+
+            <div class="card-filter" data-category="marketing"><h3>SEO-специалист</h3></div>
+            <div class="card-filter" data-category="it"><h3>Тестировщик (QA)</h3></div>
+            <div class="card-filter" data-category="creative"><h3>Видеограф</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Клинический психолог</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Специалист по риск-менеджменту</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Биотехнолог</h3></div>
+            <div class="card-filter" data-category="education"><h3>Преподаватель</h3></div>
+            <div class="card-filter" data-category="eco"><h3>Урбоэколог</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Экскаваторщик</h3></div>
+
+            <div class="card-filter" data-category="marketing"><h3>Копирайтер</h3></div>
+            <div class="card-filter" data-category="it"><h3>Системный аналитик</h3></div>
+            <div class="card-filter" data-category="creative"><h3>UX/UI-дизайнер</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Судмедэксперт</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Экономист</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Метеоролог</h3></div>
+            <div class="card-filter" data-category="education"><h3>Дефектолог</h3></div>
+            <div class="card-filter" data-category="it"><h3>Android разработчик</h3></div>
+            <div class="card-filter" data-category="marketing"><h3>Медиа-байер</h3></div>
+
+            <div class="card-filter" data-category="creative"><h3>Аниматор</h3></div>
+            <div class="card-filter" data-category="it"><h3>Гейм-девелопер</h3></div>
+            <div class="card-filter" data-category="marketing"><h3>Event-менеджер</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Врач-невролог</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Финансовый контролер</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Сейсмолог</h3></div>
+            <div class="card-filter" data-category="education"><h3>Социальный педагог</h3></div>
+            <div class="card-filter" data-category="it"><h3>Full-stack разработчик</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Снабженец</h3></div>
+
+            <div class="card-filter" data-category="marketing"><h3>Контент-маркетолог</h3></div>
+            <div class="card-filter" data-category="it"><h3>Продакт-менеджер</h3></div>
+            <div class="card-filter" data-category="creative"><h3>Арт-директор</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Врач-онколог</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Кредитный аналитик</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Почвовед</h3></div>
+            <div class="card-filter" data-category="education"><h3>Репетитор</h3></div>
+            <div class="card-filter" data-category="it"><h3>iOS разработчик</h3></div>
+            <div class="card-filter" data-category="marketing"><h3>Email-маркетолог</h3></div>
+
+            <div class="card-filter" data-category="creative"><h3>Композитор</h3></div>
+            <div class="card-filter" data-category="it"><h3>BI-аналитик</h3></div>
+            <div class="card-filter" data-category="marketing"><h3>Менеджер по трафику</h3></div>
+            <div class="card-filter" data-category="medicine"><h3>Медицинская сестра</h3></div>
+            <div class="card-filter" data-category="finance"><h3>Актуарий</h3></div>
+            <div class="card-filter" data-category="accurate"><h3>Биоинформатик</h3></div>
+            <div class="card-filter" data-category="education"><h3>Экскурсовод</h3></div>
+            <div class="card-filter" data-category="construction"><h3>Отделочник</h3></div>
+            <div class="card-filter" data-category="it"><h3>Сетевой инженер</h3></div>
+        </div>
+
         <!-- Футер (общий) -->
         <footer class="content-footer-main">
             <div class="footer-logo"><img src="../images/logo.svg" alt="Axis - Главная страница" /></div>
@@ -165,9 +334,9 @@
                 В МИРЕ ПРОФЕССИЙ
             </div>
             <div class="footer-buttons-main">
-                <button class="btn-black">РАССЫЛКА →</button>
+                <button class="btn-black">РАССЫЛКА <img src="../images/arrow2.svg" alt=""></button>
                 <button class="btn-black">
-                    <a href="https://t.me/axis_prof">ТГ КАНАЛ → </a> </button>
+                    <a href="https://t.me/axis_prof">ТГ КАНАЛ <img src="../images/arrow2.svg" alt=""> </a> </button>
             </div>
         </footer>
     </main>

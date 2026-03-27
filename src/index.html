@@ -76,7 +76,7 @@
         </div>
 
 <!--      Слайд 2-->
-        <div class="slide">
+        <div class="slide two-slide">
           <div class="hero-logo">
             <a href="/">
               <img src="images/logo.svg" alt="Axis" />
@@ -104,14 +104,14 @@
 
 <!--Слайд 3-->
         <div class="slide">
-          <div class="hero-logo">
+          <div class="hero-logo three-hero-logo">
             <a href="/">
               <img src="images/logo.svg" alt="Axis" />
             </a>
           </div>
-          <div class="hero-text">
-            <p class="hero-loz">Выбери свой этап и пройди тест для определения наилучших сферы, профессии или формата работы</p>
-            <div class="big-arrow">
+          <div class="hero-text three-hero-text">
+            <p class="hero-loz three-hero-loz">Выбери свой этап и пройди тест для определения наилучших сферы, профессии или формата работы</p>
+            <div class="big-arrow three-big-arrow">
               <img src="images/arrow.svg" alt="Axis" />
             </div>
           </div>
@@ -138,7 +138,7 @@
           </div>
           <div class="hero-text">
             <p class="hero-loz">Покрути колесо, вдруг судьба подскажет твою профессию?</p>
-            <div class="big-arrow">
+            <div class="big-arrow four-slide">
               <img src="images/arrow.svg" alt="Axis" />
             </div>
           </div>
@@ -158,14 +158,14 @@
 
     <!-- Пагинация -->
     <div class="pagination">
-      <button class="nav-arrow prev" id="prevBtn">←</button>
+      <button class="nav-arrow prev" id="prevBtn"><img src="./images/arrow.svg" alt=""></button>
       <div class="pages" id="pagesContainer">
         <span class="page-num active" data-index="0">1</span>
         <span class="page-num" data-index="1">2</span>
         <span class="page-num" data-index="2">3</span>
         <span class="page-num" data-index="3">4</span>
       </div>
-      <button class="nav-arrow next" id="nextBtn">→</button>
+      <button class="nav-arrow next" id="nextBtn"><img src="./images/arrow.svg" alt=""></button>
     </div>
 
   </header>
@@ -196,7 +196,7 @@
               data-title="ИТ"
               data-desc="Тестирование, frontend- и backend-разработка, аналитика данных, data- и DevOps- инженерия."
             >
-              IT
+              <a href="./pages/category/it.html"> IT</a>
             </div>
 
             <div
@@ -206,7 +206,7 @@
               data-title="Маркетинг"
               data-desc="Продвижение брендов, реклама и PR."
             >
-              Маркетинг и PR
+              <a href="./pages/category/marketing.html">Маркетинг и PR </a>
             </div>
 
             <div
@@ -216,7 +216,7 @@
               data-title="Креативные индустрии"
               data-desc="Дизайн, мода, искусство и креатив."
             >
-              Креативные индустрии
+              <a href="./pages/category/creative-industries.html">Креативные индустрии</a>
             </div>
 
             <div
@@ -226,7 +226,7 @@
               data-title="Медицина"
               data-desc="Лечебное дело и биотехнологии."
             >
-              Медицина
+              <a href="./pages/category/medicine.html"> Медицина</a>
             </div>
 
             <div
@@ -236,7 +236,7 @@
               data-title="Финансы"
               data-desc="Банкинг, инвестиции и аудит."
             >
-              Финансы
+              <a href="./pages/category/finance.html"> Финансы</a>
             </div>
 
             <div
@@ -246,7 +246,7 @@
               data-title="Точные науки"
               data-desc="Математика, физика и химия."
             >
-              Точные науки
+              <a href="/"></a>Точные науки
             </div>
 
             <div
@@ -256,7 +256,7 @@
               data-title="Естественные науки"
               data-desc="Биология, география и геология."
             >
-              Естественные науки
+              <a href="/"> Естественные науки</a>
             </div>
 
             <div
@@ -266,7 +266,7 @@
               data-title="Строительство"
               data-desc="Архитектура и инженерия."
             >
-              Строительство
+              <a href="/"> Строительство</a>
             </div>
 
             <div
@@ -276,7 +276,7 @@
               data-title="Образование"
               data-desc="Педагогика и преподавание."
             >
-              Образование
+              <a href="/"> Образование</a>
             </div>
 
             <div
@@ -286,7 +286,7 @@
               data-title="Экология"
               data-desc="Охрана природы и эко-активизм."
             >
-              Экология
+              <a href="/"> Экология</a>
             </div>
           </div>
 
@@ -302,7 +302,7 @@
               </div>
 
               <p id="banner-desc" style="display: none"></p>
-              <a href="pages/test.html" class="btn-black" id="banner-btn">пройти тест →</a>
+              <a href="pages/category.html" class="banner-btn" id="banner-btn"> к разделу <img src="images/arrow2.svg"></a>
             </div>
 
             <div class="computer-img-placeholder" id="banner-img-container">
@@ -325,11 +325,13 @@
                   формы).</span>
               </div>
               <div class="card-img-placeholder">
+                <a href="./pages/category/it.html" >
                 <img src="./images/it.webp" alt="Axis - Главная страница" />
+                </a>
               </div>
               <div class="card-footer">
-                <span class="icon-sq">v3</span>
-                <a href="./pages/category/it.html" class="btn-read">читать →</a>
+                <span class="icon-sq">3</span>
+                <a href="./pages/category/it.html" class="btn-read">читать</a>
               </div>
             </div>
 
@@ -343,11 +345,13 @@
                 >
               </div>
               <div class="card-img-placeholder">
+                <a href="./pages/category/marketing.html">
                 <img src="./images/marketing.webp" alt="Axis - Главная страница" />
+                </a>
               </div>
               <div class="card-footer">
-                <span class="icon-sq">v3</span>
-                <a href="./pages/category/marketing.html" class="btn-read">читать →</a>
+                <span class="icon-sq">2</span>
+                <a href="./pages/category/marketing.html" class="btn-read">читать</a>
               </div>
             </div>
 
@@ -355,11 +359,13 @@
               <div class="card-header">
                 <span>Ещё...</span>
                 <div class="card-img-placeholder theme">
+                  <a href="./pages/category/economist.html">
                   <img src="./images/eco.webp" alt="Axis - Главная страница" />
+                  </a>
                 </div>
               </div>
               <div class="card-footer">
-                <a href="./pages/category/economist.html" class="btn-read">читать →</a>
+                <a href="./pages/category/economist.html" class="btn-read">читать </a>
               </div>
             </div>
           </div>
@@ -369,24 +375,26 @@
         <section class="trends-section">
           <div class="trends-grid">
             <div class="trend-card">
+              <a href="./pages/search/trends-mini5.html">
               <h3>Зумеры выбирают спокойную карьеру</h3>
-              <img class="trend-img" src="./images/Heart.webp" alt="Axis - Главная страница" />
-              <a href="./pages/search.html" class="btn-read-sm">читать →</a>
+              <img class="trend-img" src="./images/Heart.webp" alt="Axis - Главная страница" /></a>
             </div>
             <div class="trend-card">
+              <a href="./pages/search/trends-mini8.html">
               <h3>Профессии, которые появятся к 2030 году</h3>
-              <img class="trend-img" src="./images/Plus-Abstract-Shape-_4_.webp" alt="Axis - Главная страница" />
-              <a href="./pages/search.html" class="btn-read-sm">читать →</a>
+              <img class="trend-img" src="./images/Plus%20Abstract%20Shape.jpg" alt="Axis - Главная страница" /></a>
             </div>
             <div class="trend-card">
+              <a href="./pages/search/trends-mini3.html">
               <h3>Главные навыки будущего</h3>
               <img class="trend-img" src="./images/dispersion-glass-_16_-_2_.webp" alt="Axis - Главная страница" />
-              <a href="./pages/search.html" class="btn-read-sm">читать →</a>
+              </a>
             </div>
             <div class="trend-card">
+              <a href="./pages/search/trends-mini4.html">
               <h3>Почему портфолио стало важнее диплома</h3>
               <img class="trend-img" src="./images/apple.webp" alt="Axis - Главная страница" />
-              <a href="./pages/search.html" class="btn-read-sm">читать →</a>
+              </a>
             </div>
           </div>
         </section>
@@ -398,18 +406,18 @@
 
         <!-- Футер внутри контента -->
         <footer class="content-footer-main">
-          <div class="footer-logo"><img src="./images/logo.svg" alt="Axis - Главная страница" /></div>
+          <div class="footer-logo"><img src="images/logo.svg" alt="Axis - Главная страница" /></div>
           <div class="footer-line-main">
-            <img src="images/arrow-small.svg" alt="arrow">
+            <img src="./images/arrow-small.svg" alt="arrow">
           </div>
           <div class="footer-slogan-main">
             ТВОЙ ОРИЕНТИР <br />
             В МИРЕ ПРОФЕССИЙ
           </div>
           <div class="footer-buttons-main">
-            <button class="btn-black">РАССЫЛКА →</button>
+            <button class="btn-black">РАССЫЛКА <img src="./images/arrow2.svg" alt=""></button>
             <button class="btn-black">
-              <a href="https://t.me/axis_prof">ТГ КАНАЛ → </a> </button>
+              <a href="https://t.me/axis_prof">ТГ КАНАЛ <img src="./images/arrow2.svg" alt=""> </a> </button>
           </div>
         </footer>
       </main>

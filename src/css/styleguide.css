@@ -4,8 +4,7 @@
     padding: 0;
     background-color: #fff;
     color: #000;
-    font-family: 'Akzidenzgroteskpro', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     box-sizing: border-box;
 }
 
@@ -149,15 +148,16 @@
 .sg-h2 {
     font-family: 'Drukewidecyr', sans-serif;
     font-weight: 900;
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 2vw;
+    margin-bottom: 2vw;
 }
 
 .sg-desc {
-    font-size: 14px;
+    font-family: 'Akzidenzgroteskpro', sans-serif;
+    font-size: 1.1rem;
     line-height: 1.5;
-    max-width: 600px;
-    margin-bottom: 40px;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
     color: #000;
 }
 
