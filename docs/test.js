@@ -178,8 +178,7 @@ addEventListener("DOMContentLoaded", function () {
     }]
   }];
   var currentQuestionIndex = 0;
-  var userAnswers = {}; // Хранение ответов { 0: 'A', 1: 'B' ... }
-
+  var userAnswers = {};
   var quizArea = document.getElementById('quiz-area');
   var rubricatorArea = document.getElementById('rubricator');
   var root = document.documentElement; // Для смены CSS переменных
