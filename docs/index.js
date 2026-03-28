@@ -151,6 +151,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var prevBtn = document.getElementById('prevBtn');
   var nextBtn = document.getElementById('nextBtn');
   var pageNums = document.querySelectorAll('.page-num');
+  var pagesContainer = document.getElementById('pagesContainer');
+  var sliderViewport = document.querySelector('.slider-viewport');
   if (track && prevBtn && nextBtn && pageNums.length > 0) {
     var goToSlide = function goToSlide(index) {
       if (index < 0 || index >= totalSlides) return;
@@ -188,6 +190,40 @@ document.addEventListener('DOMContentLoaded', function () {
       passive: false
     });
   }
+  if (typeof nextBtn !== 'undefined' && nextBtn) {
+    var autoSlide = function autoSlide() {
+      nextBtn.click();
+    };
+    var startAutoPlay = function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(autoSlide, timeToSwitch);
+    };
+    var stopAutoPlay = function stopAutoPlay() {
+      clearInterval(autoPlayTimer);
+    };
+    var resetAutoPlay = function resetAutoPlay() {
+      startAutoPlay();
+    };
+    var autoPlayTimer;
+    var timeToSwitch = 3000;
+    startAutoPlay();
+    nextBtn.addEventListener('click', resetAutoPlay);
+    if (typeof prevBtn !== 'undefined' && prevBtn) {
+      prevBtn.addEventListener('click', resetAutoPlay);
+    }
+    if (typeof pagesContainer !== 'undefined' && pagesContainer) {
+      pagesContainer.addEventListener('click', function (event) {
+        if (event.target.classList.contains('page-num')) {
+          resetAutoPlay();
+        }
+      });
+    }
+    if (typeof sliderViewport !== 'undefined' && sliderViewport) {
+      sliderViewport.addEventListener('mouseenter', stopAutoPlay);
+      sliderViewport.addEventListener('mouseleave', startAutoPlay);
+    }
+  }
+
   // 2 слайд
   var imageMap = {
     "[ Маркетинг и PR ]": marketing_namespaceObject,
@@ -252,8 +288,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var logoContainer = document.querySelector(".three-hero-logo");
   var heroText = document.querySelector(".three-hero-loz");
-  var arrowImg = document.querySelector(".three-big-arrow img");
-  if (!logoContainer || !heroText || !arrowImg) return;
+  var arrowContainer = document.querySelector(".three-big-arrow");
+  var arrowImg = arrowContainer ? arrowContainer.querySelector("img") : null;
+  var logoLink = logoContainer ? logoContainer.querySelector("a") : null;
+  if (!logoContainer || !heroText || !arrowImg || !logoLink || !arrowContainer) return;
   var objects = {
     kepka: document.querySelector(".kepka"),
     hat: document.querySelector(".hat"),
@@ -263,8 +301,9 @@ document.addEventListener('DOMContentLoaded', function () {
     return el !== null;
   });
   if (!hasObjects) return;
+
+  // Сохраняем исходное состояние (только текст и картинку стрелки)
   var defaultState = {
-    logoHTML: logoContainer.innerHTML,
     text: heroText.innerText,
     arrowSrc: arrowImg.getAttribute("src")
   };
@@ -285,24 +324,31 @@ document.addEventListener('DOMContentLoaded', function () {
       arrow: arrow_pink_namespaceObject
     }
   };
-  var style = document.createElement("style");
-  style.innerHTML = "\n        .glass-obj { transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer; }\n        .glass-obj:hover { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(150, 255, 150, 0.6)); }\n        .dynamic-title { \n            font-family: 'Akzidenzgroteskpro', sans-serif;\n            font-size: 2vw; \n            font-weight: 800; \n            text-transform: uppercase; \n            margin-left: 10vw;\n            margin: 0;\n            line-height: 0.9;\n            display: block;\n            min-width: 20vw; \n        }\n    ";
-  document.head.appendChild(style);
+  logoContainer.style.position = 'relative';
+  var dynamicTitle = document.createElement("div");
+  dynamicTitle.classList.add("dynamic-title");
+  logoContainer.appendChild(dynamicTitle);
 
-  // 5. Функция смены контента
+  // Функция обновления контента
   function updateContent(type) {
     if (type && contentMap[type]) {
       var data = contentMap[type];
-      logoContainer.innerHTML = "<span class=\"dynamic-title\">".concat(data.title, "</span>");
+      logoLink.style.opacity = '0';
+      dynamicTitle.innerText = data.title;
+      dynamicTitle.style.opacity = '1';
       heroText.innerText = data.text;
       arrowImg.src = data.arrow;
-      arrowImg.style.filter = "none";
+      arrowContainer.style.transform = "translateY(1vw)";
     } else {
-      logoContainer.innerHTML = defaultState.logoHTML;
-      heroText.innerText = defaultState.text;
-      arrowImg.src = defaultState.arrowSrc;
+      // Возвращаем все как было при уводе мышки
+      logoLink.style.opacity = '1'; // Возвращаем логотип
+      dynamicTitle.style.opacity = '0'; // Прячем текст "ШКОЛЬНИК"
+      heroText.innerText = defaultState.text; // Возвращаем старое описание
+      arrowImg.src = defaultState.arrowSrc; // Возвращаем черную стрелку
     }
   }
+
+  // Навешиваем слушатели событий
   Object.entries(objects).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
       key = _ref2[0],
@@ -318,6 +364,18 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // 4 слайд
+  var button = document.getElementById('random-btn');
+  if (!button) return;
+  if (button) {
+    var pagesList = ['pages/category/accountant.html', 'pages/category/actuary.html', 'pages/category/Artist.html', 'pages/category/auditor.html', 'pages/category/bi-analyst.html', 'pages/category/brand-manager.html', 'pages/category/clinical-psychologist.html', 'pages/category/compliance-specialist.html', 'pages/category/composer.html', 'pages/category/content-marketer.html', 'pages/category/copywriter.html', 'pages/category/costume-designer.html', 'pages/category/creative-industries.html', 'pages/category/creative-producer.html', 'pages/category/credit-analyst.html', 'pages/category/cybersecurity-specialists.html', 'pages/category/data-analyst.html', 'pages/category/data-scientist.html', 'pages/category/devOps-engineer.html', 'pages/category/digital-marketer.html', 'pages/category/economist.html', 'pages/category/editor.html', 'pages/category/email-marketer.html', 'pages/category/finance.html', 'pages/category/financial-analyst.html', 'pages/category/financial-controller.html', 'pages/category/fintech-specialist.html', 'pages/category/forensic-expert.html', 'pages/category/game-developer.html', 'pages/category/general-practitioner.html', 'pages/category/graphic-designer.html'];
+    if (!pagesList) return;
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      var randomIndex = Math.floor(Math.random() * pagesList.length);
+      var randomPageUrl = pagesList[randomIndex];
+      window.location.href = randomPageUrl;
+    });
+  }
 
   // фильтрация
 });
