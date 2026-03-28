@@ -5,7 +5,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 1,
             color: '#5BB2FF',
-            question: "1. В выходной день ты скорее всего:",
+            question: "В выходной день ты скорее всего:",
             options: [
                 { key: 'A', text: "Пойду в музей, на выставку, в театр или кино" },
                 { key: 'Б', text: "Встречусь с друзьями, пойду в шумное место" },
@@ -16,7 +16,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 2,
             color: '#F18E6D',
-            question: "2. Какой предмет интереснее?",
+            question: "Какой предмет интереснее?",
             options: [
                 { key: 'A', text: "Литература, МХК, история искусств, рисование" },
                 { key: 'Б', text: "Обществознание, экономика, право, иностранный язык" },
@@ -27,7 +27,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 3,
             color: '#9CD75D',
-            question: "3. Что для тебя главное в работе?",
+            question: "Что для тебя главное в работе?",
             options: [
                 { key: 'A', text: "Возможность творить, самовыражаться" },
                 { key: 'Б', text: "Общение с людьми, влияние на них" },
@@ -38,7 +38,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 4,
             color: '#9FAAB6',
-            question: "4. Какую книгу ты выберешь?",
+            question: "Какую книгу ты выберешь?",
             options: [
                 { key: 'A', text: "Красочный альбом по искусству или биографию художника" },
                 { key: 'Б', text: "Книгу по психологии влияния, переговорам" },
@@ -49,7 +49,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 5,
             color: '#FFCD55',
-            question: " 5. Твой любимый тип задач:",
+            question: "Твой любимый тип задач:",
             options: [
                 { key: 'A', text: "Придумать что-то новое, создать образ" },
                 { key: 'Б', text: " Убедить кого-то, договориться, наладить контакт" },
@@ -60,7 +60,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 6,
             color: '#80DDBF',
-            question: "6. Что тебя раздражает в людях?",
+            question: "Что тебя раздражает в людях?",
             options: [
                 { key: 'A', text: "Безвкусица, серость, отсутствие фантазии" },
                 { key: 'Б', text: "Закрытость, неумение общаться" },
@@ -71,7 +71,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 7,
             color: '#80EAFF',
-            question: "7. В компании друзей ты обычно:",
+            question: "В компании друзей ты обычно:",
             options: [
                 { key: 'A', text: "Генератор идей, тот, кто предлагает, куда пойти" },
                 { key: 'Б', text: "Душа компании, организатор встреч" },
@@ -82,7 +82,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 8,
             color: '#E6BB77',
-            question: "8.  Какой фильм ты выберешь?",
+            question: "Какой фильм ты выберешь?",
             options: [
                 { key: 'A', text: "Красивую авторскую драму, арт-хаус" },
                 { key: 'Б', text: "Комедию, социальную драму" },
@@ -93,7 +93,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 9,
             color: '#FF768D',
-            question: "9. Что тебе легче всего дается?",
+            question: "Что тебе легче всего дается?",
             options: [
                 { key: 'A', text: "Придумывать нестандартные, креативные решения" },
                 { key: 'Б', text: "Знакомиться с новыми людьми" },
@@ -104,7 +104,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 10,
             color: '#FF8C3F',
-            question: "10. Какая фраза тебе ближе всего?",
+            question: "Какая фраза тебе ближе всего?",
             options: [
                 { key: 'A', text: "«Красота спасет мир»" },
                 { key: 'Б', text: "«Не имей сто рублей, а имей сто друзей»" },

@@ -57,7 +57,7 @@ ul { list-style: none; }
 }
 
 .big-arrow{
-  margin-top: -10.5vw;
+  margin-top: -10vw !important;
   margin-left: -5vw;
   z-index: 100;
 }
@@ -834,6 +834,7 @@ a { text-decoration: none; color: inherit; }
 
 .btn-filter{
   width: 11vw;
+  padding: 0.8rem 0.5rem !important;
   font-family: 'Druk Wide Cyr', sans-serif;
   font-weight: 900;
   border-radius: 5px;
@@ -858,12 +859,12 @@ a { text-decoration: none; color: inherit; }
   box-sizing: border-box;
 }
 
-/* Класс для скрытия элементов */
+
 .card-filter.hidden {
   display: none;
 }
 
-/* Стили для активной кнопки */
+
 .btn-filter.active {
   background-color: #212121;
   color: #FCFCFC;
@@ -882,7 +883,7 @@ a { text-decoration: none; color: inherit; }
 .card-filter img{
   width: 11vw;
   margin-left: 5vw;
-  margin-top: 3vw;
+  margin-top: 1vw;
 }
 .card-filter img:hover {
   transform: scale(1.2);
@@ -1366,7 +1367,7 @@ width: 10vw;
   margin: 0 auto;
 }
 
-/* --- Левая Колонка (Сайдбар) --- */
+
 .ax-sidebar-left {
   background: #FCFCFC;
   padding: 40px 20px;
@@ -2317,16 +2318,16 @@ width: 10vw;
 
 .dynamic-parallax-img {
   position: absolute;
-  top: 30%; /* Настройте под центр вашего левого блока */
+  top: 30%;
   left: 15%;
   transform-origin: center;
   z-index: 10;
-  pointer-events: none; /* Чтобы не мешала кликать по другим тегам */
+  pointer-events: none;
   transition: opacity 0.5s ease, transform 0.1s ease-out;
-  width: 25vw; /* Размер картинки */
+  width: 25vw;
 }
 
-/* Глубина для 3D эффекта */
+
 .two-slide {
   perspective: 1000px;
 }
@@ -2335,6 +2336,15 @@ width: 10vw;
 /* --- СТИЛИ 3 ЭКРАНА  --- */
 .glass-obj img{
   width: 15vw;
+}
+
+.glass-obj {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+.glass-obj:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(150, 255, 150, 0.6));
 }
 
 .bag{
@@ -2352,6 +2362,28 @@ position: absolute;
   position: absolute;
   margin-left: 30vw;
 }
+
+.three-hero-logo a {
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.dynamic-title {
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали относительно логотипа */
+  left: -35vw;
+  transform: translateY(-50%);
+  font-family: 'Akzidenzgroteskpro', sans-serif;
+  font-size: 2vw; /* Подберите нужный размер под макет */
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000; /* Цвет текста */
+  white-space: nowrap; /* Чтобы текст не переносился на новую строку */
+  opacity: 0; /* Изначально текст скрыт */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Чтобы текст не мешал кликать, если нужно */
+}
+
 
 
 /* --- СТИЛИ 4 ЭКРАНА (Колесо) --- */
@@ -2486,7 +2518,7 @@ position: absolute;
 
 .section__title {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.1;
@@ -2494,7 +2526,7 @@ position: absolute;
 }
 
 .section p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: 'Akzidenzgroteskpro', sans-serif;
   margin-bottom: 1.2rem;
   font-weight: 400;
@@ -2511,7 +2543,7 @@ position: absolute;
   font-weight: 400;
   padding-left: 35px;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #000000;
 }
 

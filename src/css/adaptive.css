@@ -1,4 +1,4 @@
-/* Базовые настройки для rem (1rem = 16px при стандартных настройках) */
+
 :root {
     --font-main: 'Akzidenzgroteskpro', sans-serif;
     width: 100%;
@@ -11,11 +11,11 @@
     /*категории*/
 
     .main-wrapper {
-        display: block; /* Убираем flex, если в десктопе sidebar сбоку */
+        display: block;
     }
 
     .sidebar {
-        display: none; /* Скрываем боковую панель на планшете/мобилке */
+        display: none;
     }
 
     .mobile-header {
@@ -44,7 +44,7 @@
         padding: 4vw;
     }
 
-    /* Сетка категорий на планшете - 2 колонки */
+
     .catalog-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -58,7 +58,7 @@
         border-radius: 1.5rem;
         padding: 2rem;
         position: relative;
-        overflow: hidden; /* Чтобы картинки не вылезали за края слишком сильно на планшете */
+        overflow: hidden;
         display: flex;
         align-items: center;
     }
@@ -108,7 +108,7 @@
 
     h2.section-title,
     .banner-content h2 {
-        font-size: 1.8rem !important; /* Уменьшаем до разумных пределов */
+        font-size: 1.8rem !important;
         line-height: 1.1;
         margin-bottom: 1rem;
         letter-spacing: -0.02em;
@@ -141,19 +141,18 @@
         color: #000;
     }
 
-    /* Добавим стрелочку в конец каждой категории (как в макете) */
     .cat-item::after {
         content: '→';
-        color: currentColor; /* Цвет берется из data-color или просто черный */
+        color: currentColor;
         font-weight: bold;
     }
 
-    /* 4. Розовый баннер — ИСПРАВЛЯЕМ НАЛОЖЕНИЕ */
+
     .promo-banner {
         display: flex;
-        flex-direction: column; /* Текст сверху, картинка снизу */
+        flex-direction: column;
         padding: 25px;
-        background-color: #FFC5D7; /* Примерный цвет */
+        background-color: #FFC5D7;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
@@ -162,7 +161,7 @@
 
     .banner-content {
         position: relative;
-        z-index: 2; /* Текст над картинкой, если они пересекутся */
+        z-index: 2;
         width: 100%;
         justify-content: space-between;
     }
@@ -188,36 +187,34 @@
     }
 
     .banner-image {
-        width: 80%; /* Картинка не должна быть на весь экран */
-        margin: 20px 0 0 auto; /* Сдвигаем вправо вниз */
+        width: 80%;
+        margin: 20px 0 0 auto;
         display: block;
         position: relative;
-        right: -10%; /* Немного "уводим" за край для стиля */
+        right: -10%;
     }
 
     /* 5. Карточки профессий */
     .cards-grid {
-        display: flex !important; /* Убеждаемся, что это flex */
-        flex-wrap: nowrap !important; /* ЗАПРЕЩАЕМ ПЕРЕНОС (самое важное) */
-        overflow-x: auto; /* Включаем горизонтальный скролл */
-        -webkit-overflow-scrolling: touch; /* Делаем скролл плавным на iOS */
-        gap: 20px; /* Расстояние между карточками */
-        padding: 10px 4vw 30px; /* Отступы: по бокам как у всей страницы, снизу для запаса */
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding: 10px 4vw 30px;
         scroll-snap-type: x mandatory;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* Edge */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
     .card, .card-orange, .card-green {
-        flex: 0 0 85vw; /* Карточка занимает 85% ширины экрана */
-        max-width: 40vh; /* Но не больше этого значения на планшетах */
-        scroll-snap-align: start; /* Карточка будет "магнититься" к левому краю при скролле */
-
-        /* Внутренние стили карточки, чтобы она была аккуратной */
+        flex: 0 0 85vw;
+        max-width: 40vh;
+        scroll-snap-align: start;
         display: flex;
         flex-direction: column;
         height: auto;
-        min-height: 30vh; /* Высота под ваш контент */
+        min-height: 30vh;
     }
 
     .btn-read{
@@ -261,13 +258,13 @@
 
     .trends-grid {
         display: flex !important;
-        flex-wrap: nowrap !important; /* Запрещаем перенос на новые строки */
-        overflow-x: auto; /* Включаем скролл */
-        gap: 1rem; /* Отступ между карточками */
-        padding: 10px 4vw 30px; /* Отступы по краям экрана */
-        scroll-snap-type: x mandatory; /* Эффект прилипания */
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 10px 4vw 30px;
+        scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Скрываем полосу прокрутки */
+        scrollbar-width: none;
     }
 
     .trends-grid::-webkit-scrollbar {
@@ -276,40 +273,40 @@
 
     /* 2. Сама карточка тренда */
     .trend-card {
-        flex: 0 0 75vw; /* Ширина карточки — 75% экрана (чтобы была видна следующая) */
-        background-color: #F1F1F1; /* Светло-серый фон как в макете */
+        flex: 0 0 75vw;
+        background-color: #F1F1F1;
         border-radius: 10px;
         padding: 1.5rem;
         scroll-snap-align: start;
-        min-height: 250px; /* Задаем высоту, чтобы карточки не "схлопывались" */
+        min-height: 250px;
         display: flex;
         flex-direction: column;
     }
 
-    /* 3. Ссылка внутри карточки (делаем её на всю высоту) */
+
     .trend-card a {
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Текст сверху, картинка снизу */
+        justify-content: space-between;
         height: 100%;
         text-decoration: none;
         color: #000;
     }
 
-    /* 4. Заголовок внутри карточки */
+
     .trend-card h3 {
         font-size: 1.2rem;
         font-weight: 900;
         line-height: 1.2;
         margin: 0;
-        text-transform: none; /* Или uppercase, если нужно как в макете */
+        text-transform: none;
     }
 
-    /* 5. Исправляем картинку (она должна быть крупнее и внизу справа) */
+
     .trend-img {
-        width: 100px !important; /* Увеличиваем размер (настройте под себя) */
+        width: 100px !important;
         height: auto !important;
-        align-self: flex-end; /* Прижимаем к правому нижнему углу */
+        align-self: flex-end;
         margin-top: 1rem;
         object-fit: contain;
     }
@@ -318,52 +315,52 @@
         display: block !important;
         width: 100%;
         background-color: #fff;
-        padding: 2rem 4vw 3rem; /* Отступы: сверху, по бокам, снизу */
-        border-top: 1.5px solid #000; /* Черная линия сверху как в макете */
+        padding: 2rem 4vw 3rem;
+        border-top: 1.5px solid #000;
         margin-top: 3rem;
     }
 
-    /* 2. Выстраиваем содержимое в ряд */
+
     .mobile-footer-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 15px; /* Расстояние между элементами */
+        gap: 15px;
     }
 
     /* 3. Логотип */
     .mobile-footer .mob-logo-icon img {
-        height: 2.2rem; /* Настройте размер под макет */
+        height: 2.2rem;
         display: block;
     }
 
-    /* 4. Линия со стрелкой (самый важный блок) */
+
     .footer-line-mob {
-        flex-grow: 1; /* Линия занимает всё свободное место */
+        flex-grow: 1;
         height: 2px;
         background-color: #000;
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: flex-end; /* Стрелка будет в конце линии */
+        justify-content: flex-end;
     }
 
-    /* Стилизуем саму стрелку (картинку внутри линии) */
+
     .footer-line-mob img {
-        width: 25px; /* Размер наконечника стрелки */
+        width: 25px;
         height: auto;
         position: absolute;
-        right: -2px; /* Чтобы стрелка плотно прилегала к концу линии */
+        right: -2px;
         transform: translateY(0);
     }
 
     /* 5. Текст слогана */
     .footer-slogan-mob {
-        font-size: 0.9rem; /* Уменьшаем для мобилки */
-        font-weight: 900; /* Максимально жирный */
+        font-size: 0.9rem;
+        font-weight: 900;
         line-height: 1;
-        text-transform: uppercase; /* Все заглавные */
-        white-space: nowrap; /* Чтобы не переносился на 3 строки */
+        text-transform: uppercase;
+        white-space: nowrap;
         color: #000;
         letter-spacing: 0.02em;
     }
@@ -392,13 +389,17 @@
     }
 
     .ax-title-text {
-        font-size: 2.5rem;
+
         text-transform: uppercase;
         font-weight: 800;
     }
+    .ax-title-text span{
+        font-size: 0.4rem !important;
+        text-wrap: wrap !important;
+    }
 
     .ax-bracket {
-        height: 3.5rem; /* Масштабируем скобки */
+        height: 3.5rem;
         width: auto;
     }
 
@@ -409,13 +410,13 @@
     }
 
     /* Заголовки секций */
-    .ax-section-title {
-        font-size: 1.4rem;
+    .ax-section-title, .ax-list-checked li {
+        font-size: 1rem;
         margin-bottom: 1.5rem;
-        font-weight: 700;
+        font-weight: 500;
     }
 
-    .article span{
+    .article span {
         font-size: 1.2rem;
     }
 
@@ -425,8 +426,9 @@
 
     /* Списки с иконками/стрелками */
     .ax-grid-2-col {
+
         display: flex;
-        flex-direction: column; /* На мобилках в колонку */
+        flex-direction: column;
         gap: 0;
     }
     .ax-grid-2-col a{
@@ -440,38 +442,98 @@
     }
 
     /* Списки */
-    .ax-list-checked {
+    .ax-list-checked li {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    /* Пункт списка со стрелочкой */
-    .ax-list-checked li, .ax-list-checked-yellow li, .ax-list-checked-turquoise li, .ax-list-checked-orange li {
+    .it-li li{
+        text-decoration-line: none !important;
+        text-wrap: auto !important;
+        width: 65vw !important;
+        font-size: 0.9rem !important;
+    }
+
+
+    .ax-list-checked li, .ax-list-checked-yellow li, .ax-list-checked-turquoise li, .ax-list-checked-orange li, .ax-list-checked-rose li {
         position: relative;
-        padding-left: 3.5rem; /* Место для стрелочки */
-        margin-bottom: 1.8rem; /* Расстояние между строками как на макете */
+        padding-left: 3.5rem;
+        margin-bottom: 1.8rem;
         font-size: 1rem;
         line-height: 1.2;
         color: #212121;
         text-wrap: nowrap;
         display: flex;
         align-items: center;
-        text-transform: lowercase; /* На макете всё с маленькой буквы */
+        text-transform: lowercase;
     }
 
-    /* Сама голубая стрелочка */
+
     .ax-list-checked li::before {
         content: '→';
         position: absolute;
         left: 0;
-        color: #00A3FF; /* Голубой как на фото */
+        color: #00A3FF;
         font-size: 1.5rem;
         font-weight: 900;
         background-size: contain;
         background-position: center;
     }
 
+    .ax-list-checked-yellow li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #ffb74d;
+        font-size: 1.5rem;
+        font-weight: 900;
+        background-size: contain;
+        background-position: center;
+    }
+    .ax-list-checked-orange li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #be5f0a;
+        font-size: 1.5rem;
+        font-weight: 900;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .ax-list-checked-turquoise li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #00d2d3;
+        font-size: 1.5rem;
+        font-weight: 900;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .ax-list-checked-rose li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #F06292;
+        font-size: 1.5rem;
+        font-weight: 900;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .ax-list-checked-green li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #6cce96;
+        font-size: 1.5rem;
+        font-weight: 900;
+        background-size: contain;
+        background-position: center;
+    }
     .ax-content-wrapper {
         padding: 0;
     }
@@ -480,6 +542,74 @@
     display: none;
 }
 
+    .cards-grid-test {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem; /* Большой отступ между блоками как на макете */
+    }
+
+    .nexus-unit {
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .ethereal-artifact {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    /* Заголовки с подчеркиванием */
+    .anchor-sigil {
+        font-size: 1.2rem;
+        line-height: 1.1;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        border-bottom: 0.6rem solid #212121; /* Жирное подчеркивание */
+    }
+
+    .portal-access {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: #212121;
+        font-family: 'Akzidenzgroteskpro', sans-serif;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    .portal-access img { width: 1.5rem; }
+
+    .data-stream {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #212121;
+        margin-bottom: 3rem;
+    }
+
+    .btn-cta {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        background: #212121;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-size: 1,5rem;
+        font-weight: 800;
+        transition: transform 0.2s;
+    }
+
+    .btn-cta:hover {
+        opacity: 0.9;
+    }
 
 
 
@@ -511,14 +641,14 @@
         height: auto;
     }
 
-    /* Сетка категорий на мобилке - 1 колонка (как на макете) */
+
     .catalog-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     .cat-card {
-        height: 18vw; /* Пропорциональная высота */
+        height: 18vw;
         min-height: 80px;
         padding: 0 1.5rem;
         border-radius: 0.8rem;
@@ -529,7 +659,7 @@
 
     }
 
-    /* Стилизация иконок как на макете (вылетают за пределы) */
+
     .card-icon {
         position: absolute;
         right: -2vw;
@@ -545,10 +675,10 @@
         width: 100%;
         height: auto;
         object-fit: contain;
-        /* Эффект легкой прозрачности или наложения можно добавить тут */
+
     }
 
-    /* Цвета из вашего HTML */
+
     .bg-blue { background-color: #64B5F6; }
     .bg-orange { background-color: #FF9E57; }
     .bg-pink { background-color: #F06292; }
@@ -560,7 +690,7 @@
     .bg-salmon { background-color: #EF9A9A; }
     .bg-green { background-color: #AED581; }
 
-    /* Фильтры профессий */
+
     .filter-buttons {
         display: flex;
         overflow-x: hidden;
@@ -578,7 +708,7 @@
         background: #fff;
     }
 
-    /* Сетка профессий на мобилке - 2 колонки */
+
     .professions-grid {
         display: grid;
         grid-template-columns: 1fr 1fr !important;
@@ -609,7 +739,7 @@
         margin-top: 5vw;
     }
 
-    /* Футер */
+
     .content-footer-main, .content-footer {
         display: none;
     }
@@ -639,7 +769,7 @@
         padding: 5vw 4vw;
     }
 
-    /* Заголовок с кавычками */
+
     .ax-hero-title {
         display: flex;
         align-items: center;
@@ -655,11 +785,11 @@
     }
 
     .ax-bracket {
-        height: 2rem; /* Масштабируем SVG через высоту в rem */
+        height: 2rem;
         width: auto;
     }
 
-    /* Основной текст */
+
     .text-section {
         margin-bottom: 2.5rem;
     }
@@ -675,7 +805,7 @@
         line-height: 1.4;
     }
 
-    /* Список "Кто ты?" с цветными стрелками */
+
     .who-list {
         list-style: none;
         padding: 0;
@@ -692,7 +822,7 @@
         min-height: 2rem;
     }
 
-    /* Создаем стрелки через псевдоэлементы */
+
     .who-list li::before {
         content: "➔";
         position: absolute;
@@ -705,7 +835,7 @@
     .arrow-orange::before { color: #ff8c40; }
     .arrow-green::before { color: #a2d94c; }
 
-    /* Скрываем картинки на мобильном, если нужно строго по макету */
+
     .about-visuals {
         display: none;
     }
@@ -717,25 +847,25 @@
         padding-top: 1.5rem;
     }
 
-    /* --- ФУТЕР (СТРОГО ПО МАКЕТУ) --- */
+
 
     .footer-logo {
         flex-shrink: 0;
     }
 
     .footer-logo img {
-        height: 3rem; /* Высота логотипа */
+        height: 3rem;
         width: auto;
     }
 
     .footer-line-main {
-        flex-grow: 1; /* Линия занимает все свободное пространство */
+        flex-grow: 1;
         display: flex;
         align-items: center;
     }
 
     .footer-line-main img {
-        width: 100%; /* Растягиваем стрелку по горизонтали */
+        width: 100%;
         height: auto;
         min-width: 3rem;
     }
@@ -751,7 +881,6 @@
         margin-left: -15vw;
     }
 
-    /* Скрываем кнопки рассылки на мобильном, так как их нет на скриншоте */
     .footer-buttons-main {
         display: none;
     }
@@ -759,7 +888,7 @@
 /*главная*/
 
     .trends-grid {
-        grid-template-columns: 1fr; /* В одну колонку */
+        grid-template-columns: 1fr;
     }
 
     .banner-content h2 {

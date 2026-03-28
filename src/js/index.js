@@ -76,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const pageNums = document.querySelectorAll('.page-num');
+    const pagesContainer = document.getElementById('pagesContainer');
+    const sliderViewport = document.querySelector('.slider-viewport');
 
     if (track && prevBtn && nextBtn && pageNums.length > 0) {
         let currentIndex = 0;
@@ -109,6 +111,64 @@ document.addEventListener('DOMContentLoaded', () => {
             cardsGrid.scrollLeft += event.deltaY;
         }, { passive: false });
     }
+
+    if (typeof nextBtn !== 'undefined' && nextBtn) {
+
+        let autoPlayTimer;
+        const timeToSwitch = 3000;
+
+        function autoSlide() {
+            nextBtn.click();
+        }
+
+        function startAutoPlay() {
+            stopAutoPlay();
+            autoPlayTimer = setInterval(autoSlide, timeToSwitch);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayTimer);
+        }
+
+        function resetAutoPlay() {
+            startAutoPlay();
+        }
+
+
+        startAutoPlay();
+
+        nextBtn.addEventListener('click', resetAutoPlay);
+
+
+        if (typeof prevBtn !== 'undefined' && prevBtn) {
+            prevBtn.addEventListener('click', resetAutoPlay);
+        }
+
+        if (typeof pagesContainer !== 'undefined' && pagesContainer) {
+            pagesContainer.addEventListener('click', function (event) {
+                if (event.target.classList.contains('page-num')) {
+                    resetAutoPlay();
+                }
+            });
+        }
+
+        if (typeof sliderViewport !== 'undefined' && sliderViewport) {
+            sliderViewport.addEventListener('mouseenter', stopAutoPlay);
+            sliderViewport.addEventListener('mouseleave', startAutoPlay);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     // 2 слайд
     const imageMap = {
         "[ Маркетинг и PR ]": marketingImg,
@@ -183,11 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const logoContainer = document.querySelector(".three-hero-logo");
     const heroText = document.querySelector(".three-hero-loz");
-    const arrowImg = document.querySelector(".three-big-arrow img");
+    const arrowContainer = document.querySelector(".three-big-arrow");
+    const arrowImg = arrowContainer ? arrowContainer.querySelector("img") : null;
+    const logoLink = logoContainer ? logoContainer.querySelector("a") : null;
 
-
-    if (!logoContainer || !heroText || !arrowImg) return;
-
+    if (!logoContainer || !heroText || !arrowImg || !logoLink || !arrowContainer) return;
 
     const objects = {
         kepka: document.querySelector(".kepka"),
@@ -195,13 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
         bag: document.querySelector(".bag"),
     };
 
-
     const hasObjects = Object.values(objects).some(el => el !== null);
     if (!hasObjects) return;
 
-
+    // Сохраняем исходное состояние (только текст и картинку стрелки)
     const defaultState = {
-        logoHTML: logoContainer.innerHTML,
         text: heroText.innerText,
         arrowSrc: arrowImg.getAttribute("src"),
     };
@@ -225,44 +283,33 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     };
 
-    const style = document.createElement("style");
-    style.innerHTML = `
-        .glass-obj { transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer; }
-        .glass-obj:hover { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(150, 255, 150, 0.6)); }
-        .dynamic-title { 
-            font-family: 'Akzidenzgroteskpro', sans-serif;
-            font-size: 2vw; 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            margin-left: 10vw;
-            margin: 0;
-            line-height: 0.9;
-            display: block;
-            min-width: 20vw; 
-        }
-    `;
-    document.head.appendChild(style);
+    logoContainer.style.position = 'relative';
 
-    // 5. Функция смены контента
+    const dynamicTitle = document.createElement("div");
+    dynamicTitle.classList.add("dynamic-title");
+    logoContainer.appendChild(dynamicTitle);
+
+    // Функция обновления контента
     function updateContent(type) {
         if (type && contentMap[type]) {
             const data = contentMap[type];
-
-            logoContainer.innerHTML = `<span class="dynamic-title">${data.title}</span>`;
+            logoLink.style.opacity = '0';
+            dynamicTitle.innerText = data.title;
+            dynamicTitle.style.opacity = '1';
             heroText.innerText = data.text;
-
             arrowImg.src = data.arrow;
+            arrowContainer.style.transform = "translateY(1vw)";
 
-            arrowImg.style.filter = "none";
         } else {
-
-            logoContainer.innerHTML = defaultState.logoHTML;
-            heroText.innerText = defaultState.text;
-            arrowImg.src = defaultState.arrowSrc;
+            // Возвращаем все как было при уводе мышки
+            logoLink.style.opacity = '1';          // Возвращаем логотип
+            dynamicTitle.style.opacity = '0';      // Прячем текст "ШКОЛЬНИК"
+            heroText.innerText = defaultState.text; // Возвращаем старое описание
+            arrowImg.src = defaultState.arrowSrc;   // Возвращаем черную стрелку
         }
     }
 
-
+    // Навешиваем слушатели событий
     Object.entries(objects).forEach(([key, el]) => {
         if (el) {
             el.addEventListener("mouseenter", () => updateContent(key));
@@ -271,7 +318,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 // 4 слайд
+    const button = document.getElementById('random-btn');
+    if (!button) return;
 
+    if (button) {
+
+        const pagesList = [
+            'pages/category/accountant.html',
+            'pages/category/actuary.html',
+            'pages/category/Artist.html',
+            'pages/category/auditor.html',
+            'pages/category/bi-analyst.html',
+            'pages/category/brand-manager.html',
+            'pages/category/clinical-psychologist.html',
+            'pages/category/compliance-specialist.html',
+            'pages/category/composer.html',
+            'pages/category/content-marketer.html',
+            'pages/category/copywriter.html',
+            'pages/category/costume-designer.html',
+            'pages/category/creative-industries.html',
+            'pages/category/creative-producer.html',
+            'pages/category/credit-analyst.html',
+            'pages/category/cybersecurity-specialists.html',
+            'pages/category/data-analyst.html',
+            'pages/category/data-scientist.html',
+            'pages/category/devOps-engineer.html',
+            'pages/category/digital-marketer.html',
+            'pages/category/economist.html',
+            'pages/category/editor.html',
+            'pages/category/email-marketer.html',
+            'pages/category/finance.html',
+            'pages/category/financial-analyst.html',
+            'pages/category/financial-controller.html',
+            'pages/category/fintech-specialist.html',
+            'pages/category/forensic-expert.html',
+            'pages/category/game-developer.html',
+            'pages/category/general-practitioner.html',
+            'pages/category/graphic-designer.html',
+
+        ];
+        if (!pagesList) return;
+
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const randomIndex = Math.floor(Math.random() * pagesList.length);
+            const randomPageUrl = pagesList[randomIndex];
+
+            window.location.href = randomPageUrl;
+        });
+    }
 
 // фильтрация
 

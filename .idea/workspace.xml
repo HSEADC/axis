@@ -9,6 +9,9 @@
       <change beforePath="$PROJECT_DIR$/src/css/adaptive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/adaptive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/test2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/test2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/test3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/test3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category/Artist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/Artist.html" afterDir="false" />
@@ -70,6 +73,11 @@
       <change beforePath="$PROJECT_DIR$/src/pages/category/underwriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/underwriter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category/videographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/videographer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category/web-designer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/web-designer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test/test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/test/test3.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styleguide.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/styleguide.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +115,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/config/webpack.pages.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/css/adaptive.css" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/css/main.css" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/js/search.js" root0="SKIP_INSPECTION" />
@@ -264,6 +273,7 @@
       <workItem from="1774443507000" duration="2663000" />
       <workItem from="1774534326215" duration="42753000" />
       <workItem from="1774621822646" duration="15519000" />
+      <workItem from="1774646335475" duration="12632000" />
     </task>
     <task id="LOCAL-00001" summary="123456789">
       <option name="closed" value="true" />

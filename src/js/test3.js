@@ -7,7 +7,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 1,
             color: '#5BB2FF',
-            question: "1. Как ты предпочитаешь работать?",
+            question: "Как ты предпочитаешь работать?",
             options: [
                 { key: 'A', text: "По четкому плану и графику" },
                 { key: 'Б', text: "По вдохновению — когда есть настроение" },
@@ -18,7 +18,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 2,
             color: '#F18E6D',
-            question: "2. Что для тебя важнее в результате работы?",
+            question: "Что для тебя важнее в результате работы?",
             options: [
                 { key: 'A', text: "Чтобы все было сделано правильно, без ошибок" },
                 { key: 'Б', text: "Чтобы было красиво, необычно, с душой" },
@@ -29,7 +29,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 3,
             color: '#9CD75D',
-            question: "3. Как ты принимаешь решения?",
+            question: "Как ты принимаешь решения?",
             options: [
                 { key: 'A', text: "Логически взвешиваю все «за» и «против»" },
                 { key: 'Б', text: "Доверяю интуиции и первому впечатлению" },
@@ -40,7 +40,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 4,
             color: '#9FAAB6',
-            question: "4. Что тебя мотивирует работать лучше?",
+            question: "Что тебя мотивирует работать лучше?",
             options: [
                 { key: 'A', text: "Четкая постановка задачи и сроки" },
                 { key: 'Б', text: "Интересная, творческая задача" },
@@ -51,7 +51,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 5,
             color: '#FFCD55',
-            question: " 5. Как ты реагируешь на критику?",
+            question: "Как ты реагируешь на критику?",
             options: [
                 { key: 'A', text: "Анализирую, ищу рациональное зерно" },
                 { key: 'Б', text: " Обижаюсь, особенно если критика неконструктивная" },
@@ -62,7 +62,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 6,
             color: '#80DDBF',
-            question: "6. В каком помещении тебе комфортнее работать?",
+            question: "В каком помещении тебе комфортнее работать?",
             options: [
                 { key: 'A', text: "В тихом, изолированном кабинете" },
                 { key: 'Б', text: "В красивом, эстетичном пространстве" },
@@ -73,7 +73,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 7,
             color: '#80EAFF',
-            question: "7. Что для тебя самое страшное в работе?",
+            question: "Что для тебя самое страшное в работе?",
             options: [
                 { key: 'A', text: "Допустить ошибку в расчетах или документах" },
                 { key: 'Б', text: "Сделать скучно и шаблонно" },
@@ -84,7 +84,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 8,
             color: '#E6BB77',
-            question: "8. Как ты справляешься с работой?",
+            question: "Как ты справляешься с работой?",
             options: [
                 { key: 'A', text: "Составляю список задач и выполняю их по порядку" },
                 { key: 'Б', text: " Ищу творческий подход, чтобы автоматизировать рутину" },
@@ -95,7 +95,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 9,
             color: '#FF768D',
-            question: "9. Что для тебя важнее в карьере?",
+            question: "Что для тебя важнее в карьере?",
             options: [
                 { key: 'A', text: "Стабильность и предсказуемость" },
                 { key: 'Б', text: "Возможность самовыражаться" },
@@ -106,7 +106,7 @@ addEventListener("DOMContentLoaded", function() {
         {
             id: 10,
             color: '#FF8C3F',
-            question: "10. Как ты отдыхаешь после работы?",
+            question: "Как ты отдыхаешь после работы?",
             options: [
                 { key: 'A', text: "Привожу дела в порядок, планирую следующий день" },
                 { key: 'Б', text: "Занимаюсь творчеством или хобби" },
