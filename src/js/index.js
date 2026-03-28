@@ -186,21 +186,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeImg = null;
 
     tags.forEach(tag => {
-        // 1. ПРИ НАВЕДЕНИИ
+
         tag.addEventListener('mouseenter', function() {
             const slide = this.closest('.two-slide');
             const logo = slide.querySelector('.hero-logo');
             const text = slide.querySelector('.hero-text');
             const tagText = this.innerText.trim();
 
-            // Скрываем лого и текст (добавляем класс)
+
             if (logo) logo.classList.add('is-hidden');
             if (text) text.classList.add('is-hidden');
 
-            // Удаляем старую картинку, если она была (для безопасности)
             if (activeImg) activeImg.remove();
 
-            // Создаем новую картинку
+
             const img = document.createElement('img');
             img.src = imageMap[tagText] || "";
             img.className = 'dynamic-parallax-img';
@@ -289,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dynamicTitle.classList.add("dynamic-title");
     logoContainer.appendChild(dynamicTitle);
 
-    // Функция обновления контента
+
     function updateContent(type) {
         if (type && contentMap[type]) {
             const data = contentMap[type];
@@ -301,15 +300,14 @@ document.addEventListener('DOMContentLoaded', () => {
             arrowContainer.style.transform = "translateY(1vw)";
 
         } else {
-            // Возвращаем все как было при уводе мышки
-            logoLink.style.opacity = '1';          // Возвращаем логотип
-            dynamicTitle.style.opacity = '0';      // Прячем текст "ШКОЛЬНИК"
-            heroText.innerText = defaultState.text; // Возвращаем старое описание
-            arrowImg.src = defaultState.arrowSrc;   // Возвращаем черную стрелку
+
+            logoLink.style.opacity = '1';
+            dynamicTitle.style.opacity = '0';
+            heroText.innerText = defaultState.text;
+            arrowImg.src = defaultState.arrowSrc;
         }
     }
 
-    // Навешиваем слушатели событий
     Object.entries(objects).forEach(([key, el]) => {
         if (el) {
             el.addEventListener("mouseenter", () => updateContent(key));

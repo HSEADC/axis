@@ -5,79 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90929b0c-70ec-4cb8-bad3-85ea2f3c6440" name="Changes" comment="Merge branch 'main' of https://github.com/HSEADC/codiki">
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Astronomer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Astrophysicist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Bioinformatician.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Biologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Biotechnologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Chemical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Cryptographer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Design Engineer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Ecologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Estimator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Finisher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Foreman.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Geographer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Geologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Geophysicist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Hydrologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Meteorologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Oceanographer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Physicist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Quantum-Engineer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Research-Engineer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Research-Fellow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Research-Scientist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Seismologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Soil Scientist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Technologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/Volcanologist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/accurate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/constraction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/ecology.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/education.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/humanitarian.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/adaptive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/adaptive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/test2.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/test3.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/test2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/test2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/test3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/test3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/Artist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/Artist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/M&amp;A-specialist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/M&amp;A-specialist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/SMM-specialist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/SMM-specialist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/accountant.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/accountant.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/actuary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/actuary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/auditor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/auditor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/bi-analyst.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/bi-analyst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/brand-manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/brand-manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/clinical-psychologist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/clinical-psychologist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/compliance-specialist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/compliance-specialist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/composer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/composer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/content-marketer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/content-marketer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/copywriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/copywriter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/costume-designer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/costume-designer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/creative-industries.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/creative-industries.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/creative-producer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/creative-producer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/credit-analyst.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/credit-analyst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/cybersecurity-specialists.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/cybersecurity-specialists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/data-analyst.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/data-analyst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/data-scientist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/data-scientist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/devOps-engineer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/devOps-engineer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/digital-marketer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/digital-marketer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/economist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/economist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/editor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/email-marketer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/email-marketer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/finance.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/finance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/financial-analyst.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/financial-analyst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/financial-controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/financial-controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/fintech-specialist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/fintech-specialist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/forensic-expert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/forensic-expert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/game-developer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/game-developer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/general-practitioner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/general-practitioner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/graphic-designer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/graphic-designer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/industrial-designer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/industrial-designer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/it.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/it.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/marketer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/marketer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/marketing.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/marketing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/medical-lab-technician.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/medical-lab-technician.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/medicine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/medicine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/motion-designer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/motion-designer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/musician.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/musician.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/nurse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/nurse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/oncologist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/oncologist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/paramedic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/paramedic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/pediatrician.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/pediatrician.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/pharmacist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/pharmacist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/photographer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/pr-manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/pr-manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/product-manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/product-manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/risk-management-specialist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/risk-management-specialist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/site-administrator.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/site-administrator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/surgeon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/surgeon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/tax-consultant.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/tax-consultant.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/trader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/trader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/traffic-manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/traffic-manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/treasurer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/treasurer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/underwriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/underwriter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/videographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/videographer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/web-designer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/web-designer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/test/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/test/test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/test/test3.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test/test3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styleguide.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/styleguide.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +55,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

@@ -117,7 +117,7 @@ const questionsData = [
 
 
     let currentQuestionIndex = 0;
-    const userAnswers = {}; // Хранение ответов { 0: 'A', 1: 'B' ... }
+    const userAnswers = {};
 
 
     const quizArea = document.getElementById('quiz-area');

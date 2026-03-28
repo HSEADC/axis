@@ -239,21 +239,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var tags = document.querySelectorAll('.tag');
   var activeImg = null;
   tags.forEach(function (tag) {
-    // 1. ПРИ НАВЕДЕНИИ
     tag.addEventListener('mouseenter', function () {
       var slide = this.closest('.two-slide');
       var logo = slide.querySelector('.hero-logo');
       var text = slide.querySelector('.hero-text');
       var tagText = this.innerText.trim();
-
-      // Скрываем лого и текст (добавляем класс)
       if (logo) logo.classList.add('is-hidden');
       if (text) text.classList.add('is-hidden');
-
-      // Удаляем старую картинку, если она была (для безопасности)
       if (activeImg) activeImg.remove();
-
-      // Создаем новую картинку
       var img = document.createElement('img');
       img.src = imageMap[tagText] || "";
       img.className = 'dynamic-parallax-img';
@@ -328,8 +321,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var dynamicTitle = document.createElement("div");
   dynamicTitle.classList.add("dynamic-title");
   logoContainer.appendChild(dynamicTitle);
-
-  // Функция обновления контента
   function updateContent(type) {
     if (type && contentMap[type]) {
       var data = contentMap[type];
@@ -340,15 +331,12 @@ document.addEventListener('DOMContentLoaded', function () {
       arrowImg.src = data.arrow;
       arrowContainer.style.transform = "translateY(1vw)";
     } else {
-      // Возвращаем все как было при уводе мышки
-      logoLink.style.opacity = '1'; // Возвращаем логотип
-      dynamicTitle.style.opacity = '0'; // Прячем текст "ШКОЛЬНИК"
-      heroText.innerText = defaultState.text; // Возвращаем старое описание
-      arrowImg.src = defaultState.arrowSrc; // Возвращаем черную стрелку
+      logoLink.style.opacity = '1';
+      dynamicTitle.style.opacity = '0';
+      heroText.innerText = defaultState.text;
+      arrowImg.src = defaultState.arrowSrc;
     }
   }
-
-  // Навешиваем слушатели событий
   Object.entries(objects).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
       key = _ref2[0],
