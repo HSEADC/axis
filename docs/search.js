@@ -37,8 +37,53 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+  function initSearch() {
+    var searchInput = document.querySelector('.search-input');
+    var cards = document.querySelectorAll('.card-filter');
+    var noResults = document.querySelector('.no-results');
+    if (!searchInput || cards.length === 0) return;
+    function applySearch(query) {
+      var q = query.trim().toLowerCase();
+      var visibleCount = 0;
+      cards.forEach(function (card) {
+        // Ищем по data-name (ключевые слова) и по видимому тексту карточки
+        var keywords = (card.getAttribute('data-name') || '').toLowerCase();
+        var text = card.textContent.toLowerCase();
+        var matches = !q || keywords.includes(q) || text.includes(q);
+        card.style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+
+      // Показываем «ничего не найдено», если есть такой элемент
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? '' : 'none';
+      }
+    }
+
+    // Фильтр в реальном времени при вводе
+    searchInput.addEventListener('input', function () {
+      return applySearch(searchInput.value);
+    });
+
+    // Поиск по кнопке / Enter
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') applySearch(searchInput.value);
+    });
+    var searchBtn = document.querySelector('.search-btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', function () {
+        return applySearch(searchInput.value);
+      });
+    }
+
+    // Сброс поиска при очистке поля
+    searchInput.addEventListener('search', function () {
+      return applySearch('');
+    });
+  }
   initHorizontalScroll();
   initFilter();
+  initSearch();
 });
 /******/ })()
 ;
