@@ -6,19 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="90929b0c-70ec-4cb8-bad3-85ea2f3c6440" name="Changes" comment="Merge branch 'main' of https://github.com/HSEADC/codiki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test2.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test2.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/test3.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/test3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +202,8 @@
       <workItem from="1774534326215" duration="42753000" />
       <workItem from="1774621822646" duration="15519000" />
       <workItem from="1774646335475" duration="12632000" />
-      <workItem from="1779193317115" duration="5106000" />
+      <workItem from="1779193317115" duration="5801000" />
+      <workItem from="1779199768941" duration="2515000" />
     </task>
     <task id="LOCAL-00001" summary="123456789">
       <option name="closed" value="true" />
