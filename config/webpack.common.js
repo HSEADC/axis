@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 const htmlPages = require("./webpack.pages.js");
 const path = require("path");
 
@@ -65,6 +66,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
 
     new CopyWebpackPlugin({
+
       patterns: [
         {
           from: path.resolve(__dirname, "../src/share/CNAME"),
@@ -72,7 +74,14 @@ module.exports = {
         },
       ],
     }),
-
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, "../src/partials/analytics.html"),
+        priority: "replace",
+        location: "head",
+        template_filename: "*",
+      },
+    ]),
     ...htmlPages,
   ],
 
