@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90929b0c-70ec-4cb8-bad3-85ea2f3c6440" name="Changes" comment="Merge branch 'main' of https://github.com/HSEADC/codiki">
+      <change afterPath="$PROJECT_DIR$/src/share/CNAME" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/category/Research-Engineer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/Research-Engineer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,6 +207,7 @@
       <workItem from="1774646335475" duration="12632000" />
       <workItem from="1779193317115" duration="5801000" />
       <workItem from="1779199768941" duration="2515000" />
+      <workItem from="1780950167576" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="123456789">
       <option name="closed" value="true" />

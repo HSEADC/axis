@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const htmlPages = require("./webpack.pages.js");
 const path = require("path");
 
@@ -59,13 +60,26 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin(), ...htmlPages],
-  optimization: {
-    minimizer: [new CssMinimizerPlugin()],
-  },
+
+  plugins: [
+    new MiniCssExtractPlugin(),
+
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "../src/share/CNAME"),
+          to: path.resolve(__dirname, "../docs"),
+        },
+      ],
+    }),
+
+    ...htmlPages,
+  ],
+
   resolve: {
     fallback: {
       stream: require.resolve("stream-browserify"),
     },
   },
 };
+
