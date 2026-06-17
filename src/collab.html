@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AXIS × Skillbox — Исследование профессий 2035 года</title>
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<!--<!менюшка сверху>-->
+<header id="fixed-header-skill" class="fixed-header-skill">
+    <div class="container-skill header-container-skill">
+        <a href="#hero-top-skill" class="logo-skill">
+           <img src="./images/collab-logo.png">
+        </a>
+        <nav>
+            <ul class="nav-menu-skill">
+                <li><a href="#market-section" class="nav-link-skill">Рынок</a></li>
+                <li><a href="#professions-section-skill" class="nav-link-skill">Профессии</a></li>
+                <li><a href="#quotes-section" class="nav-link-skill">Будущее</a></li>
+                <li><a href="#quiz-section" class="nav-link-skill">Тест</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- --- главный блок --- -->
+<section class="hero-skill" id="hero-top-skill">
+    <div class="container-skill hero-grid-skill">
+        <div class="hero-content-skill">
+            <h1 class="hero-title-skill">Кем ты будешь работать в <span>2035 году?</span></h1>
+            <p class="hero-subtitle-skill">Совместное детальное исследование профессий будущего и ключевых вызовов автоматизации от аналитических агентов AXIS и образовательной платформы Skillbox.</p>
+            <div class="hero-actions-skill">
+                <button id="btn-explore-grid-skill" class="btn-skill btn-primary-skill">
+                    Начать исследование <img src="./images/arrow2.svg" alt="">
+                </button>
+                <button id="btn-explore-test-skill" class="btn-skill btn-secondary-skill">
+                    Пройти тест <img src="./images/arrow3.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-illustration-skill">
+            <img src="images/it.webp">
+        </div>
+    </div>
+
+    <!-- блок статистики -->
+    <div class="container-skill hero-stats-skill">
+        <div class="stats-grid-skill">
+            <div class="stat-item-skill">
+                <span class="stat-number">85%</span>
+                <p class="stat-desc">профессий 2035 года ещё не существуют на современном рынке труда</p>
+            </div>
+            <div class="stat-item-skill">
+                <span class="stat-number stat-number-alt">47%</span>
+                <p class="stat-desc">рабочих мест находятся под непосредственным риском стремительной автоматизации</p>
+            </div>
+            <div class="stat-item-skill">
+                <span class="stat-number stat-number-dark">10</span>
+                <p class="stat-desc">лет осталось до наступления технологического сингулярного сдвига</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- рынок --- -->
+<section class="market-section" id="market-section">
+    <div class="container-skill">
+        <h2 class="market-title-skill">Рынок труда меняется быстрее, чем ты думаешь</h2>
+
+        <div class="market-cards-skill">
+            <!--  1 -->
+            <div class="market-card-skill">
+                <span class="market-card-metric metric-purple">85%</span>
+                <h3 class="market-card-title">Автоматизация</h3>
+                <p class="market-card-text">Оксфордское комплексное исследование: почти половина существующих профессий может быть полностью программно автоматизирована в ближайшие два десятилетия.</p>
+            </div>
+            <!--  2 -->
+            <div class="market-card-skill">
+                <span class="market-card-metric metric-orange">$15 трлн</span>
+                <h3 class="market-card-title">ИИ в экономике</h3>
+                <p class="market-card-text">Прогноз консалтингового агентства McKinsey о колоссальном влиянии генеративного ИИ на мировую макроэкономику и автоматизацию секторов к 2030 году.</p>
+            </div>
+            <!--  3 -->
+            <div class="market-card-skill">
+                <span class="market-card-metric metric-cyan">6 лет</span>
+                <h3 class="market-card-title">На адаптацию</h3>
+                <p class="market-card-text">Средний период полного обновления ключевых профессиональных навыков специалиста по новейшим данным World Economic Forum стремительно сократился до 6 лет.</p>
+            </div>
+        </div>
+
+        <!-- скорость изменений -->
+        <div class="speed-subsection">
+            <h3 class="speed-title">Скорость изменений по отраслям</h3>
+
+            <div class="speed-grid">
+                <div class="industry-list">
+                    <!-- IT -->
+                    <div class="industry-item">
+                        <div class="industry-info">
+                            <span>Информационные технологии (ИТ)</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="industry-bar-bg">
+                            <div class="industry-bar-fill" style="width: 94%; background-color: var(--color-brand);"></div>
+                        </div>
+                    </div>
+                    <!-- финансы -->
+                    <div class="industry-item">
+                        <div class="industry-info">
+                            <span>Финансы и аналитика</span>
+                            <span>76%</span>
+                        </div>
+                        <div class="industry-bar-bg">
+                            <div class="industry-bar-fill" style="width: 76%; background-color: #ffd13b;"></div>
+                        </div>
+                    </div>
+                    <!-- медицина -->
+                    <div class="industry-item">
+                        <div class="industry-info">
+                            <span>Медицина и генетика</span>
+                            <span>68%</span>
+                        </div>
+                        <div class="industry-bar-bg">
+                            <div class="industry-bar-fill" style="width: 68%; background-color: #35d3ef;"></div>
+                        </div>
+                    </div>
+                    <!-- образование -->
+                    <div class="industry-item">
+                        <div class="industry-info">
+                            <span>Образование и трекинг</span>
+                            <span>61%</span>
+                        </div>
+                        <div class="industry-bar-bg">
+                            <div class="industry-bar-fill" style="width: 61%; background-color: #ff5c97;"></div>
+                        </div>
+                    </div>
+                    <!-- наука -->
+                    <div class="industry-item">
+                        <div class="industry-info">
+                            <span>Естественные науки и космос</span>
+                            <span>55%</span>
+                        </div>
+                        <div class="industry-bar-bg">
+                            <div class="industry-bar-fill" style="width: 55%; background-color: #20c997;"></div>
+                        </div>
+                    </div>
+                    <!-- строительство -->
+                    <div class="industry-item">
+                        <div class="industry-info">
+                            <span>Строительство и архитектура сред</span>
+                            <span>38%</span>
+                        </div>
+                        <div class="industry-bar-bg">
+                            <div class="industry-bar-fill" style="width: 38%; background-color: #ff7a3c;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    <p class="quote-text">«Мы не можем со 100% уверенностью планировать, какие узкие роли возникнут завтра — но точно знаем, что когнитивная адаптивность и умение работать в тандеме с ИИ станут главными навыками нового века».</p>
+                    <span class="quote-author">— World Economic Forum, Future of Jobs Report 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- интервью --- -->
+<section class="inquiry-section">
+    <div class="container-skill">
+        <h2 class="inquiry-title">Что думают люди о своей будущей карьере и профессии</h2>
+
+        <div class="inquiry-grid">
+            <!--  1 -->
+            <div class="inquiry-card">
+                <h3 class="inquiry-card-heading color-pink-txt">73%</h3>
+                <p class="inquiry-card-text">молодых специалистов признаются, что ровным счётом не представляют, как кардинально изменится их текущая область через 5 лет.</p>
+                <div class="inquiry-icon">
+                    <img src="images/education.webp">
+                </div>
+            </div>
+            <!--  2 -->
+            <div class="inquiry-card">
+                <h3 class="inquiry-card-heading color-blue-txt">61%</h3>
+                <p class="inquiry-card-text">опрошенных считают сферу ИТ и облачных данных единственной безопасной гаванью, но при этом боятся совершить шаг по переходу.</p>
+                <div class="inquiry-icon">
+                    <img src="images/it.webp">
+                </div>
+            </div>
+
+            <div class="inquiry-card chart-card">
+                <div class="chart-data-side">
+                    <h3 class="inquiry-card-heading color-orange-txt">88%</h3>
+                    <p class="inquiry-card-text">людей драматически переоценивают стабильность механических и офисных должностей. Вера в то, что их специальность останется неизменной — критическое массовое заблуждение.</p>
+                </div>
+
+                <div class="chart-visual-side">
+
+                    <div class="donut-container">
+                        <svg class="donut" viewBox="0 0 36 36" width="100%" height="100%">
+
+                            <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#caccd9" stroke-width="3"/>
+
+                            <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#ff7a3c" stroke-width="3" stroke-dasharray="29 71" stroke-dashoffset="100"/>
+
+                            <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#2f34f5" stroke-width="3" stroke-dasharray="12 88" stroke-dashoffset="71"/>
+                        </svg>
+                        <div class="donut-inner-txt">
+                            <span class="donut-num">16%</span>
+                            <div class="donut-label">регулярно</div>
+                        </div>
+                    </div>
+
+                    <!-- лист с цифрами -->
+                    <ul class="chart-legend">
+                        <li class="legend-item">
+                            <span class="legend-color legend-blue"></span>
+                            <span>Следят за рынком регулярно — 12%</span>
+                        </li>
+                        <li class="legend-item">
+                            <span class="legend-color legend-orange"></span>
+                            <span>Иногда просматривают тренды — 29%</span>
+                        </li>
+                        <li class="legend-item">
+                            <span class="legend-color legend-grey"></span>
+                            <span>Вообще не следят за изменениями — 59%</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- фильтрация --- -->
+<section class="professions-section-skill" id="professions-section-skill">
+    <div class="container-skill">
+        <h2 class="professions-title">Как изменятся привычные профессии под давлением систем ИИ</h2>
+
+
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="doctor">Врач</button>
+            <button class="tab-btn" data-tab="designer">Дизайнер</button>
+            <button class="tab-btn" data-tab="marketer">Маркетолог</button>
+            <button class="tab-btn" data-tab="teacher">Учитель</button>
+            <button class="tab-btn" data-tab="lawyer">Юрист</button>
+        </div>
+
+        <!-- активный -->
+        <div class="tab-content-panel" id="active-tab-panel">
+            <div class="prof-info-col">
+                <div class="prof-headline-block">
+                    <h3 class="prof-name">Врач</h3>
+                    <p class="prof-desc">ИИ уже превосходит дерматологов в диагностике меланомы и радиологов в анализе снимков. Но сострадание, сложные этические решения и комплексные клинические случаи остаются исключительным правом человека.</p>
+                </div>
+
+                <div class="prof-metrics-block">
+                    <div class="prof-metric-item">
+                        <div class="prof-metric-label">
+                            <span>Риск автоматизации рутины</span>
+                            <span class="prof-metric-val">72%</span>
+                        </div>
+                        <div class="prof-bar-bg">
+                            <div class="prof-bar-fill accent-blue" style="width: 72%"></div>
+                        </div>
+                    </div>
+
+                    <div class="prof-metric-item">
+                        <div class="prof-metric-label">
+                            <span>Рост спроса на специалистов</span>
+                            <span class="prof-metric-val">+34%</span>
+                        </div>
+                        <div class="prof-bar-bg">
+                            <div class="prof-bar-fill accent-orange" style="width: 34%"></div>
+                        </div>
+                    </div>
+
+                    <div class="prof-metric-item">
+                        <div class="prof-metric-label">
+                            <span>Уровень изменения профессии</span>
+                            <span class="prof-metric-val">Высокий</span>
+                        </div>
+                        <div class="prof-bar-bg">
+                            <div class="prof-bar-fill accent-pink" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prof-tags">
+                    <span class="prof-pill-tag">ИИ-диагностика</span>
+                    <span class="prof-pill-tag">Биоинформатика</span>
+                    <span class="prof-pill-tag">Телемедицина</span>
+                </div>
+            </div>
+
+            <div class="prof-card-col" style="background-color: #80eaff;">
+                <div class="prof-card-top">
+                    <h4 class="prof-card-text">Врач 2035</h4>
+                    <p style="font-size: 1.5rem; line-height: 1.5; font-weight: 500; margin-top: 1.0rem;">Куратор лечения + интерпретатор ИИ-анализа + специалист по эмпатии и медицинской этике.</p>
+                </div>
+                <div class="prof-card-art-container">
+                   <img src="images/medicine.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- скиллбокс --- -->
+<section class="courses-section">
+    <div class="container-skill">
+        <h2 class="courses-title">Как заранее подготовиться к изменениям 2035 года?</h2>
+
+        <div class="courses-grid">
+            <!--  1 -->
+            <div class="course-card">
+                <div class="course-details">
+                    <span class="course-author-label">Skillbox эксперты</span>
+                    <h3 class="course-headline">Нейросети. Практический форсированный курс</h3>
+                    <p style="font-size: 1.4rem; color: var(--color-text-muted-dark);">Изучение промпт-дизайна, автоматизации генерации кода, работы с визуалом с помощью нейронных сетей Midjourney и Chat GPT.</p>
+                </div>
+                <div class="course-gfx">
+                    <img src="images/skill1.png">
+                </div>
+                <a href="https://skillbox.ru" target="_blank" class="course-btn">Skillbox <img src="./images/arrow2.svg" alt=""></a>
+            </div>
+
+            <!--  2 -->
+            <div class="course-card">
+                <div class="course-details">
+                    <span class="course-author-label">Skillbox аналитика</span>
+                    <h3 class="course-headline">Аналитика данных и архитектура баз данных</h3>
+                    <p style="font-size: 1.4rem; color: var(--color-text-muted-dark);">Управление информационными потоками, настройка дашбордов и глубинное понимание современных дата-конвейеров.</p>
+                </div>
+                <div class="course-gfx">
+                    <img src="images/skill2.png">
+                </div>
+                <a href="https://skillbox.ru" target="_blank" class="course-btn">Skillbox <img src="./images/arrow2.svg" alt=""></a>
+            </div>
+
+            <!--  3 -->
+            <div class="course-card">
+                <div class="course-details">
+                    <span class="course-author-label">Skillbox менеджмент</span>
+                    <h3 class="course-headline">Управление ИТ-продуктами и командами</h3>
+                    <p style="font-size: 1.4rem; color: var(--color-text-muted-dark);">Коммуникационные стратегии, методологии Agile, интеграция ИИ-агентов в организационную структуру корпораций.</p>
+                </div>
+                <div class="course-gfx">
+                    <img src="images/skill3.png">
+                </div>
+                <a href="https://skillbox.ru" target="_blank" class="course-btn">Skillbox <img src="./images/arrow2.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- человек и профессия --- -->
+<section class="quotes-section-skill" id="quotes-section">
+    <div class="container-skill">
+        <h2 class="quotes-section-title">Человек VS Профессия будущего</h2>
+
+        <div class="quotes-grid-masonry">
+            <!--  1 -->
+            <div class="people-quote-card">
+                <p class="people-quote-body">«ИИ не заберёт огульно работу у обычных честных людей. Но он гарантированно заберёт её у тех специалистов, которые категорически отказываются или не умеют работать с технологиями искусственного интеллекта. Это принципиальная грань.»</p>
+                <div class="people-quote-meta">
+                    <span class="quote-signer">Кай-Фу Ли</span>
+                    <p class="quote-signer-title">Венчурный инвестор, технологический идеолог, экс-CEO Sinovation Ventures</p>
+                </div>
+            </div>
+            <!--  2 -->
+            <div class="people-quote-card">
+                <p class="people-quote-body">«Самое критически важное карьерное умение будущего — это отнюдь не узкое программирование кода или знание сухих команд. Это умение сверхбыстро обучаться совершенно новым концепциям и мгновенно менять жизненный контекст.»</p>
+                <div class="people-quote-meta">
+                    <span class="quote-signer">Нил Деграсс Тайсон</span>
+                    <p class="quote-signer-title">Астрофизик, известный писатель и главный популяризатор современной науки</p>
+                </div>
+            </div>
+            <!--  3 -->
+            <div class="people-quote-card">
+                <p class="people-quote-body">«Мы прямо сейчас наблюдаем исторический плавный переход от стандартной сухой экономики накопленных знаний к гибкой экономике смыслов. Тот, кто умеет находить и даровать смысл терабайтам данных — будет на вес платины.»</p>
+                <div class="people-quote-meta">
+                    <span class="quote-signer">Эксперт AXIS</span>
+                    <p class="quote-signer-title">Ведущий методолог, исследователь динамических трендов рынка труда</p>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="people-quote-card">
+                <p class="people-quote-body">«Через 10 лет молодые выпускники университетов будут безжалостно конкурировать не друг с другом на тестовых бланках — они будут насмерть бороться со связкой супер-продвинутых людей плюс мощнейших ИИ-инструментов.»</p>
+                <div class="people-quote-meta">
+                    <span class="quote-signer">Сэм Альтман</span>
+                    <p class="quote-signer-title">Президент и сооснователь передовой лаборатории ИИ OpenAI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- профессии новые --- -->
+<section class="new-profs-section">
+    <div class="container-skill">
+        <h2 class="new-profs-title">Удивительные профессии, которых ещё вчера не существовало</h2>
+
+        <div class="new-profs-grid">
+            <!--  1 -->
+            <div class="new-prof-card one">
+                <div class="new-prof-top">
+                    <h3 class="new-prof-heading">ИИ-тренер</h3>
+                    <p class="new-prof-descr">Высококлассный лингвист-инженер, который непрерывно воспитывает и тонко калибрует большие языковые модели. Он лично отвечает перед пользователем за фактологическую точность, безопасность и этику машинных генераций.</p>
+                </div>
+                <div class="new-prof-illustration">
+                    <img src="images/it.webp">
+                </div>
+            </div>
+
+            <!--  2 -->
+            <div class="new-prof-card two">
+                <div class="new-prof-top">
+                    <h3 class="new-prof-heading">XR-дизайнер</h3>
+                    <p class="new-prof-descr">Создаёт и продумывает удивительный многопользовательский опыт в расширенной смешанной реальности — от умных навигационных стекол до полноценных игровых и образовательных VR-метавселенных завтрашнего дня.</p>
+                </div>
+                <div class="new-prof-illustration">
+                    <img src="images/creative.webp">
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="new-prof-card three">
+                <div class="new-prof-top">
+                    <h3 class="new-prof-heading">Диджитэл-этик</h3>
+                    <p class="new-prof-descr">Уважаемый специалист на стыке прикладных информационных систем, практической философии и международного права, устанавливающий чёткие правовые и когнитивные барьеры для технологических корпораций.</p>
+                </div>
+                <div class="new-prof-illustration">
+                    <img src="images/humanitarian.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- навыки --- -->
+<section class="skills-section">
+    <div class="container-skill">
+        <div class="skills-title-block">
+            <h2>Ключевые навыки, которые никогда не устареют в будущем</h2>
+        </div>
+
+        <div class="skills-grid">
+            <!-- 1 -->
+            <div class="skill-card">
+                <div class="skill-icon-holder">
+                    <img src="images/mozg.png">
+                </div>
+                <h3 class="skill-headline">Критическое мышление</h3>
+                <p class="skill-paragraph">Быстро верифицировать любую терабайтную информацию, беспристрастно искать системные ошибки, выявлять скрытые дивергенции и принимать верные решения.</p>
+            </div>
+
+            <!--  2 -->
+            <div class="skill-card">
+                <div class="skill-icon-holder">
+                    <img src="images/adaptive.png">
+                </div>
+                <h3 class="skill-headline">Гибкая адаптивность</h3>
+                <p class="skill-paragraph">Легко перестраиваться под волатильные реалии, учиться новому на лету и сохранять хладнокровие среди экстремальных уровней турбулентности.</p>
+            </div>
+
+            <!--  3 -->
+            <div class="skill-card">
+                <div class="skill-icon-holder">
+                    <img src="images/blokcomp.png">
+                </div>
+                <h3 class="skill-headline">Цифровая грамотность</h3>
+                <p class="skill-paragraph">Уверенно настраивать ИИ-ассистентов, создавать скрипты автоматизации и обращаться с большими данными даже без профессионального образования.</p>
+            </div>
+
+            <!--  4 -->
+            <div class="skill-card">
+                <div class="skill-icon-holder">
+                    <img src="images/creativpicture.png">
+                </div>
+                <h3 class="skill-headline">Креативность</h3>
+                <p class="skill-paragraph">Придумывать взрывные нестандартные концепции, видеть неочевидные пересечения контекстов и совершать открытия, неподвластные холодным машинам.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --- тест --- -->
+<section class="quiz-section-skill" id="quiz-section">
+    <div class="container-skill">
+
+        <div class="quiz-header-block-skill">
+            <h1 class="quiz-section-title-skill">Какой навык будущего критически нужен именно тебе?</h1>
+        </div>
+
+        <!-- вопросы -->
+        <div class="quiz-box-card-skill" id="quiz-box-card-skill">
+            <!-- прогресс -->
+            <div class="quiz-progress-bar-bg">
+                <div id="quiz-progress" class="quiz-progress-bar-fill"></div>
+            </div>
+
+            <div class="quiz-meta-info">
+                <span id="quiz-qnum">Вопрос 1 из 5</span>
+                <span class="mono-text">Выберите вариант, наиболее подходящий вам</span>
+            </div>
+
+            <h3 id="quiz-qtitle" class="quiz-question-title">
+                Загрузка вопросов интеллектуального тестирования...
+            </h3>
+
+
+            <div id="quiz-options-grid" class="quiz-options-grid">
+            </div>
+
+            <div class="quiz-footer-actions">
+                <button id="btn-next-skill" class="btn-next-skill" disabled>Далее <img src="./images/arrow2.svg" alt=""></button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- --- футер --- -->
+<section class="footer-cta-skill footer-back-skill" >
+    <div class="container-skill">
+        <h2 class="footer-cta-title-skill">Будущее принадлежит тем, кто умеет <span>адаптироваться</span></h2>
+        <p class="footer-cta-subtitle-skill">Тем, кто не перестаёт учиться</p>
+
+        <div class="footer-actions-skill">
+            <button id="btn-footer-test-skill" class="btn-skill btn-secondary-skill" style="padding: 1.8rem 4.0rem; font-size:1.6rem;">Пройти тест заново</button>
+            <a href="https://skillbox.ru" target="_blank" class="btn-skill btn-primary-skill" style="padding: 1.8rem 4.0rem; font-size:1.6rem; background-color: var(--color-brand);">Начать обучение в Skillbox</a>
+        </div>
+
+        <p class="footer-fine-print">AXIS помогает понять, куда двигаться. Skillbox помогает начать путь.</p>
+       <div class="future-footer"><img src="images/Future.svg"></div>
+
+        <div class="footer-logo-row-skill">
+            <div class="logo-skill-footer">
+                <img src="./images/skill-logo2.svg">
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

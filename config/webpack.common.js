@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     index: "./src/js/index.js",
     styleguide: "./src/js/styleguide.js",
+    collab: "./src/js/collab.js",
     test: "./src/js/test1.js",
     test2: "./src/js/test2.js",
     test3: "./src/js/test3.js",
