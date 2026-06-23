@@ -2063,7 +2063,7 @@ width: 10vw;
 .bl { bottom: 0; left: 0; border-right: none; border-top: none; border-bottom-left-radius: 2px; }
 .br { bottom: 0; right: 0; border-left: none; border-top: none; border-bottom-right-radius: 2px; }
 
-/* Состояние: ВЫБРАН */
+
 .ax-option input:checked + .ax-letter-box {
   background-color: var(--theme-color);
   color: #000000;
@@ -2074,7 +2074,7 @@ width: 10vw;
 }
 .ax-option-text { font-size: 1.1rem; font-family: 'Akzidenzgroteskpro', sans-serif; font-weight: 500; }
 
-/* Кнопки навигации */
+
 .ax-nav-btns { display: flex; gap: 10px; margin-top: 20px; }
 .ax-btn {
   border: none;
@@ -2096,7 +2096,7 @@ width: 10vw;
 }
 .ax-btn-next:hover { opacity: 0.9; }
 
-/* Футер */
+
 .ax-footer {
   margin-top: 80px; padding-top: 30px;
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px;
@@ -2178,7 +2178,7 @@ width: 10vw;
   color: #4a9eff;
 }
 
-/* Подчеркнутые профессии */
+
 .ax-link-u {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -2187,7 +2187,7 @@ width: 10vw;
 }
 .ax-link-u:hover { color: var(--theme-color); }
 
-/* Цветные кнопки "Перейти в каталог" */
+
 .ax-res-btn {
   display: inline-block;
   padding: 12px 20px;
