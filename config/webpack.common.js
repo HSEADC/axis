@@ -16,6 +16,7 @@ module.exports = {
     test2: "./src/js/test2.js",
     test3: "./src/js/test3.js",
     search: "./src/js/search.js",
+    spec: "./src/js/spec.js",
   },
 
   output: {
@@ -58,6 +59,13 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "fonts/[hash][ext][query]",
+        },
+      },
+      {
+        test: /\.(mp3|wav|m4a|ogg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "audio/[hash][ext][query]",
         },
       },
     ],

@@ -2904,3 +2904,789 @@ position: absolute;
 .search-btn img{
   width: 1.5rem;
 }
+
+
+/*спецпроект*/
+
+.axis-interview-page {
+  --ax-ink: #212121;
+  --ax-paper:   #FFFFFF;
+  --ax-rose:    #FF3264;
+  --ax-fog:     #F5F5F5;
+  --ax-mist:    #E6E6E6;
+  --ax-smoke:   #AAAAAA;
+  --ax-gold:    #F2C74E;
+  --ax-teal:    #5FD8C4;
+  --ax-orange:  #FF8A3D;
+  --ax-ff-dis:  'Drukewidecyr', sans-serif;
+  --ax-ff-body: 'Akzidenzgroteskpro', sans-serif;
+  --ax-ease:    cubic-bezier(.22, 1, .36, 1);
+  --ax-dur:     .38s;
+
+  font-family: var(--ax-ff-body);
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.axis-interview-page *,
+.axis-interview-page *::before,
+.axis-interview-page *::after { box-sizing: inherit; }
+
+.axis-interview-page img,
+.axis-interview-page video,
+.axis-interview-page svg { display: block; max-width: 100%; }
+
+.axis-interview-page .site-crown {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: clamp(1.5rem,4vw,3rem) clamp(1.25rem,5vw,5rem) clamp(1rem,2vw,2rem);
+  min-height: 60vw;
+  overflow: hidden;
+}
+
+.axis-interview-page .crown-brand {
+  display: flex;
+  align-items: center;
+  gap: clamp(.5rem,1.5vw,1.25rem);
+  position: relative;
+  z-index: 3;
+  flex-wrap: wrap;
+  animation: ax-slide-left .8s cubic-bezier(.22,1,.36,1) both;
+}
+
+.crown-brand {
+  position: absolute;
+  z-index: 100 !important;
+  width: 100%;
+  margin-top: 18vw;
+  margin-left: 8vw;
+}
+
+.crown-brand span{
+  margin-right: 10vw;
+}
+.brand-divider{
+  width: 20vw;
+}
+
+
+.ax-bracket-spec {
+  position: absolute;
+  width: 1.1875rem;
+  height: 3.4375rem;
+  flex: none;
+}
+
+.axis-interview-page .ax-bracket-left-spec {
+  top: 0;
+  left: -2vw;
+  right: auto;
+  bottom: auto;
+}
+
+.axis-interview-page .ax-bracket-right-spec {
+  bottom: 0;
+  right: -2vw;
+  top: auto;
+  left: auto;
+}
+
+.axis-interview-page .brand-wordmark {
+  font-family: var(--ax-ff-dis);
+  font-size: clamp(2.8rem,8vw,6.5rem);
+  letter-spacing: .02em;
+  line-height: 1;
+}
+
+.axis-interview-page .brand-divider { display: flex; align-items: center; }
+
+
+.axis-interview-page .brand-tagline {
+  font-size: clamp(.5rem,1.1vw,.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  max-width: 9rem;
+}
+
+.brand-tagline {
+  font-family: 'Drukewidecyr', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  width: 100%;
+  white-space: nowrap;
+
+}
+
+.axis-interview-page .crown-cluster {
+  position: absolute;
+  right: 0; top: 0;
+  width: 55%;
+  /* точная высота — совпадает с хедером без фиксированного min-height */
+  height: 100%;
+  min-height: clamp(12rem, 28vw, 26rem);
+  pointer-events: none;
+  perspective: 900px;
+  overflow: hidden;
+}
+
+.crown-cluster{
+ margin-right: 17vw;
+}
+
+
+.axis-interview-page .cluster-obj {
+  position: absolute;
+  border-radius: 50%;
+  animation: ax-bobble 7s ease-in-out infinite;
+}
+
+
+/* ═══════════════════════════════════════════════
+   MARQUEE
+   ═══════════════════════════════════════════════ */
+.axis-interview-page .ribbon-rail {
+  overflow: hidden;
+  padding: .3rem 0;
+  user-select: none;
+}
+
+.axis-interview-page .ribbon-track {
+  display: flex;
+  width: max-content;
+  animation: ax-marquee 20s linear infinite;
+}
+
+.axis-interview-page .ribbon-word {
+  font-family: var(--ax-ff-dis);
+  font-size: clamp(3.5rem,11vw,9rem);
+  letter-spacing: .03em;
+  white-space: nowrap;
+  color: var(--ax-ink);
+}
+
+@keyframes ax-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+.ribbon-word {
+  animation: ribbonColorShift 8s steps(1, end) infinite;
+}
+
+@keyframes ribbonColorShift {
+  0%   { color: #1a1a1a; }
+  15%  { color: #be5f0a; }
+  35%  { color: #FF768D; }
+  55%  { color: #457b9d; }
+  75% { color: #F29475}
+}
+
+/* ═══════════════════════════════════════════════
+   SCATTER SECTION
+   ═══════════════════════════════════════════════ */
+.axis-interview-page .scatter-zone {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  padding: clamp(3rem,7vw,6rem) clamp(1.25rem,5vw,5rem);
+  min-height: 50vw;
+  overflow: hidden;
+}
+
+.scatter-back img{
+  z-index: 1 !important;
+  width: 90vw;
+margin-top: -2vw;
+}
+
+
+
+.axis-interview-page .scatter-copy {
+  position: absolute;
+  flex-direction: row;
+  gap: 2vw;
+  width: 50vw;
+  margin-left: 27vw;
+  z-index: 100 !important;
+}
+.axis-interview-page .scatter-copy__text {
+  width: 50vw;
+}
+
+.scatter-copy__text p + p{
+  margin-top: 1.2em;
+}
+.axis-interview-page .scatter-copy p {
+  font-size: clamp(.8rem,1.2vw,.9rem);
+  line-height: 1.7;
+  color: var(--ax-ink);
+  /*max-width: 38rem;*/
+}
+
+.scatter-copy {
+  position: absolute !important;
+  gap: 10vw;
+}
+
+.scatter-copy p{
+  margin-left: 0;
+  width: auto;
+  z-index: 100 !important;
+}
+
+
+  /* ═══════════════════════════════════════════════
+     PROFESSION CLOUD
+     ═══════════════════════════════════════════════ */
+.axis-interview-page .field-cloud {
+  padding: clamp(2rem,5vw,4rem) clamp(1.25rem,5vw,5rem) clamp(3rem,6vw,5rem);
+}
+
+.field-cloud__wrap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: .5rem .7rem;
+  justify-items: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.fieldtag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  gap: .35rem;
+  grid-column: span 2;
+  font-family: var(--ax-ff-dis);
+  font-size: clamp(1.1rem,2.2vw,1.7rem);
+  letter-spacing: .04em;
+  line-height: 1;
+  padding: .35rem .9rem;
+  border-radius: 2rem;
+  transition: background var(--ax-dur) var(--ax-ease),
+  color      var(--ax-dur) var(--ax-ease),
+  transform  var(--ax-dur) var(--ax-ease),
+  box-shadow var(--ax-dur) var(--ax-ease);
+  user-select: none;
+}
+
+.fieldtag--blue {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+}
+
+.fieldtag--blue:hover,
+.fieldtag--blue[aria-pressed="true"] {
+  background: #77D7EA;
+  color: var(--ax-paper);
+  transform: translateY(-.12rem) scale(1.04);
+  box-shadow: 0 .4rem 1rem rgba(0,0,0,.18);
+}
+
+.fieldtag--edu {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+}
+
+.fieldtag--edu:hover,
+.fieldtag--edu[aria-pressed="true"] {
+  background: #F29475;
+  color: var(--ax-paper);
+  transform: translateY(-.12rem) scale(1.04);
+  box-shadow: 0 .4rem 1rem rgba(0,0,0,.18);
+}
+
+.fieldtag--eco {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+}
+
+.fieldtag--eco:hover,
+.fieldtag--eco[aria-pressed="true"] {
+  background: #A1D965;
+  color: var(--ax-paper);
+  transform: translateY(-.12rem) scale(1.04);
+  box-shadow: 0 .4rem 1rem rgba(0,0,0,.18);
+}
+
+.fieldtag--hum {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+}
+
+.fieldtag--hum:hover,
+.fieldtag--hum[aria-pressed="true"] {
+  background: #E7BF7E;
+  color: var(--ax-paper);
+  transform: translateY(-.12rem) scale(1.04);
+  box-shadow: 0 .4rem 1rem rgba(0,0,0,.18);
+}
+
+.fieldtag--fin {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+}
+
+.fieldtag--fin:hover,
+.fieldtag--fin[aria-pressed="true"] {
+  background: #F9CB5C;
+  color: var(--ax-paper);
+  transform: translateY(-.12rem) scale(1.04);
+  box-shadow: 0 .4rem 1rem rgba(0,0,0,.18);
+}
+
+#profCloud {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+#profCloud .prof-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+#profCloud .prof-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prof-item button{
+  border: none;
+}
+
+#profCloud .prof-icon {
+  width: 6rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.axis-interview-page .fieldtag--rose {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+}
+
+.axis-interview-page .fieldtag--rose:hover,
+.axis-interview-page .fieldtag--rose[aria-pressed="true"] {
+  background: var(--ax-rose);
+  color: var(--ax-paper);
+  transform: translateY(-.12rem) scale(1.04);
+  box-shadow: 0 .4rem 1rem rgba(255,50,100,.22);
+}
+
+.axis-interview-page .fieldtag:focus-visible {
+  outline: 2px solid var(--ax-rose);
+  outline-offset: 3px;
+}
+
+.axis-interview-page .field-cloud__hint {
+  margin-top: 1.25rem;
+  font-size: .8rem;
+  color: var(--ax-smoke);
+  letter-spacing: .02em;
+  transition: opacity var(--ax-dur);
+}
+
+.axis-interview-page .field-cloud__hint.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════
+   INTERVIEW STAGE
+   ═══════════════════════════════════════════════ */
+.axis-interview-page .stage-zone {
+  padding-top: 9rem;
+  justify-content: center;
+  margin-left: 20vw;
+}
+
+/* ── Сама карточка ───────────────────────────── */
+.axis-interview-page .stage-card {
+  --card-color: #FF3264;   /* перезаписывается из JS */
+  position: relative;
+  max-width: 50rem;
+  border: 2px solid var(--card-color);
+  border-radius: 1.25rem;
+  background: #fff;
+  overflow: visible;       /* floater вылезает сверху */
+  padding-top: 5rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+.axis-interview-page .stage-card.is-fading {
+  opacity: 0;
+  transform: translateY(1.2rem);
+}
+
+.axis-interview-page .stage-card__idle {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #aaa;
+  font-size: .95rem;
+}
+
+/* ── 3D картинка над карточкой ───────────────── */
+.axis-interview-page .card-floater-img {
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(9rem, 20vw, 16rem);
+  pointer-events: none;
+  z-index: 2;
+  animation: spec-float 5s ease-in-out infinite;
+}
+
+.axis-interview-page .card-floater-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes spec-float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-.7rem); }
+}
+
+/* ── Мета: профессия + имя + аватар ─────────── */
+.axis-interview-page .card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem 1rem;
+  gap: 1rem;
+}
+
+.axis-interview-page .card-meta__prof {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  letter-spacing: .04em;
+  color: var(--card-color);
+}
+
+.axis-interview-page .card-meta__right {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  flex-shrink: 0;
+}
+
+.axis-interview-page .card-meta__name {
+  font-size: .9rem;
+  font-weight: 500;
+  color: #0D0D0D;
+}
+
+.axis-interview-page .card-meta__avatar {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background: #e6e6e6;
+  border: 2px solid var(--card-color);
+  flex-shrink: 0;
+}
+
+/* ── Видеоплеер ──────────────────────────────── */
+.axis-interview-page .card-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #d4d4d4;
+  cursor: pointer;
+  margin: 0 1.5rem 1.2rem;
+  border-radius: .5rem;
+  overflow: visible;
+}
+
+.axis-interview-page .card-video__bg {
+  position: absolute;
+  inset: 0;
+  background: #d4d4d4;
+  border-radius: .5rem;
+}
+
+/* Угловые скобки */
+.axis-interview-page .vid-corner {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-color: var(--card-color);
+  border-style: solid;
+  pointer-events: none;
+}
+.axis-interview-page .vid-corner--tl { top: -.15rem; left: -.15rem;   border-width: 2px 0 0 2px; border-radius: 2px 0 0 0; }
+.axis-interview-page .vid-corner--tr { top: -.15rem; right: -.15rem;  border-width: 2px 2px 0 0; border-radius: 0 2px 0 0; }
+.axis-interview-page .vid-corner--bl { bottom: -.15rem; left: -.15rem;  border-width: 0 0 2px 2px; border-radius: 0 0 0 2px; }
+.axis-interview-page .vid-corner--br { bottom: -.15rem; right: -.15rem; border-width: 0 2px 2px 0; border-radius: 0 0 2px 0; }
+
+.axis-interview-page .card-video__btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.axis-interview-page .video-play-ring {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s;
+}
+.axis-interview-page .video-play-ring::after {
+  content: '';
+  border-style: solid;
+  border-color: transparent transparent transparent var(--card-color);
+  border-width: .65rem 0 .65rem 1rem;
+  margin-left: .2rem;
+}
+.axis-interview-page .card-video:hover .video-play-ring {
+  transform: scale(1.1);
+}
+
+.axis-interview-page .card-video__el {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  display: none;
+}
+
+.axis-interview-page .card-video iframe,
+.axis-interview-page .card-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none; /* Убираем стандартную рамку iframe */
+  border-radius: .5rem; /* Чтобы углы видео совпадали с углами серой карточки */
+  object-fit: cover; /* На всякий случай для тега <video> */
+}
+
+.axis-interview-page .card-video.is-playing .card-video__bg,
+.axis-interview-page .card-video.is-playing .card-video__btn { display: none; }
+.axis-interview-page .card-video.is-playing .card-video__el  { display: block; }
+
+/* ── Аудиоплеер ──────────────────────────────── */
+.axis-interview-page .card-audio {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .9rem 1.5rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.axis-interview-page .aud-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1.5px solid var(--card-color);
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: none;
+  transition: background .25s;
+}
+.axis-interview-page .aud-btn svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--card-color);
+  transition: color .25s;
+}
+.axis-interview-page .aud-btn:hover,
+.axis-interview-page .aud-btn.is-active {
+  background: var(--card-color);
+}
+.axis-interview-page .aud-btn:hover svg,
+.axis-interview-page .aud-btn.is-active svg {
+  color: #fff;
+}
+
+.axis-interview-page .aud-wave {
+  flex: 1;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.axis-interview-page .wave-slat {
+  width: 2px;
+  background: #0D0D0D;
+  border-radius: 1px;
+  flex-shrink: 0;
+  transition: background .15s;
+}
+.axis-interview-page .wave-slat.done {
+  background: var(--card-color);
+}
+
+.axis-interview-page .aud-clock {
+  font-size: .78rem;
+  font-variant-numeric: tabular-nums;
+  color: #aaa;
+  min-width: 2.8rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── Текстовый флаг ──────────────────────────── */
+.axis-interview-page .card-text-flag {
+  padding: .8rem 1.5rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--card-color);
+  border-bottom: 1px solid var(--card-color);
+}
+
+/* ── Q&A тело ────────────────────────────────── */
+.axis-interview-page .card-body {
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.axis-interview-page .qa-block + .qa-block {
+  margin-top: 1.4rem;
+}
+
+.axis-interview-page .qa-q {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.axis-interview-page .qa-a {
+  font-size: .9rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ── CTA кнопка ──────────────────────────────── */
+.axis-interview-page .card-body__foot {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.axis-interview-page .cta-pill {
+  background: var(--card-color);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: .06em;
+  padding: .65rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  transition: filter .25s;
+}
+.axis-interview-page .cta-pill:hover {
+  filter: brightness(.85);
+}
+
+
+.content-footer-main-spec{
+  width: 100%;
+  padding: 2vw 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo-spec img{
+  width: 8vw;
+}
+
+.footer-line-spec {
+  width: 1vw;
+  flex-grow: 1;
+  height: 0.2vw;
+  background: #212121;
+}
+
+.footer-line-main-spec img{
+  width: 8vw;
+}
+
+.footer-slogan-main-spec {
+  font-size: 1vw;
+  color: #212121;
+  width: auto;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  margin-left: 2vw;
+}
+
+.footer-slogan-spec {
+  font-size: 1vw;
+  color: #212121;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-right: 1vw;
+}
+
+
+.footer-buttons-main-spec{
+  display: inline-flex;
+  margin-top: -9vw;
+  gap: 10px;
+}
+
+.btn-black-spec {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: 'Akzidenzgroteskpro', sans-serif;
+  background: #212121;
+  color: #FCFCFC;
+  width: auto;
+  padding: 1vw 2vw;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 9vw;
+  border-radius: 10px;
+  border: none;
+  text-wrap: nowrap !important;
+  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.btn-black-spec img{
+  align-items: center;
+  width: 1rem;
+  /*margin-left: 0.1rem;*/
+  /*margin-top: 0.5vw;*/
+}

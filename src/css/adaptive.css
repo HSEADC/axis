@@ -896,7 +896,56 @@
     }
 
 
+/*спецпроект*/
+    @media (max-width: 74.9375rem) {
+        .axis-interview-page .scatter-zone  { min-height: auto; }
+        .axis-interview-page .scatter-copy  { grid-column: 2; }
+    }
 
+    @media (max-width: 56.1875rem) {
+        .axis-interview-page .scatter-zone { grid-template-columns: 1fr; padding-top: 2.5rem; min-height: auto; }
+        .axis-interview-page .scatter-copy { grid-column: 1; position: relative; z-index: 2; }
+        .axis-interview-page .scatter-obj--recycle,
+        .axis-interview-page .scatter-obj--test,
+        .axis-interview-page .scatter-obj--gem,
+        .axis-interview-page .scatter-obj--pills2 { opacity: .55; }
+
+        .axis-interview-page .site-crown { flex-direction: column; min-height: auto; padding-bottom: 2rem; }
+        .axis-interview-page .crown-cluster { position: relative; width: 100%; height: 10rem; margin-top: 1rem; }
+        .axis-interview-page .cluster-obj--camera { width: 7rem; height: 7rem; right: 5%; top: -1rem; }
+        .axis-interview-page .cluster-obj--hat    { width: 3rem; height: 2.5rem; right: 38%; top: 1rem; }
+        .axis-interview-page .cluster-obj--flask  { display: none; }
+        .axis-interview-page .cluster-obj--coin   { width: 3rem; height: 2rem; right: 45%; top: 55%; }
+        .axis-interview-page .cluster-obj--cursor { width: 2.2rem; height: 2.2rem; right: 20%; top: 65%; }
+        .axis-interview-page .cluster-obj--pills  { display: none; }
+        .axis-interview-page .stage-floater { display: none; }
+    }
+
+    @media (max-width: 37.4375rem) {
+        .axis-interview-page .ribbon-word  { font-size: clamp(3rem,13vw,5rem); }
+        .axis-interview-page .fieldtag     { font-size: clamp(.9rem,4vw,1.1rem); padding: .3rem .75rem; }
+        .axis-interview-page .card-audio   { flex-wrap: wrap; gap: .5rem; }
+        .axis-interview-page .aud-wave     { min-width: 100%; order: 3; }
+        .axis-interview-page .aud-clock    { order: 4; }
+        .axis-interview-page .card-head    { min-height: 8rem; }
+        .axis-interview-page .meta-name    { margin-right: 4rem; }
+        .axis-interview-page .site-base    { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 23.4375rem) {
+        .axis-interview-page .fieldtag        { font-size: .85rem; }
+        .axis-interview-page .card-body       { padding: 1.2rem 1rem 1.5rem; }
+        .axis-interview-page .crown-cluster   { height: 7rem; }
+        .axis-interview-page .cluster-obj--camera { width: 5rem; height: 5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .axis-interview-page .cluster-obj,
+        .axis-interview-page .scatter-obj,
+        .axis-interview-page .floater-gem,
+        .axis-interview-page .ribbon-track { animation: none; }
+        .axis-interview-page .stage-card   { transition: none; }
+    }
 
 
 
