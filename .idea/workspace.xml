@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="90929b0c-70ec-4cb8-bad3-85ea2f3c6440" name="Changes" comment="Merge branch 'main' of https://github.com/HSEADC/codiki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/adaptive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/adaptive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/collab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/collab.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/spec.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spec.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +219,7 @@
       <workItem from="1781626223938" duration="10851000" />
       <workItem from="1781701345030" duration="16751000" />
       <workItem from="1782203017387" duration="1061000" />
+      <workItem from="1782237180695" duration="17496000" />
     </task>
     <task id="LOCAL-00001" summary="123456789">
       <option name="closed" value="true" />

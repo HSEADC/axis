@@ -20,27 +20,16 @@
 
     --transition-speed:       0.3s;
 
-    /* Базовые свойства страницы */
     font-family: var(--font-sans);
     background-color: var(--color-bg-primary);
     color: var(--color-text-dark);
-    font-size: 1.6rem;
     line-height: 1.5;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
 }
 
-/* box-sizing только внутри обёртки */
-.collab-page *,
-.collab-page *::before,
-.collab-page *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 
-/* Типографика заголовков — скоуп */
 .collab-page h1,
 .collab-page h2,
 .collab-page h3,
@@ -52,10 +41,9 @@
     letter-spacing: -0.02em;
 }
 
-/* ── LAYOUT UTILITIES ─────────────────────────────────────── */
+
 .collab-page .container-skill {
     width: 100%;
-    max-width: 120rem;
     margin: 0 auto;
     padding: 3.5rem 2.4rem;
 }
@@ -64,7 +52,7 @@
     padding: 8.0rem 0;
 }
 
-/* Изображения */
+
 .collab-page .inquiry-icon img {
     width: 11rem;
     margin-left: -1.6rem;
@@ -110,7 +98,7 @@
     margin-left: 15rem;
 }
 
-/* ── HEADER ───────────────────────────────────────────────── */
+
 .collab-page .fixed-header-skill {
     position: fixed !important;
     top: 0;
