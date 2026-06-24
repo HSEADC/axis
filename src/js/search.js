@@ -65,16 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (matches) visibleCount++;
             });
 
-            // Показываем «ничего не найдено», если есть такой элемент
+
             if (noResults) {
                 noResults.style.display = visibleCount === 0 ? '' : 'none';
             }
         }
 
-        // Фильтр в реальном времени при вводе
+
         searchInput.addEventListener('input', () => applySearch(searchInput.value));
 
-        // Поиск по кнопке / Enter
+
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') applySearch(searchInput.value);
         });
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
             searchBtn.addEventListener('click', () => applySearch(searchInput.value));
         }
 
-        // Сброс поиска при очистке поля
+
         searchInput.addEventListener('search', () => applySearch(''));
     }
 

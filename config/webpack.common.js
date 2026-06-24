@@ -86,7 +86,7 @@ module.exports = {
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, "../src/partials/analytics.html"),
-        priority: "replace",
+        priority: "append",
         location: "head",
         template_filename: "*",
       },

@@ -20,9 +20,6 @@ const images = {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ==========================================================================
-       1. TABS: INTERACTIVE PROFESSIONS SELECTION
-       ========================================================================== */
     const tabData = {
         doctor: {
             name: 'Врач',
@@ -34,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             progress: [72, 34, 85], // widths for progress bars
             pills: ['ИИ-диагностика', 'Биоинформатика', 'Телемедицина'],
-            bgClass: '#35d3ef', // Cyan background
+            bgClass: '#35d3ef',
             cardTitle: 'Врач 2035',
             cardDesc: 'Куратор лечения + интерпретатор ИИ-анализа + специалист по эмпатии и медицинской этике.',
             image: medicineImg,
@@ -49,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             progress: [85, 28, 95],
             pills: ['Промпт-дизайн', 'Генеративный UX/UI', '3D-моделирование', 'Арт-Дирекшн'],
-            bgClass: '#ff768d', // Magenta/pink background
+            bgClass: '#ff768d',
             cardTitle: 'Дизайнер 2035',
             cardDesc: 'Виртуальный архитектор пространств + генеративный дизайнер + куратор ИИ-систем.',
             image: creativeImg,
@@ -64,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             progress: [65, 41, 80],
             pills: ['ИИ-персонализация', 'Дата-аналитика', 'Психографика бренд-опыта'],
-            bgClass: '#ff8c3f', // Bright yellow/gold background
+            bgClass: '#ff8c3f',
             cardTitle: 'Маркетолог 2035',
             cardDesc: 'Стратег человеческих смыслов + архитектор ИИ-персонализации + аналитик поведенческих аномалий.',
                 image: marketingImg,
@@ -79,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             progress: [45, 50, 60],
             pills: ['ИИ-тьюторство', 'Развитие soft-skills', 'Игропрактика', 'Экология мышления'],
-            bgClass: '#e6bb77', // Lavender/purple background
+            bgClass: '#e6bb77',
             cardTitle: 'Учитель 2035',
             cardDesc: 'Навигатор индивидуальных образовательных траекторий + ментор критического выбора.',
             image: humanitarianImg,
@@ -94,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             progress: [60, 15, 65],
             pills: ['Цифровое & Космическое право', 'Этический консалтинг', 'ИИ-регуляция'],
-            bgClass: '#f18e6d', // Peach/coral background
+            bgClass: '#f18e6d',
             cardTitle: 'Юрист 2035',
             cardDesc: 'Архитектор смарт-контрактов + аудитор систем регулирования ИИ + техно-медиатор.',
             image: educationImg,
@@ -108,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = tabData[key];
         if (!data) return;
 
-        // Apply animation effect: fade out
+
         activeTabPanel.style.opacity = '0';
 
         setTimeout(() => {
-            // Re-fill descriptions
+
             activeTabPanel.innerHTML = `
         <div class="prof-info-col">
           <div class="prof-headline-block">
@@ -167,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `;
-            // Fade-in
+
             activeTabPanel.style.opacity = '1';
         }, 200);
     }
@@ -182,9 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    /* ==========================================================================
-       2. DYNAMIC QUIZ SYSTEM (5 QUESTIONS WITH CUSTOM RESULT INTEGRATION)
-       ========================================================================== */
+
     const quizQuestions = [
         {
             id: 1,
@@ -238,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    /* Detailed diagnostics for the 4 potential outcomes */
+
     const outcomes = {
         adaptability: {
             badgeTitle: 'Адаптивность',
@@ -296,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuestionIndex = 0;
     let userAnswers = [];
 
-    // DOM elements
+
     const quizProgress = document.getElementById('quiz-progress');
     const quizQNum = document.getElementById('quiz-qnum');
     const quizTitle = document.getElementById('quiz-qtitle');
@@ -322,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quizQNum.textContent = `Вопрос ${collab + 1} из ${quizQuestions.length}`;
         quizTitle.textContent = q.title;
 
-        // Render options inside options grid
+
         quizOptionsGrid.innerHTML = '';
         q.options.forEach((opt, idx) => {
             const optionBtn = document.createElement('button');
@@ -332,12 +327,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <span>${opt.text}</span>
       `;
             optionBtn.addEventListener('click', () => {
-                // Remove 'selected' from all options
+
                 const allButtons = quizOptionsGrid.querySelectorAll('.quiz-option-btn');
                 allButtons.forEach(b => b.classList.remove('selected'));
-                // Highlight active
+
                 optionBtn.classList.add('selected');
-                // Register choice
+
                 selectedOptionIndex = idx;
                 btnNext.disabled = false;
             });
@@ -346,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showResults() {
-        // Calculate winning skill score
+
         const skillCounts = { adaptability: 0, critical: 0, digital: 0, creative: 0 };
         userAnswers.forEach(skill => {
             if (skillCounts[skill] !== undefined) {
@@ -354,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Find highest counted skill
+
         let winningSkill = 'adaptability';
         let maxCount = -1;
         for (const [skill, count] of Object.entries(skillCounts)) {
@@ -367,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const detailName = winningSkill;
         const clientData = outcomes[detailName];
 
-        // Wipe quiz elements and build results architecture beautifully inside the exact same container!
         quizBoxCard.innerHTML = `
       <div class="result-view-wrapper">
         <div class="result-top-badge-banner">
@@ -407,14 +401,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         
         <div style="margin-top: 4.8rem; display: flex; justify-content: center; gap: 2.0rem;">
-          <button id="btn-quiz-restart" class="btn-skill btn-secondary-skill" style="padding: 1.4rem 2.8rem; font-size:1.4rem;">
-            🎯 Пройти тест ещё раз
+          <button id="btn-quiz-restart" class="btn-skill btn-secondary-skill" style="padding: 1.4rem 2.8rem; font-size:1.4rem; font-family: "Drukewidecyr", sans-serif">
+             Пройти тест ещё раз
           </button>
         </div>
       </div>
     `;
 
-        // Hook up restart mechanism
+
         document.getElementById('btn-quiz-restart').addEventListener('click', () => {
             restartQuiz();
         });
@@ -424,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentQuestionIndex = 0;
         userAnswers = [];
         quizBoxCard.innerHTML = `
-      <!-- Progress Bar indicator block -->
+     
       <div class="quiz-progress-bar-bg">
         <div id="quiz-progress" class="quiz-progress-bar-fill"></div>
       </div>
@@ -438,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Когда в твоей работе появляется новый инструмент...
       </h3>
       
-      <!-- Option Card Grids -->
+     
       <div id="quiz-options-grid" class="quiz-options-grid"></div>
       
       <div class="quiz-footer-actions">
@@ -446,15 +440,13 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
-        // re-assign refs
-        // update state references
         const newProgress = document.getElementById('quiz-progress');
         const newQnum = document.getElementById('quiz-qnum');
         const newQtitle = document.getElementById('quiz-qtitle');
         const newGrid = document.getElementById('quiz-options-grid');
         const newNext = document.getElementById('btn-next-skill');
 
-        // Bind event back
+
         newNext.addEventListener('click', () => {
             const activeQ = quizQuestions[currentQuestionIndex];
             const answerSkill = activeQ.options[selectedOptionIndex].skill;
@@ -504,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Bind initial click for first loop
+
     btnNext.addEventListener('click', () => {
         const q = quizQuestions[currentQuestionIndex];
         const answerSkill = q.options[selectedOptionIndex].skill;
@@ -514,13 +506,10 @@ document.addEventListener('DOMContentLoaded', () => {
         loadQuestion(currentQuestionIndex);
     });
 
-    // Start initial first loop
+
     loadQuestion(0);
 
 
-    /* ==========================================================================
-       3. SMOOTH NAVIGATION AND ANCHOR LINKS
-       ========================================================================== */
     const downArrowCta = document.getElementById('btn-explore-test-skill');
     if (downArrowCta) {
         downArrowCta.addEventListener('click', (e) => {
@@ -543,7 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Header navigation scroll hooks
+
     const navAnchorLinks = document.querySelectorAll('.nav-link-skill');
     navAnchorLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -558,7 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Footer navigation scroll hooks
+
     const startCtaBtn = document.getElementById('btn-footer-test-skill');
     if (startCtaBtn) {
         startCtaBtn.addEventListener('click', (e) => {
